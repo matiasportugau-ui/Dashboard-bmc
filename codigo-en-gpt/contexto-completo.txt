@@ -1,0 +1,217 @@
+=== CONTEXTO COMPLETO DASHBOARD BMC ===
+
+PROYECTO: Dashboard BMC - Tablero Financiero
+FECHA: 25 de Septiembre de 2025
+VERSIÓN: 1.0.0
+
+=== RESUMEN EJECUTIVO ===
+
+Dashboard BMC es un sistema integral de visualización y análisis de datos financieros diseñado para proporcionar insights en tiempo real y facilitar la toma de decisiones basada en datos. El proyecto integra tecnologías modernas con capacidades de IA mediante GPT.
+
+=== ARQUITECTURA TÉCNICA ===
+
+FRONTEND:
+- Tecnología Principal: React con TypeScript
+- Librerías: D3.js, Chart.js, Material-UI, Redux
+- Características: Componentes reutilizables, visualizaciones interactivas, responsive design, actualizaciones en tiempo real
+
+BACKEND:
+- Tecnología Principal: Node.js con Express
+- Base de Datos: PostgreSQL
+- Características: API RESTful, Autenticación JWT, WebSockets para real-time, arquitectura de microservicios
+
+INFRAESTRUCTURA:
+- Contenedores: Docker
+- Orquestación: Kubernetes
+- Cloud: AWS/GCP/Azure
+- CI/CD: GitHub Actions
+
+=== FUNCIONALIDADES PRINCIPALES ===
+
+1. DASHBOARD PRINCIPAL
+   - Vista general de métricas financieras clave
+   - Widgets personalizables
+   - Actualización en tiempo real
+
+2. ANÁLISIS DE TENDENCIAS
+   - Visualización histórica de datos
+   - Proyecciones y forecasting
+   - Detección de anomalías
+
+3. REPORTES PERSONALIZADOS
+   - Generación automática
+   - Múltiples formatos de exportación
+   - Programación de envíos
+
+4. ALERTAS INTELIGENTES
+   - Umbrales configurables
+   - Notificaciones multi-canal
+   - Análisis predictivo de alertas
+
+5. INTEGRACIÓN GPT
+   - Análisis en lenguaje natural
+   - Generación de insights automáticos
+   - Asistente conversacional
+
+=== FASES DE DESARROLLO ===
+
+FASE 1 - DISEÑO Y PROTOTIPADO (4 semanas)
+- Diseño de arquitectura completa
+- Prototipo UI/UX interactivo
+- Especificación detallada de APIs
+- Modelo de datos optimizado
+
+FASE 2 - DESARROLLO CORE (12 semanas)
+- Implementación del backend
+- Desarrollo del frontend base
+- Integración con fuentes de datos
+- Suite completa de tests
+
+FASE 3 - FUNCIONALIDADES AVANZADAS (8 semanas)
+- Sistema de análisis avanzado
+- Integración con GPT
+- Sistema de alertas inteligentes
+- Optimizaciones de rendimiento
+
+FASE 4 - DESPLIEGUE Y ESTABILIZACIÓN (4 semanas)
+- Configuración de infraestructura productiva
+- Documentación completa
+- Capacitación de usuarios
+- Plan de mantenimiento
+
+=== EQUIPO RECOMENDADO ===
+
+- 1 Tech Lead (Arquitectura y decisiones técnicas)
+- 2 Backend Developers (APIs y base de datos)
+- 2 Frontend Developers (UI/UX y visualizaciones)
+- 1 DevOps Engineer (Infraestructura y CI/CD)
+- 1 QA Engineer (Testing y calidad)
+Total: 7 personas
+
+=== MÉTRICAS DE ÉXITO ===
+
+RENDIMIENTO:
+- Tiempo de respuesta < 2 segundos
+- Disponibilidad > 99.9%
+- 1000 usuarios concurrentes
+- 100 transacciones por segundo
+
+CALIDAD:
+- Cobertura de tests > 80%
+- Deuda técnica < 5%
+- 0 bugs críticos en producción
+- Satisfacción del usuario > 90%
+
+=== INTEGRACIÓN CON GPT ===
+
+CASOS DE USO:
+1. Análisis de datos en lenguaje natural
+2. Generación automática de insights
+3. Asistente para consultas complejas
+4. Explicación de métricas y tendencias
+5. Recomendaciones basadas en datos
+
+CONFIGURACIÓN:
+- Modelo: GPT-4
+- Tokens máximos: 4000
+- Temperatura: 0.7
+- Contexto financiero especializado
+
+PROMPTS OPTIMIZADOS:
+1. Análisis de métricas: "Analiza las siguientes métricas financieras y proporciona insights clave: {metricas}"
+2. Explicación de tendencias: "Explica la tendencia observada en {metrica} durante el período {periodo}"
+3. Recomendaciones: "Basándote en los datos actuales, ¿qué acciones recomiendas para mejorar {objetivo}?"
+
+=== TECNOLOGÍAS Y HERRAMIENTAS ===
+
+DESARROLLO:
+- TypeScript para type safety
+- ESLint y Prettier para calidad de código
+- Jest y React Testing Library para tests
+- Webpack para bundling optimizado
+
+VISUALIZACIÓN:
+- D3.js para gráficos personalizados
+- Chart.js para gráficos estándar
+- SVG y Canvas para rendimiento
+- Animaciones con Framer Motion
+
+BASE DE DATOS:
+- PostgreSQL para datos transaccionales
+- Redis para caché
+- TimescaleDB para series temporales
+- Elasticsearch para búsquedas
+
+MONITOREO:
+- Prometheus para métricas
+- Grafana para dashboards
+- ELK Stack para logs
+- Sentry para error tracking
+
+=== SEGURIDAD ===
+
+- Autenticación multi-factor
+- Encriptación end-to-end
+- Auditoría completa de accesos
+- Cumplimiento GDPR/SOC2
+- Pentesting regular
+- Políticas de respaldo
+
+=== PRESUPUESTO ESTIMADO ===
+
+DESARROLLO:
+- 5,600 horas totales
+- $75/hora promedio
+- Total: $420,000
+
+INFRAESTRUCTURA:
+- $2,000 mensuales
+- $24,000 anuales
+
+LICENCIAS:
+- $5,000 anuales
+
+TOTAL PRIMER AÑO: $449,000
+
+=== RIESGOS Y MITIGACIONES ===
+
+1. RIESGO TÉCNICO: Integración con sistemas legacy
+   - Probabilidad: Media
+   - Impacto: Alto
+   - Mitigación: POC temprano
+
+2. RIESGO DE NEGOCIO: Cambios en requerimientos
+   - Probabilidad: Alta
+   - Impacto: Medio
+   - Mitigación: Metodología ágil
+
+3. RIESGO DE SEGURIDAD: Datos sensibles
+   - Probabilidad: Baja
+   - Impacto: Muy Alto
+   - Mitigación: Auditorías regulares
+
+=== MEJORES PRÁCTICAS ===
+
+DESARROLLO:
+- Código limpio y documentado
+- Revisiones de código obligatorias
+- Pair programming para features críticas
+- TDD/BDD según corresponda
+
+DESPLIEGUE:
+- Blue-green deployments
+- Rollback automático
+- Feature flags
+- Canary releases
+
+MANTENIMIENTO:
+- Actualizaciones de seguridad mensuales
+- Refactoring continuo
+- Monitoreo proactivo
+- Documentación actualizada
+
+=== CONCLUSIONES ===
+
+Dashboard BMC representa una solución integral y moderna para análisis financiero, combinando tecnologías probadas con innovación en IA. La arquitectura propuesta garantiza escalabilidad, seguridad y una experiencia de usuario superior. La integración con GPT añade un diferenciador competitivo significativo.
+
+=== FIN DEL CONTEXTO ===
