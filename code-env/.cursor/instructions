@@ -1,0 +1,96 @@
+# Instrucciones para AI Assistant - Entorno Code
+
+## Propósito del Entorno
+Este es un entorno de desarrollo automatizado diseñado para:
+1. Crear aplicaciones de forma rápida y consistente
+2. Facilitar la colaboración entre humanos y AI
+3. Automatizar tareas repetitivas de desarrollo
+4. Mantener estándares de calidad altos
+
+## Cómo Usar Este Entorno
+
+### Para Crear Nuevos Proyectos:
+```bash
+npm run create:project
+```
+Esto iniciará un wizard interactivo para seleccionar templates y configuraciones.
+
+### Para Sincronizar con AI:
+```bash
+npm run ai:sync
+```
+Esto actualiza el contexto y sincroniza cambios con el AI assistant.
+
+### Para Deployment:
+```bash
+npm run deploy
+```
+Ejecuta el pipeline completo de deployment con tests y backups.
+
+## Estructura de Archivos Importantes
+
+### `/templates/`
+Contiene plantillas para diferentes tipos de proyectos:
+- `web-app/`: Aplicaciones web con React/Next.js
+- `api/`: APIs REST con FastAPI o Express
+- `desktop-app/`: Aplicaciones de escritorio con Electron
+- `mobile-app/`: Apps móviles con React Native
+- `ai-integration/`: Proyectos con integración de AI
+
+### `/scripts/`
+Scripts de automatización organizados por función:
+- `setup/`: Configuración inicial de proyectos
+- `deployment/`: Scripts de despliegue
+- `automation/`: Automatización de tareas comunes
+- `ai-communication/`: Comunicación con AI assistant
+
+### `/config/`
+Archivos de configuración del entorno:
+- `environment.yaml`: Configuración principal
+- Archivos específicos por tecnología
+
+## Comandos Esenciales
+
+### Desarrollo:
+- `npm run dev`: Inicia modo desarrollo con hot reload
+- `npm run lint`: Ejecuta linting en todo el proyecto
+- `npm run format`: Formatea código automáticamente
+- `npm run test`: Ejecuta suite de tests
+
+### AI Integration:
+- `npm run ai:sync`: Sincroniza contexto con AI
+- Archivos en `/docs/context/` se actualizan automáticamente
+
+## Mejores Prácticas
+
+### Para Developers:
+1. Siempre usar templates predefinidos como base
+2. Documentar cambios importantes
+3. Ejecutar tests antes de commits
+4. Usar scripts de automatización disponibles
+
+### Para AI Assistant:
+1. Leer context files antes de hacer cambios grandes
+2. Usar nomenclatura consistente con el entorno
+3. Mantener sincronización activa
+4. Seguir los estándares de código definidos
+
+## Flujo de Trabajo Recomendado
+
+1. **Planificación**: Usar templates y documentación existente
+2. **Desarrollo**: Seguir reglas de código y usar herramientas
+3. **Testing**: Ejecutar tests automatizados
+4. **Deployment**: Usar scripts de deployment automatizado
+5. **Sincronización**: Mantener AI assistant actualizado
+
+## Resolución de Problemas
+
+### Problemas Comunes:
+- **Dependencies**: Ejecutar `npm run setup`
+- **Linting errors**: Ejecutar `npm run format` y luego `npm run lint`
+- **AI sync issues**: Verificar configuración en `config/environment.yaml`
+
+### Logs:
+- Logs de aplicación: `/logs/app.log`
+- Logs de deployment: `/logs/deployment.log`
+- Logs de AI sync: `/logs/ai-sync.log`
