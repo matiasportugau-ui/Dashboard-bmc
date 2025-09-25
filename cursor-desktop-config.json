@@ -1,0 +1,205 @@
+{
+  "cursor_app": {
+    "name": "Cursor Desktop App",
+    "version": "1.0.0",
+    "description": "IDE unificado para el ecosistema de desarrollo colaborativo",
+    "main_entry": "cursor-desktop-app.js",
+    "features": {
+      "ai_integration": {
+        "enabled": true,
+        "providers": ["code_gpt", "code_assistant"],
+        "auto_suggestions": true,
+        "real_time_feedback": true
+      },
+      "project_management": {
+        "git_integration": true,
+        "workspace_sync": true,
+        "multi_project_support": true
+      },
+      "code_intelligence": {
+        "syntax_highlighting": true,
+        "error_detection": true,
+        "auto_completion": true,
+        "refactoring_tools": true
+      },
+      "collaboration": {
+        "real_time_editing": true,
+        "session_sharing": true,
+        "voice_commands": false,
+        "screen_sharing": false
+      },
+      "debugging": {
+        "breakpoints": true,
+        "step_debugging": true,
+        "variable_inspection": true,
+        "performance_profiling": true
+      }
+    },
+    "ui_configuration": {
+      "theme": "dark",
+      "layout": "split_view",
+      "sidebar": {
+        "visible": true,
+        "components": [
+          "project_explorer",
+          "ai_assistant",
+          "feedback_panel",
+          "diagnostics",
+          "git_status"
+        ]
+      },
+      "toolbar": {
+        "actions": [
+          "run_code",
+          "debug_code",
+          "format_code",
+          "generate_docs",
+          "request_improvement"
+        ]
+      }
+    },
+    "keyboard_shortcuts": {
+      "run_code": "Ctrl+Enter",
+      "format_code": "Ctrl+Shift+F",
+      "generate_docs": "Ctrl+Shift+D",
+      "request_improvement": "Ctrl+Shift+I",
+      "toggle_ai_suggestions": "Ctrl+Space",
+      "save_file": "Ctrl+S",
+      "open_command_palette": "Ctrl+Shift+P"
+    },
+    "ai_suggestions": {
+      "enabled": true,
+      "triggers": [
+        "on_typing",
+        "on_selection",
+        "on_file_open",
+        "on_error_detection"
+      ],
+      "suggestion_types": [
+        "code_completion",
+        "error_fixing",
+        "performance_optimization",
+        "documentation_generation",
+        "refactoring_suggestions"
+      ],
+      "confidence_threshold": 0.7
+    },
+    "automation": {
+      "auto_save": true,
+      "auto_format": true,
+      "auto_lint": true,
+      "auto_test": false,
+      "auto_deploy": false
+    },
+    "integration_settings": {
+      "api_gateway": {
+        "host": "localhost",
+        "port": 3000,
+        "timeout": 5000,
+        "retry_attempts": 3
+      },
+      "websocket": {
+        "enabled": true,
+        "reconnect_interval": 5000,
+        "heartbeat_interval": 30000
+      },
+      "feedback_system": {
+        "enabled": true,
+        "auto_send": true,
+        "include_context": true,
+        "include_performance_metrics": true
+      }
+    },
+    "development_workflow": {
+      "stages": [
+        {
+          "name": "initial_generation",
+          "component": "code_gpt",
+          "actions": [
+            "generate_base_code",
+            "create_project_structure",
+            "setup_dependencies"
+          ]
+        },
+        {
+          "name": "code_refinement",
+          "component": "code_assistant",
+          "actions": [
+            "validate_code",
+            "optimize_performance",
+            "add_documentation",
+            "implement_tests"
+          ]
+        },
+        {
+          "name": "integration_testing",
+          "component": "cursor_app",
+          "actions": [
+            "run_tests",
+            "check_integration",
+            "validate_ui_components"
+          ]
+        },
+        {
+          "name": "deployment_preparation",
+          "component": "code_assistant",
+          "actions": [
+            "final_optimization",
+            "security_audit",
+            "generate_deployment_package"
+          ]
+        }
+      ],
+      "quality_gates": [
+        {
+          "stage": "code_refinement",
+          "checks": [
+            "syntax_validation",
+            "linting_passed",
+            "test_coverage > 80%"
+          ]
+        },
+        {
+          "stage": "integration_testing",
+          "checks": [
+            "all_tests_passed",
+            "no_critical_errors",
+            "performance_benchmarks_met"
+          ]
+        }
+      ]
+    },
+    "customization": {
+      "plugins": [],
+      "themes": ["default", "dark", "light", "high_contrast"],
+      "extensions": [
+        "ai-code-assistant",
+        "git-integration",
+        "docker-support",
+        "kubernetes-tools"
+      ]
+    },
+    "security": {
+      "code_signing": true,
+      "encrypted_storage": true,
+      "secure_communication": true,
+      "audit_logging": true
+    },
+    "performance": {
+      "memory_limit": "2GB",
+      "cpu_usage_limit": "80%",
+      "background_tasks": true,
+      "caching": {
+        "enabled": true,
+        "ttl": 3600000,
+        "max_size": "1GB"
+      }
+    },
+    "deployment": {
+      "target_platforms": ["desktop", "web", "mobile"],
+      "auto_update": true,
+      "update_channel": "stable",
+      "rollback_support": true
+    }
+  }
+}
