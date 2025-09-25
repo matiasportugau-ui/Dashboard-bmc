@@ -1,0 +1,51 @@
+# Editores/IDE
+.vscode/
+.idea/
+*.swp
+
+# Node / JS
+node_modules/
+dist/
+coverage/
+.nyc_output/
+.next/
+.turbo/
+.vite/
+build/
+storybook-static/
+.eslintcache
+.yarn/
+.pnp.cjs
+.pnp.loader.mjs
+.pnp.data.json
+.pnp.plugins.json
+.pnpm-store/
+*.log
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage*
+htmlcov/
+
+# Entornos
+.env
+.env.*
+!.env.example
+
+# SO / Miscelánea
+.DS_Store
+Thumbs.db
+.tmp/
+.cache/
+.sass-cache/
+*.tgz
+
+# Dev Container
+.devcontainer/volumes/
