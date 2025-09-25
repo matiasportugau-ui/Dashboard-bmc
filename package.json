@@ -1,0 +1,52 @@
+{
+  "name": "code-gpt-ecosystem",
+  "version": "1.0.0",
+  "description": "Ecosistema colaborativo de desarrollo con múltiples AIs",
+  "main": "ecosystem-integration.js",
+  "scripts": {
+    "start": "node scripts/start-ecosystem.js",
+    "setup": "./setup-ecosystem.sh",
+    "status": "node scripts/check-status.js",
+    "feedback-report": "node scripts/generate-feedback-report.js",
+    "test": "node examples/code-transfer-example.js",
+    "dev": "node --watch ecosystem-integration.js",
+    "lint": "echo 'Linting not configured yet'",
+    "build": "echo 'Build not required for this project'"
+  },
+  "keywords": [
+    "ai",
+    "code-generation",
+    "development",
+    "automation",
+    "collaboration",
+    "cursor",
+    "gpt",
+    "assistant",
+    "ecosystem"
+  ],
+  "author": "Code GPT Ecosystem Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2",
+    "uuid": "^9.0.0",
+    "ws": "^8.14.2",
+    "eventemitter3": "^5.0.1"
+  },
+  "devDependencies": {
+    "axios": "^1.6.0",
+    "nodemon": "^3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/code-gpt-ecosystem.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/code-gpt-ecosystem/issues"
+  },
+  "homepage": "https://github.com/your-org/code-gpt-ecosystem#readme"
+}
