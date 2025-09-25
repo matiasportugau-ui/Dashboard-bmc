@@ -1,0 +1,44 @@
+{
+  "name": "dashboard-bmc",
+  "version": "1.0.0",
+  "description": "Dashboard financiero avanzado para Business Model Canvas",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "cd client && npm start",
+    "server": "cd server && npm run dev",
+    "build": "concurrently \"npm run build-client\" \"npm run build-server\"",
+    "build-client": "cd client && npm run build",
+    "build-server": "cd server && npm run build",
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install",
+    "test": "concurrently \"cd client && npm test\" \"cd server && npm test\"",
+    "lint": "concurrently \"cd client && npm run lint\" \"cd server && npm run lint\""
+  },
+  "keywords": [
+    "dashboard",
+    "financial",
+    "bmc",
+    "business-model-canvas",
+    "react",
+    "nodejs",
+    "mongodb"
+  ],
+  "author": "Dashboard BMC Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dashboard-bmc/dashboard-bmc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dashboard-bmc/dashboard-bmc/issues"
+  },
+  "homepage": "https://github.com/dashboard-bmc/dashboard-bmc#readme"
+}
