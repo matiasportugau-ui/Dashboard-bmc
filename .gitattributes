@@ -1,0 +1,5 @@
+* text=auto eol=lf
+
+# Ensure shell scripts remain unix formatted
+*.sh text eol=lf
+

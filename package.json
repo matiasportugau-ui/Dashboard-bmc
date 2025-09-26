@@ -1,4 +1,24 @@
 {
+  "name": "code-ai-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "format": "prettier -w .",
+    "test": "echo 'No JS/TS tests yet' && exit 0",
+    "check": "npm run lint && npm test"
+  },
+  "devDependencies": {
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.31.0",
+    "prettier": "3.3.3",
+    "typescript": "5.6.3"
+  }
+}
+
+{
   "name": "code",
   "private": true,
   "version": "0.1.0",
