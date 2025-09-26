@@ -1,0 +1,7 @@
+# Reglas de colaboración con Cursor/AI
+
+- Usa TODOs atómicos y estados: pending/in_progress/completed.
+- Antes de editar código, actualizar el TODO activo.
+- Preferir cambios pequeños y verificables.
+- Formato y lint en CI obligatorios.
+- Citas de código: usar referencias con líneas o bloques nuevos.
