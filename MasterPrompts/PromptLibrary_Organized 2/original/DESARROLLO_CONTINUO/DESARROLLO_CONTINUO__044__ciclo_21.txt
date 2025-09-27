@@ -1,0 +1,16 @@
+# CICLO 21 — Mockups de UI (Low‑Fi)
+Fecha: 2025-09-02T04:18:12.170976
+
+## Consulta del Orquestador
+Producir descripción de mockups low‑fi para pantallas MVP con layout, jerarquía y componentes, listos para pasar a Figma. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Ir al grano; priorizar pantallas críticas del flujo.
+- AU2: Coherencia con tokens y accesibilidad (C9).
+
+## Bucle 2×
+- Iteración 1 (Integración): Estructuras por pantalla con componentes definidos.
+- Iteración 1 (Crítica): Añadir estados vacíos/errores y ayudas contextuales.
+- Iteración 2 (Integración): Incorpora tooltips/ayudas y variantes por tamaño de grupo.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.95

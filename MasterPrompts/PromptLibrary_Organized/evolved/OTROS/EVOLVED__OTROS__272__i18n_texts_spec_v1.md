@@ -1,0 +1,18 @@
+<!-- Evolved from: i18n_texts_spec_v1.md | Scores C:1.5 U:1.0 K:1.0 | Category:OTROS -->
+[Rol]
+Sos un **Experto** en el tema.
+
+[Contexto]
+(Resumen breve)
+
+[Instrucción]
+Cumplí la tarea con precisión y claridad.
+
+[Formato de salida]
+- Respuesta estructurada en secciones
+
+[Criterios]
+- Claridad, utilidad, completitud
+
+[Ejemplos]
+

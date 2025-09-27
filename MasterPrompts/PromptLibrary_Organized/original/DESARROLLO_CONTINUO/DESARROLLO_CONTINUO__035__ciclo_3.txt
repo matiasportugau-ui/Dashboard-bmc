@@ -1,0 +1,25 @@
+# CICLO 3 — Arquitectura Técnica MVP
+Fecha: 2025-09-02T04:05:51.029525
+
+## Consulta del Orquestador
+Definir arquitectura técnica para el MVP: elección de stack móvil (React Native vs Flutter), backend, auth, base de datos, push, mapas. Establecer criterios de decisión, spikes técnicos mínimos y plan de despliegue. Ejecutar bucle 2× (BLD/INT ↔ CRT).
+
+## Respuestas del Equipo (representantes del usuario)
+- AU1 (Operaciones/Negocio): Optimizar time-to-market y costo. Prefiere ecosistema con más talento disponible localmente.
+- AU2 (Calidad/Producto): Prioriza consistencia UI y performance; modularidad y mantenibilidad.
+
+## Bucle 2×
+- Iteración 1 (Integración): Propuesta
+  - **App**: React Native (Expo) para rapidez (OTA updates), ecosistema y talento.
+  - **Backend**: Firebase (Auth, Firestore, Cloud Functions), FCM para push.
+  - **Mapas**: Mapbox/Google Maps; ubicación compartida por evento.
+  - **Infra**: Cloud Functions para cálculo de listas y simulaciones.
+  - **CI/CD**: Expo EAS + testing con Jest/React Testing Library.
+  - **Telemetría**: Firebase Analytics + eventos custom.
+- Iteración 1 (Crítica): Pedir criterios objetivos RN vs Flutter; contemplar vendor lock-in; agregar capas de abstracción en servicios críticos; definir límites de costo mensual.
+- Iteración 2 (Integración): Añade matriz de decisión y adapters (services/ports). Define topes: plan gratuito + alerta al 80% de cuota.
+- Iteración 2 (Crítica): Conforme para MVP. Requiere checklist de seguridad mínimo.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.96
+**Riesgos**: lock-in en BaaS; costos variables con crecimiento.
+**Pendientes**: PoC de notificaciones, stress básico en cálculos.

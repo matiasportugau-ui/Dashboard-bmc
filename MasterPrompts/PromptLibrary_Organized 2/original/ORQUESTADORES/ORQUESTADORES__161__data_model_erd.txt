@@ -1,0 +1,40 @@
+# Modelo de Dominio — Firestore (MVP)
+
+## Colecciones
+- users/{userId}
+  - displayName, photoURL, phone, country
+  - prefs: { veggie:bool, kids:int, noAlcohol:bool }
+  - createdAt, updatedAt
+
+- events/{eventId}
+  - ownerId, title, dateTime, location:{lat,lng,address}
+  - groupSize:int, eventType:enum("amigos","familiar","mixto")
+  - season:enum("verano","invierno"), profile:enum("liviano","estandar","alto")
+  - mode:enum("estandar","ahorro"), status:enum("planificando","en_curso","cerrado")
+  - linkCode (invitation), createdAt, updatedAt
+  - aggregates: { assignedPct, estTotalCost, estPerCapita, itemsCount }
+
+- events/{eventId}/items/{itemId}
+  - type:enum("carne","chorizo","pan","ensalada","bebida","carbon","hielo","otros")
+  - name, qtyMin, qtyMax, qtyFinal, unit, estUnitPrice, assignedTo:userId|null
+  - confirmedBy:userId[]
+  - notes, createdAt, updatedAt
+
+- events/{eventId}/feedback/{fbId}
+  - userId, satisfaction:1..5, sobraPct, faltaPct, calcAccuracy:1..5
+  - createdAt
+
+- assignments/{assignmentId}  (proyección para consultas globales)
+  - eventId, itemId, assignedTo, state:enum("asignado","confirmado")
+  - createdAt, updatedAt
+
+## Índices (ejemplos)
+- events: ownerId + status (compuesto)
+- assignments: assignedTo + state (compuesto)
+- items: eventId + type
+
+## Agregados
+- events.aggregates.* se actualiza vía Cloud Functions (onWrite items/assignments).
+
+## Timestamps
+- createdAt/updatedAt con serverTimestamp()

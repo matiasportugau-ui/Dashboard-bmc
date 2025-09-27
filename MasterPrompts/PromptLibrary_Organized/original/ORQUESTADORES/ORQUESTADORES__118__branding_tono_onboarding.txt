@@ -1,0 +1,7 @@
+# Branding — Sale Asado
+- Propuesta de valor: “Organizá el asado sin enredos: lista inteligente, reparto justo y recordatorios a tiempo.”
+- Tono: cercano, práctico, rioplatense (sin lunfardo marcado), respetuoso.
+- Mensajes de onboarding:
+  1) “Creá el asado en 30 segundos.”
+  2) “La lista te sugiere y vos decidís.”
+  3) “Cada uno trae lo suyo y listo.”

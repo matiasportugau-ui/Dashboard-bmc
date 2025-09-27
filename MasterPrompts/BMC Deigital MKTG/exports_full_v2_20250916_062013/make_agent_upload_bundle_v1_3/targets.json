@@ -1,0 +1,12 @@
+{
+  "target_roas": 3.0,
+  "target_cac": null,
+  "min_margin_pct": 0.15,
+  "windows": [
+    "1d",
+    "7d",
+    "28d"
+  ],
+  "currency": "UYU",
+  "timezone": "America/Montevideo"
+}

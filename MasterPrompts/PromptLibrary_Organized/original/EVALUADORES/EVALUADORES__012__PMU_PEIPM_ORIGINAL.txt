@@ -1,0 +1,6 @@
+ID: PMU_PEIPM
+Origen: Prompt Maestro — PEIPM Auditado
+Objetivo: Autoevaluación iterativa con métricas y early-stop
+
+---
+Versión original extendida simulada con roles, fases y políticas completas.

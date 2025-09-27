@@ -1,0 +1,16 @@
+# CICLO 23 — Soporte, SLAs y Operación
+Fecha: 2025-09-02T04:18:12.170976
+
+## Consulta del Orquestador
+Definir política de soporte (canales, tiempos), SLAs internos (prioridades P0/P1/P2) y runbook operativo básico. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: WhatsApp/Discord al principio.
+- AU2: Registro de tickets y métricas.
+
+## Bucle 2×
+- Iteración 1 (Integración): Política y SLAs.
+- Iteración 1 (Crítica): Añadir plantillas de respuesta y escalamiento.
+- Iteración 2 (Integración): Incluye runbook de incidentes y post‑mortems.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.95

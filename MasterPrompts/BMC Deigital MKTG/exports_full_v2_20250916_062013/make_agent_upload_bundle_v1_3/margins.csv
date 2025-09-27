@@ -1,0 +1,4 @@
+scope,id,min_margin_pct,notes
+category,calzado,0.18,margen mínimo calzado
+category,indumentaria,0.15,
+sku,SKU-003,0.2,SKU con bajo volumen

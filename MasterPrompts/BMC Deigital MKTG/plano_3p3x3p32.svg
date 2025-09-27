@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="660" viewBox="0 0 330 330">
+  <g id="layer-frames" data-layer="frames">
+    <rect x="0" y="0" width="330" height="330" fill="none" stroke="black" stroke-width="1"/>
+  </g>
+  <g id="layer-beams" data-layer="beams">
+    <rect x="16.5" y="109" width="297" height="5" fill="none" stroke="black" stroke-width="0.8"/>
+    <rect x="16.5" y="221" width="297" height="5" fill="none" stroke="black" stroke-width="0.8"/>
+  </g>
+  <g id="layer-annotations" data-layer="annotations">
+    <text x="6" y="14" font-size="8">Plano 3.3 m × 3.3 m (layout del video remapeado)</text>
+    <text x="6" y="26" font-size="7">Perímetro: 13.2 m • Área: 10.89 m²</text>
+  </g>
+</svg>

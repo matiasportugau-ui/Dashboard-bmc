@@ -1,0 +1,19 @@
+# CICLO 7 — QA & DoR/DoD
+Fecha: 2025-09-02T04:08:54.260925
+
+## Consulta del Orquestador
+Definir Plan de QA (smoke, funcionales, E2E básicos), criterios Definition of Ready/Done y set inicial de casos de prueba priorizados para el MVP. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Enfocarse en lo crítico para release rápido.
+- AU2: Criterios medibles y automatizables (cuando aplique).
+
+## Bucle 2×
+- Iteración 1 (Integración): Plan QA minimalista pero suficiente para MVP.
+- Iteración 1 (Crítica): Añadir cobertura de errores de red y reintentos; métricas de calidad.
+- Iteración 2 (Integración): Agrega casos offline/retry, ratios de pase mínimos y severidades.
+- Iteración 2 (Crítica): Conforme.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.96
+**Riesgos**: sub-cobertura de E2E; se mitigará en beta cerrada.
+**Pendientes**: integrar Detox en Fase 2.

@@ -1,0 +1,16 @@
+# CICLO 34 — Partnerships Locales (AR/UY)
+Fecha: 2025-09-02T04:24:20.541303
+
+## Consulta del Orquestador
+Plan de partnerships con carnicerías, bebidas e hielo: propuesta de valor, piloto, métricas y acuerdo básico. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Pilotos rápidos con 2–3 socios por ciudad.
+- AU2: Términos simples, comisión por cupón.
+
+## Bucle 2×
+- Iteración 1 (Integración): Propuesta y pilotos.
+- Iteración 1 (Crítica): Añadir KPIs y proceso de onboarding.
+- Iteración 2 (Integración): Incluye acuerdo tipo y reporte quincenal.
+
+**Métricas**: calidad=0.89, estabilidad=0.92, cobertura=0.94

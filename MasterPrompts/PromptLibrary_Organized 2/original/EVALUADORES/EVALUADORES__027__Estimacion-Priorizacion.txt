@@ -1,0 +1,6 @@
+# Estimación y Priorización
+
+- Impacto esperado (↑ conversión, ↓ rebote, ↑ CLS, etc.).  
+- Confianza (baja/media/alta).  
+- Esfuerzo (bajo/medio/alto).  
+- Score ICE/RICE → orden de ejecución.

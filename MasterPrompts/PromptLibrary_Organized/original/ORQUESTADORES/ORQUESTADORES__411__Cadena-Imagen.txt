@@ -1,0 +1,7 @@
+# Cadena Imagen (Banners/Renders → Realismo)
+
+1) Análisis de composición → recorte/redistribución.  
+2) Reencuadre inteligente a 1920×450.  
+3) Limpieza/Generative Fill + texturas.  
+4) Tipografía y CTA.  
+5) Validación técnica (peso, formato, legibilidad).

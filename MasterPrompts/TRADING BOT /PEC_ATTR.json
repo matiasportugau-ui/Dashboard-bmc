@@ -1,0 +1,72 @@
+{
+  "improvements": [
+    {
+      "variable": "utility",
+      "delta": 0.1,
+      "agent": "DAN",
+      "interaction": "DAN→AUTO",
+      "reason": "Cobertura de evidencias + mejores casos de prueba"
+    },
+    {
+      "variable": "robustness",
+      "delta": 0.05,
+      "agent": "AUTO",
+      "interaction": "AUTO→ANALYTICS",
+      "reason": "Normalización y pruebas de perturbación"
+    },
+    {
+      "variable": "efficiency",
+      "delta": 0.03,
+      "agent": "AUTO",
+      "interaction": "AUTO",
+      "reason": "Optimización de costos/tokens/latencia"
+    },
+    {
+      "variable": "security",
+      "delta": 0.005,
+      "agent": "SAFE",
+      "interaction": "SAFE",
+      "reason": "Refuerzo de políticas y filtros"
+    },
+    {
+      "variable": "generalization",
+      "delta": 0.05,
+      "agent": "RSR",
+      "interaction": "RSR→ANALYTICS",
+      "reason": "Mejoras en datasets OOD/holdout"
+    },
+    {
+      "variable": "explainability",
+      "delta": 0.04,
+      "agent": "ANALYTICS",
+      "interaction": "ANALYTICS",
+      "reason": "Mejores plantillas de justificación"
+    }
+  ],
+  "ranking": [
+    {
+      "factor": "utility / DAN→AUTO",
+      "contribution": 0.03
+    },
+    {
+      "factor": "robustness / AUTO→ANALYTICS",
+      "contribution": 0.01
+    },
+    {
+      "factor": "generalization / RSR→ANALYTICS",
+      "contribution": 0.005
+    },
+    {
+      "factor": "efficiency / AUTO",
+      "contribution": 0.0045
+    },
+    {
+      "factor": "explainability / ANALYTICS",
+      "contribution": 0.002
+    },
+    {
+      "factor": "security / SAFE",
+      "contribution": 0.001
+    }
+  ]
+}

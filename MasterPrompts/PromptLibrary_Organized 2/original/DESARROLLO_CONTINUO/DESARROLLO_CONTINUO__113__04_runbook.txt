@@ -1,0 +1,10 @@
+# Runbook — Reutilización del Proceso Maestro
+
+1) Copiar este paquete y renombrar la carpeta al nuevo producto.
+2) Editar 00_prompt_maestro_*.txt con el nuevo objetivo y contexto.
+3) Ajustar 01_config.json (kpis, límites, toggles).
+4) Iniciar CICLO 1: formular la Consulta 1 (Plan V0). Registrar en 02_logs/ciclo_1.md.
+5) Ejecutar bucle 2× (BLD↔CRT). Documentar métricas y riesgos.
+6) Generar 03_outputs/mvp_v0.md con objetivos, MVP, KPIs, roadmap.
+7) Repetir ciclos según necesidad (ciclo_2, ciclo_3…); mantener changelog.
+8) Al cierre, comprimir la carpeta y archivarla en tu biblioteca.

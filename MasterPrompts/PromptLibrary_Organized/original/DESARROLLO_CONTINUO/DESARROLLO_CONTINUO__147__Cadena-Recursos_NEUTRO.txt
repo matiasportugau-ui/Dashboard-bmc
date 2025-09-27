@@ -1,0 +1,18 @@
+# Cadena de Recursos (Niveles)
+
+- **Nivel 1 (Ahorro)**: gpt-3.5-turbo, salida resumida, ≤ 1 iteración.  
+- **Nivel 2 (Equilibrado)**: gpt-4o, salida completa, 1–2 iteraciones.  
+- **Nivel 3 (Máxima calidad)**: gpt-4 para validación, contraste multi‑modelo, 2–3 iteraciones.
+
+# === EXPORT_SEAL v1 ===
+# project: PromptPack Neutro
+# prompt_id: NEUTRO::Cadena-Recursos.md
+# version: v1.0.0
+# file: Cadena-Recursos_NEUTRO.md
+# lang: md
+# created_at: 2025-09-06T08:41:10Z
+# author: BMC / Usuario
+# origin: chatgpt
+# body_sha256: TBD
+# notes: Versión neutralizada automáticamente
+# === /EXPORT_SEAL ===

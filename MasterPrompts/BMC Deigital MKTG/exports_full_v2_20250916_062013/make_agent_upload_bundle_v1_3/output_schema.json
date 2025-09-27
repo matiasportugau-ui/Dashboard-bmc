@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.1",
+  "fields": [
+    {
+      "name": "intent",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "require_confirmation",
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "name": "windows",
+      "type": "array",
+      "items": "string",
+      "required": true
+    },
+    {
+      "name": "missing",
+      "type": "array",
+      "items": "string",
+      "required": false
+    },
+    {
+      "name": "insights",
+      "type": "array",
+      "required": true,
+      "items": {
+        "type": "object",
+        "fields": [
+          {
+            "name": "type",
+            "type": "string"
+          },
+          {
+            "name": "entity",
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "type": "string"
+          },
+          {
+            "name": "why",
+            "type": "string"
+          },
+          {
+            "name": "suggestion",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "actions",
+      "type": "array",
+      "required": false,
+      "items": {
+        "type": "object",
+        "fields": [
+          {
+            "name": "scenario",
+            "type": "string"
+          },
+          {
+            "name": "params",
+            "type": "object"
+          },
+          {
+            "name": "priority",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "reply",
+      "type": "string",
+      "required": true
+    }
+  ]
+}

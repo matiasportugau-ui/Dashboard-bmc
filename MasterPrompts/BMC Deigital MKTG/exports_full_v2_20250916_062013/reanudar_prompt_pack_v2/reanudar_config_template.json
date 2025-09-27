@@ -1,0 +1,38 @@
+{
+  "version": "2.0",
+  "timestamp_iso": "[YYYY-MM-DDThh:mm:ssZ]",
+  "proyecto": "[NOMBRE_PROYECTO]",
+  "objetivo": "[OBJETIVO_PRINCIPAL]",
+  "estado_previo": [
+    "punto 1",
+    "punto 2",
+    "punto 3"
+  ],
+  "decisiones_clave": [
+    "..."
+  ],
+  "artefactos": [
+    "..."
+  ],
+  "entorno": [
+    "SO/Herramientas..."
+  ],
+  "limites": {
+    "ciclos_max": 3,
+    "early_stop_delta": 0.02
+  },
+  "politicas": {
+    "idioma": "es-UY",
+    "preguntar_una_vez": true,
+    "seguir_con_supuestos": true,
+    "cumplimiento_legal_UY": true
+  },
+  "salida_formato": [
+    "Estado_actual",
+    "Próximo_paso_concreto",
+    "Plan_B_si_falla",
+    "QA_rápido",
+    "Log_decisiones",
+    "Pendientes"
+  ]
+}

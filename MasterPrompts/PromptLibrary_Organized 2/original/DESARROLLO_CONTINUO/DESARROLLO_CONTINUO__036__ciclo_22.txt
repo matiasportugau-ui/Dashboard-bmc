@@ -1,0 +1,16 @@
+# CICLO 22 — Guías técnicas: Push & Maps
+Fecha: 2025-09-02T04:18:12.170976
+
+## Consulta del Orquestador
+Definir guías técnicas para notificaciones push (FCM) y mapas (Google Maps) en RN/Expo: permisos, flujos, límites y pruebas. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Priorizar recordatorios h‑24/h‑2 y enlaces de retorno al asado.
+- AU2: Manejo de permisos y fallback sin ubicación.
+
+## Bucle 2×
+- Iteración 1 (Integración): Guía paso a paso con ejemplos.
+- Iteración 1 (Crítica): Añadir pruebas locales y en background, y límites de spam.
+- Iteración 2 (Integración): Incluye digest y silencios nocturnos configurables.
+
+**Métricas**: calidad=0.91, estabilidad=0.94, cobertura=0.96

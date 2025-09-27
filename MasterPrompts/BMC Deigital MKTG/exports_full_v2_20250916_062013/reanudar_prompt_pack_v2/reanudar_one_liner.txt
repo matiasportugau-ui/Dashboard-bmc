@@ -1,0 +1,1 @@
+Reanudá mi proyecto. Contexto: [NOMBRE_PROYECTO], objetivo=[OBJETIVO_PRINCIPAL], estado_prev=[RESUMEN], decisiones=[DECISIONES], artefactos=[ARTEFACTOS]. Entregame: (1) Estado_actual, (2) Próximo_paso_concreto (bloque listo), (3) Plan_B_si_falla, (4) QA_rápido/Métricas, (5) Log_decisiones, (6) Pendientes (≤ 3). Si falta un dato crítico, hacé 1 pregunta y seguí con supuestos.

@@ -1,0 +1,18 @@
+# i18n — Especificación de Textos (v1)
+
+## Estructura
+- /i18n/{locale}.json  (es-UY, es-AR, es-419)
+- Convención de keys: scope.screen.element.state
+
+## Ejemplos
+- home.title: "Mis asados"
+- create.save: "Guardar"
+- assign.take: "Lo traigo yo"
+- summary.costPerCapita: "Costo por persona: {value}"
+- feedback.rate: "¿Cómo salió el asado?"
+
+## Pluralización
+- items.count: "{count, plural, one {# ítem} other {# ítems}}"
+
+## Fallback
+- es-UY → es-AR → es-419

@@ -1,0 +1,4 @@
+platform,endpoint,notes
+meli,/sites/MLU/search?q={keyword},competidores por keyword/SKU
+meli,/items/{item_id}/prices,precio propio exacto
+google,keyword_planner_historical,tendencia por keyword

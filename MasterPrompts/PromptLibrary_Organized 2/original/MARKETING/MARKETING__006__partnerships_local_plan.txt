@@ -1,0 +1,20 @@
+# Partnerships Locales — Plan Piloto
+
+## Propuesta de valor
+- Tráfico calificado (asados planificados) + cupones
+- Visibilidad en app (opt-in) y métricas de conversión
+
+## Piloto
+- 2–3 comercios por ciudad (AR/UY), 6–8 semanas
+- Cupones por rubro (carne, bebidas, hielo)
+
+## KPIs
+- Redenciones/semana, tasa de conversión, ticket medio
+- Satisfacción proveedor (1–5)
+
+## Onboarding
+- Alta comercio (datos básicos), catálogo y condiciones de cupón
+- Material promocional y tracking UTM
+
+## Acuerdo tipo (resumen)
+- Duración piloto, comisión por redención, protección de datos, rescisión sencilla

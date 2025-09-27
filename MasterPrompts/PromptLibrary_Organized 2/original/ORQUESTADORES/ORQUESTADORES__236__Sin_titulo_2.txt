@@ -1,0 +1,172 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0\cname textColor;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs20 \cf2 \{\
+  "prompt_name": "Prompt_Maestro_OptimMax_Mercado_Rendimiento",\
+  "version": "v1.0.0",\
+  "objetivo": "Orquestar un sistema inteligente asistido por IA que integre se\'f1ales de mercado (tendencias, precios, demanda, competencia) + rendimiento interno (Shopify, Meta Ads, cat\'e1logo) para dise\'f1ar, ejecutar y optimizar campa\'f1as (prospecting/remarketing/retenci\'f3n), creatividades y reglas de automatizaci\'f3n con ciclos iterativos y validaci\'f3n.",\
+  "alcance": \{\
+    "canales": ["Meta Ads (FB/IG)", "Tienda Shopify", "Email/SMS opcional"],\
+    "mercados": ["Uruguay (prioridad)", "expansi\'f3n opcional regional"],\
+    "embudos": ["Prospecci\'f3n", "Remarketing", "Retenci\'f3n"],\
+    "tipos_productos": ["Isopanel", "Isoroof", "Galpones/Dep\'f3sitos", "Torniller\'eda y accesorios"]\
+  \},\
+  "entradas_requeridas": \{\
+    "rendimiento_interno": \{\
+      "shopify": ["ventas por d\'eda", "AOV", "tasa_conversion", "carritos_abandonados", "stock"],\
+      "meta_ads": ["impresiones", "clics", "CTR", "CPM", "CPA", "ROAS", "compras", "frecuencia", "eventos_pixel_capi"],\
+      "catalogo": ["feed_productos", "product_sets", "atributos: categoria, espesor, largo, precio, disponibilidad"]\
+    \},\
+    "informacion_mercado": \{\
+      "tendencias_busqueda": ["keywords y volumen", "estacionalidad"],\
+      "competencia": ["mensajes, precios, formatos creativos observados"],\
+      "macro_local": ["eventos/obras, clima/temporada si aplica"]\
+    \},\
+    "restricciones": \{\
+      "presupuesto_mensual_uy": "definir",\
+      "l\'edmite_costo_por_compra_max": "definir",\
+      "pol\'edticas_contenido": ["marca", "t\'e9cnicas de construcci\'f3n responsables", "normativa Meta"]\
+    \},\
+    "ventanas_tiempo": \{\
+      "lookback_interno_dias": 30,\
+      "lookback_mercado_dias": 60\
+    \}\
+  \},\
+  "roles_agentes": [\
+    \{"id": "ORQ", "descripcion": "Orquestador/Planner. Divide el trabajo, consolida resultados, decide pr\'f3xima acci\'f3n."\},\
+    \{"id": "DAN", "descripcion": "Descubrimiento y an\'e1lisis de mercado: se\'f1ales, pricing, ganchos, objeciones."\},\
+    \{"id": "RSR", "descripcion": "Investigaci\'f3n competitiva y benchmarking creativo."\},\
+    \{"id": "OPS", "descripcion": "Arquitectura de campa\'f1as (ASC + conversi\'f3n manual), segmentaci\'f3n y reglas."\},\
+    \{"id": "CRT", "descripcion": "Generaci\'f3n y refinamiento de creatividades (video/est\'e1tico/carrusel) y copys."\},\
+    \{"id": "MED", "descripcion": "M\'e9tricas, atribuci\'f3n, EMQ, calidad de eventos, tableros y alertas."\},\
+    \{"id": "OPT", "descripcion": "Optimizaci\'f3n iterativa: pausas, escalados, bids, rotaci\'f3n creativa."\},\
+    \{"id": "SAFE", "descripcion": "Cumplimiento de pol\'edticas, marcas, claims t\'e9cnicos y seguridad."\},\
+    \{"id": "AUD", "descripcion": "Auditor\'eda de procesos, versiones, changelog y calidad de salidas."\}\
+  ],\
+  "fases": [\
+    \{"id": 0, "nombre": "Estudio", "descripcion": "Mapear datos internos y se\'f1ales externas; definir hip\'f3tesis."\},\
+    \{"id": 1, "nombre": "Planificaci\'f3n", "descripcion": "Dise\'f1ar arquitectura: ASC + Conversi\'f3n (Prospecci\'f3n, Remarketing, Retenci\'f3n) y KPI."\},\
+    \{"id": 2, "nombre": "Iteraci\'f3n_PEIPM", "descripcion": "50 ciclos fijos: Proponer\uc0\u8594 Ejecutar (simulado/documentado)\u8594 Inspeccionar\u8594 Aprender\u8594 Modificar."\},\
+    \{"id": 3, "nombre": "Validaci\'f3n", "descripcion": "Pruebas A/B/Lift, chequeo de causalidad y sesgos."\},\
+    \{"id": 4, "nombre": "Cierre", "descripcion": "Paquete final: plan activo, reglas, creatividades aprobadas, pr\'f3ximos tests."\},\
+    \{"id": 5, "nombre": "Monitoreo", "descripcion": "Alertas, health-check, mantenimiento y backlog vivo."\}\
+  ],\
+  "kpi_objetivo": \{\
+    "ctr_prosp": ">=1.0%",\
+    "cpa_total": "<= objetivo_negocio",\
+    "roas_total": ">= objetivo_negocio",\
+    "frecuencia_max_retarget": "<= 5.0 (rolling 7d)",\
+    "tasa_conversion_shopify": "\uc0\u8593  sostenida vs baseline",\
+    "emq_eventos": "alta (Meta Events Manager)",\
+    "tiempo_respuesta_creativo": "<= 72h para nuevas variantes"\
+  \},\
+  "artefactos_salida": [\
+    "DISE\'d1O_CAMPA\'d1A.json",\
+    "LISTA_CREATIVE_VARIANTS.json",\
+    "REGLAS_META.json",\
+    "PLAN_TESTS.json",\
+    "TABLERO_KPIs_SPEC.json",\
+    "CHANGELOG_iteraciones.md"\
+  ],\
+  "formatos_salida": \{\
+    "DISE\'d1O_CAMPA\'d1A.json": \{\
+      "esquema": \{\
+        "campa\'f1as": [\
+          \{\
+            "nombre": "BMC_ASC_Ventas",\
+            "objetivo": "Sales",\
+            "budget_split_pct": 65,\
+            "tipo": "Advantage+ Shopping",\
+            "product_sets": ["Isopanel", "Isoroof", "Accesorios"],\
+            "geo": ["UY"],\
+            "ubicaciones": "Autom\'e1ticas",\
+            "optimizacion_evento": "Purchase"\
+          \},\
+          \{\
+            "nombre": "BMC_CONV_Prospect/Remarketing/Retenci\'f3n",\
+            "objetivo": "Conversions",\
+            "ad_sets": [\
+              \{"nombre": "Prospeccion_Broad", "creativos": 3, "budget_pct": 20\},\
+              \{"nombre": "Remarketing_7-30d", "creativos": 4, "budget_pct": 10, "excluir_compradores": true\},\
+              \{"nombre": "Retencion_Clientes", "creativos": 3, "budget_pct": 5\}\
+            ],\
+            "product_sets": ["por_categoria", "por_espesor", "por_disponibilidad"]\
+          \}\
+        ]\
+      \}\
+    \},\
+    "REGLAS_META.json": \{\
+      "esquema": [\
+        \{"if": "CPA > objetivo 3 d\'edas y spend > umbral", "then": "pausar_anuncio"\},\
+        \{"if": "ROAS >= objetivo 3 d\'edas y spend > umbral", "then": "escalar_presupuesto +20%"\},\
+        \{"if": "Frecuencia > 5 en 7d", "then": "reducir_presupuesto 10% o refrescar_creativo"\},\
+        \{"if": "CTR < 0.6% en 3d", "then": "rotar_creativo"\}\
+      ]\
+    \},\
+    "PLAN_TESTS.json": \{\
+      "esquema": [\
+        \{"hipotesis": "Hook t\'e9cnico vs Hook ahorro tiempo", "m\'e9trica": "CPA/ROAS", "duracion_min": "7d o 50 compras"\},\
+        \{"hipotesis": "UGC instalador vs render t\'e9cnico", "m\'e9trica": "CTR/CPA"\},\
+        \{"hipotesis": "Carrusel vs Video 4:5", "m\'e9trica": "ROAS"\}\
+      ]\
+    \},\
+    "LISTA_CREATIVE_VARIANTS.json": \{\
+      "esquema": [\
+        \{"formato": "video 4:5", "\'e1ngulo": "antes/despu\'e9s t\'e9rmico", "CTA": "Ped\'ed presupuesto hoy"\},\
+        \{"formato": "carrusel", "\'e1ngulo": "comparativa espesores", "CTA": "Eleg\'ed tu panel"\},\
+        \{"formato": "est\'e1tico 1:1", "\'e1ngulo": "instalaci\'f3n r\'e1pida", "CTA": "Compra online"\}\
+      ]\
+    \},\
+    "TABLERO_KPIs_SPEC.json": \{\
+      "esquema": \{\
+        "dimensiones": ["fecha", "campa\'f1a", "ad_set", "creativo", "producto"],\
+        "m\'e9tricas": ["impresiones", "clics", "CTR", "CPM", "CPA", "ROAS", "compras", "frecuencia", "AOV"],\
+        "alertas_umbral": \{"CPA_max": "definir", "ROAS_min": "definir", "frecuencia_max": 5.0\}\
+      \}\
+    \}\
+  \},\
+  "pol\'edticas_y_guardrails": [\
+    "No claims t\'e9cnicos sin respaldo (aislaci\'f3n, normativa).",\
+    "No im\'e1genes/montajes que induzcan a error (coherencia con producto real).",\
+    "Cumplir pol\'edticas de anuncios de Meta y marca BMC."\
+  ],\
+  "ciclos_iterativos": \{\
+    "cantidad": 50,\
+    "early_stop": false,\
+    "proceso": "En cada ciclo: ORQ pide a DAN/RSR insights; CRT genera/ajusta creatividades; OPS actualiza dise\'f1o/ reglas; MED calcula KPIs; OPT propone acciones; SAFE valida; AUD registra en CHANGELOG."\
+  \},\
+  "checklist_calidad": [\
+    "EMQ alta verificada",\
+    "Eventos duplicados: NO",\
+    "Cat\'e1logo sincronizado y product sets",\
+    "ASC activa con split inicial 60\'9670%",\
+    "Prospecci\'f3n Broad + Remarketing + Retenci\'f3n activos",\
+    "Reglas y alertas operativas",\
+    "3\'965 creatividades por ad set",\
+    "Plan de tests vigente",\
+    "Changelog actualizado"\
+  ],\
+  "instrucciones_operativas": \{\
+    "tono": "claro, t\'e9cnico, accionable",\
+    "salida_formato": "JSON + bullets donde aplique",\
+    "prioridad": "simplicidad estructural + calidad creativa + control de frecuencia"\
+  \},\
+  "export_seal": \{\
+    "spec": "EXPORT_SEAL v1",\
+    "project": "BMC Ecommerce",\
+    "prompt_id": "BMC-OPT-META-001",\
+    "version": "v1.0.0",\
+    "file": "Prompt_Maestro_OptimMax_BMC_v1.0.0.json",\
+    "lang": "json",\
+    "created_at": "2025-09-11T00:00:00Z",\
+    "author": "Matias Portugau",\
+    "origin": "chatgpt",\
+    "body_sha256": "TBD",\
+    "notes": "Prompt maestro listo para orquestaci\'f3n multi-agente y PEIPM-50."\
+  \}\
+\}\
+}

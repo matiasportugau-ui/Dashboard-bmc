@@ -1,0 +1,50 @@
+{
+  "version": "1.0",
+  "prompts_draft": [
+    {
+      "id_sugerido": "p_auto_001",
+      "titulo": "Auto-extraído",
+      "tipo": [
+        "Sistema / Rol",
+        "Orquestación / Multi‑agente"
+      ],
+      "plantilla": "[SISTEMA — Orquestador]\nActuá como Orquestador Multi-Agente. Coordiná agentes especializados para resolver el objetivo con trazabilidad.",
+      "variables": [],
+      "seguridad": [
+        "Anonimizar PII",
+        "No revelar razonamiento oculto"
+      ],
+      "evidencias": [
+        "doc_NEUTRO#seg_01"
+      ],
+      "ejemplo_uso": {
+        "input": "",
+        "output_stub": ""
+      },
+      "tags": [],
+      "notas": "Heurístico; revisar con rol DAN"
+    },
+    {
+      "id_sugerido": "p_auto_002",
+      "titulo": "Auto-extraído",
+      "tipo": [
+        "Razonamiento & Planificación"
+      ],
+      "plantilla": "[Formato por ciclo]\nRESUMEN_i, CAMBIOS_i, METRICAS_i {calidad, cobertura, estabilidad, delta}, RIESGOS_i, PENDIENTES_i.",
+      "variables": [],
+      "seguridad": [
+        "Anonimizar PII",
+        "No revelar razonamiento oculto"
+      ],
+      "evidencias": [
+        "doc_NEUTRO#seg_02"
+      ],
+      "ejemplo_uso": {
+        "input": "",
+        "output_stub": ""
+      },
+      "tags": [],
+      "notas": "Heurístico; revisar con rol DAN"
+    }
+  ]
+}

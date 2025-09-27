@@ -1,0 +1,46 @@
+# Modelo de Consumo v1 — Presets iniciales (ajustables)
+> Supuestos iniciales a validar en beta. Rangos sugeridos y perfiles: liviano / estándar / alto.
+> Factores: tipo de evento (amigos/familiar/mixto), temporada (verano/invierno), preferencias (veggie/sin alcohol/niños).
+
+## Carne (res/cerdo/pollo) — gramos por persona
+- Liviano: 300–400 g
+- Estándar: 450–550 g
+- Alto: 600–750 g
+Notas: incluye mezcla de cortes (asado de tira, vacío, pollo, etc.). Ajustable por elección de cortes y tamaño del grupo.
+
+## Chorizo/Morcilla — unidades por persona
+- Liviano: 0.3–0.5 u
+- Estándar: 0.5–0.8 u
+- Alto: 0.8–1.0 u
+
+## Pan — unidades (medias piezas) por persona
+- Liviano: 0.5–0.8
+- Estándar: 0.8–1.2
+- Alto: 1.2–1.5
+
+## Ensaladas (rusa/mixta) — gramos por persona
+- Liviano: 120–160 g
+- Estándar: 160–220 g
+- Alto: 220–280 g
+
+## Bebidas (mix vino/cerveza/refrescos/agua) — litros por persona
+- Sin alcohol: 0.6–1.0 L
+- Estándar: 1.0–1.5 L (equivalente mix; ajustar por preferencias)
+- Alto: 1.5–2.0 L
+
+## Carbón/Leña — kg por evento (parrilla doméstica media)
+- 1.5–2.5 kg por comensal equivalente, con techo 20–30 kg por evento
+Ajustar según tipo de combustible y duración del asado.
+
+## Hielo — kg por evento
+- 0.5–1.0 kg por persona (verano); 0.2–0.5 kg (invierno)
+
+## Modos
+- **Estándar**: presets de arriba por perfil.
+- **Ahorro**: -10% en carnes y bebidas; +10% en ensaladas/agua.
+- **Personalizado**: sliders por rubro y exclusiones (veggie/sin alcohol/niños).
+
+## Resultados esperados (KPIs de estimación)
+- Desviación de cantidades ≤15% (meta inicial).
+- Cobertura de aportes ≥95%.
+- Feedback post-evento para recalibración automática.

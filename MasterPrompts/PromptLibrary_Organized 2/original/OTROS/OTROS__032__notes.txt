@@ -1,0 +1,14 @@
+Screenshots/ejemplos
+- Colocá aquí tus capturas de A4 y térmica 80 mm luego de imprimir desde Shopify.
+- Ver README para tips de impresión.
+
+EXPORT_SEAL v1
+project: BMC Ecommerce — Slip Package
+prompt_id: EXAMPLES-NOTES-001
+version: 1.0.0
+file: examples/notes.txt
+lang: text
+created_at: 2025-09-06T23:17:40Z
+author: Matias Portugau
+origin: chatgpt
+body_sha256: TBD

@@ -1,0 +1,21 @@
+# CHANGELOG — Slip Premium BMC
+
+## v1.0.0 — 2025-09-06T23:17:40Z
+- Plantilla inicial A4 + modo térmica.
+- QR interno en SVG inline (sin dependencias externas).
+- Chips por tags: fragil, prioridad, gift.
+- Tabla con zebra rows, casilla de picking.
+- Guía de instalación y uso.
+
+<!--
+EXPORT_SEAL v1
+project: BMC Ecommerce — Packing Slip Package
+prompt_id: CHANGELOG-001
+version: 1.0.0
+file: docs/CHANGELOG.md
+lang: md
+created_at: 2025-09-06T23:17:40Z
+author: Matias Portugau
+origin: chatgpt
+body_sha256: TBD
+-->

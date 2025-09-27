@@ -1,0 +1,16 @@
+Commercial License (BMC Ecommerce)
+- Permite uso en una (1) tienda Shopify del comprador.
+- Se permite modificación interna y redistribución privada.
+- Prohibida reventa sin autorización.
+- Copyright (c) 2025 BMC Ecommerce
+
+EXPORT_SEAL v1
+project: BMC Ecommerce — Packing Slip Package
+prompt_id: LICENCE-001
+version: 1.0.0
+file: docs/LICENCE.txt
+lang: text
+created_at: 2025-09-06T23:17:40Z
+author: Matias Portugau
+origin: chatgpt
+body_sha256: TBD

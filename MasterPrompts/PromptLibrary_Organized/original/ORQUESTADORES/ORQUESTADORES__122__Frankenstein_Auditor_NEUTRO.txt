@@ -1,0 +1,5 @@
+Frankenstein Auditor — Prompt Híbrido (v2.0.0 + PEIPM + Convergente AU)
+
+Objetivo: Ejecutar, auditar y optimizar en 50 ciclos fijos, con AU1/AU2 y desempate del CRT.
+Fases: Estudio → Planificación → Bucle 50 → Cierre.
+Incluye KPIs (calidad>=0.90, estabilidad>=0.92, cobertura=100%), formato por ciclo y Config JSON.

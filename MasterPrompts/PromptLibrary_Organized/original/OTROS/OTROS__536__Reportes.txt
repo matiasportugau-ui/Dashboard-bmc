@@ -1,0 +1,4 @@
+# Reportes de Recursos
+Activar/desactivar en `Recursos.json` (`mostrar_reporte`).  
+Niveles: 1 (ahorro), 2 (equilibrado), 3 (máxima calidad).  
+El reporte describe: tipo de operación, nivel, tamaño de salida y notas.

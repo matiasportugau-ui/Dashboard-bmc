@@ -1,0 +1,40 @@
+{
+  "created_at": "2025-09-07T09:00:39Z",
+  "timezone": "America/Montevideo",
+  "start_score": 0.872193,
+  "end_score": 0.879893,
+  "delta_total": 0.0077,
+  "gates_ok": true,
+  "cycles": [
+    {
+      "i": 1,
+      "pattern": "Iterativo-PEIPM",
+      "delta": 0.00215,
+      "decision": "Accepted"
+    },
+    {
+      "i": 2,
+      "pattern": "Comité-CRT",
+      "delta": 0.00265,
+      "decision": "Accepted"
+    },
+    {
+      "i": 3,
+      "pattern": "Paralelo-Exploratorio",
+      "delta": 0.0018,
+      "decision": "Accepted"
+    },
+    {
+      "i": 4,
+      "pattern": "DAG-Convergente-AU",
+      "delta": 0.0,
+      "decision": "Accepted"
+    },
+    {
+      "i": 5,
+      "pattern": "Secuencial-Core",
+      "delta": 0.0011,
+      "decision": "Accepted"
+    }
+  ]
+}

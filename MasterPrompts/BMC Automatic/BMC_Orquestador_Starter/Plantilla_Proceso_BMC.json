@@ -1,0 +1,104 @@
+{
+  "proceso_id": "BMC-AREA-NombreCorto-v1",
+  "owner": {
+    "nombre": "",
+    "rol": "",
+    "email": ""
+  },
+  "objetivo": "¿Qué resultado concreto entrega el proceso?",
+  "alcance": "Qué incluye y qué excluye",
+  "prioridad": "alta|media|baja",
+  "area": "Ventas|Marketing|Operaciones|Soporte|Finanzas|TI",
+  "sistemas_origen": [
+    "CRM",
+    "ERP",
+    "GSheets",
+    "Email",
+    "Shopify",
+    "Meta Ads"
+  ],
+  "gatillos": [
+    "evento",
+    "cron",
+    "webhook",
+    "manual"
+  ],
+  "entradas": [
+    {
+      "tipo": "dato/archivo/api",
+      "fuente": "",
+      "formato": ""
+    }
+  ],
+  "salidas": [
+    {
+      "tipo": "registro/archivo/notif",
+      "destino": "",
+      "formato": ""
+    }
+  ],
+  "SLA": {
+    "objetivo_horas": 4,
+    "ventana": "L-V 9-18",
+    "tolerancia_pct": 5
+  },
+  "reglas": [
+    "regla_1",
+    "regla_2"
+  ],
+  "pasos": [
+    {
+      "n": 1,
+      "desc": "…",
+      "actor": "humano|sistema",
+      "herramienta": "…"
+    },
+    {
+      "n": 2,
+      "desc": "…"
+    }
+  ],
+  "excepciones": [
+    {
+      "caso": "…",
+      "tratamiento": "…"
+    }
+  ],
+  "metricas": [
+    "CSAT",
+    "Tasa_errores",
+    "Tiempo_ciclo"
+  ],
+  "riesgos": [
+    "…"
+  ],
+  "datos_sensibles": {
+    "presentes": false,
+    "detalle": []
+  },
+  "integraciones": [
+    {
+      "tipo": "api|rpa|iPaaS",
+      "sistema": "…",
+      "endpoint": "…"
+    }
+  ],
+  "automatable": true,
+  "artefactos_adjuntos": [
+    "ruta/a/manual.pdf",
+    "ruta/a/plantilla.xlsx"
+  ],
+  "notas": "contexto adicional",
+  "export_seal": {
+    "project": "BMC-Automatizaciones",
+    "prompt_id": "Plantilla_Proceso_BMC",
+    "version": "v1.0",
+    "file": "Plantilla_Proceso_BMC.json",
+    "lang": "json",
+    "created_at": "2025-09-17T21:36:22Z",
+    "author": "BMC",
+    "origin": "ChatGPT",
+    "body_sha256": "TBD",
+    "notes": "Plantilla para completar por proceso"
+  }
+}

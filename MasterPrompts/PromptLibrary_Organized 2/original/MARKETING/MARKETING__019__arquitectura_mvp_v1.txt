@@ -1,0 +1,26 @@
+# Arquitectura Técnica MVP — Sale Asado (V1)
+
+## Decisiones
+- **App**: React Native (Expo) por time-to-market, OTA y talento disponible.
+- **Backend**: Firebase (Auth, Firestore, Cloud Functions), FCM, Hosting.
+- **Mapas**: Google Maps SDK (alternativa Mapbox).
+- **Estado**: React Query + Context (capas de servicio).
+- **Testing**: Jest + RTL; E2E posterior (Detox).
+- **CI/CD**: Expo EAS (builds) + GitHub Actions (lint/tests).
+
+## Matriz RN vs Flutter (criterios resumidos)
+- Talento local: RN ✓ | Flutter ~
+- OTA updates: RN (Expo) ✓ | Flutter ~
+- Performance UI: RN ✓ (hermes) | Flutter ✓
+- Librerías de ecosistema local: RN ✓ | Flutter ~
+- Costos de arranque: similares (RN con ventaja por experiencia previa)
+
+## Módulos
+- app/: screens, components, hooks
+- services/: auth, firestore, storage, push, maps, consumo
+- functions/: cálculo de listas, simulaciones, cierres
+- analytics/: eventos, KPIs, consent
+
+## Límites y Alertas
+- Uso mensual Firestore/Functions → alertas al 80% cuota.
+- Tráfico push controlado (digest).

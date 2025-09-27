@@ -1,0 +1,5 @@
+# Cadena de Recursos (Niveles)
+
+- **Nivel 1 (Ahorro)**: gpt-3.5-turbo, salida resumida, ≤ 1 iteración.  
+- **Nivel 2 (Equilibrado)**: gpt-4o, salida completa, 1–2 iteraciones.  
+- **Nivel 3 (Máxima calidad)**: gpt-4 para validación, contraste multi‑modelo, 2–3 iteraciones.

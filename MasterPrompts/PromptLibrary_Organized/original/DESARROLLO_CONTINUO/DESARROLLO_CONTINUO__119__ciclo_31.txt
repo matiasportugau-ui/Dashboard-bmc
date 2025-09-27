@@ -1,0 +1,16 @@
+# CICLO 31 — OKRs Trimestrales (T1–T2)
+Fecha: 2025-09-02T04:24:20.541303
+
+## Consulta del Orquestador
+Definir OKRs por trimestre (producto, crecimiento, calidad) con metas medibles alineadas a MVP, beta y lanzamiento. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Objetivos simples y que muevan la aguja.
+- AU2: KRs medibles y realistas.
+
+## Bucle 2×
+- Iteración 1 (Integración): Propuesta de OKRs T1/T2.
+- Iteración 1 (Crítica): Añadir umbrales go/no-go y responsables.
+- Iteración 2 (Integración): Incluye owners y periodicidad de revisión.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.95

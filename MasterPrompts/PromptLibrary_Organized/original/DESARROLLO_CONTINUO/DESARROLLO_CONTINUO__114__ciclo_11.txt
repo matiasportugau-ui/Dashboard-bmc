@@ -1,0 +1,18 @@
+# CICLO 11 — Legal & Privacidad
+Fecha: 2025-09-02T04:11:43.827299
+
+## Consulta del Orquestador
+Borrador de Política de Privacidad y Términos de Servicio (MVP), checklist legal (alcohol/edad, datos) y mapa de consentimiento. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Textos claros y cortos.
+- AU2: Cobertura esencial (datos, finalidades, derechos, contacto, consent).
+
+## Bucle 2×
+- Iteración 1 (Integración): Borradores + checklist.
+- Iteración 1 (Crítica): Añadir procedimiento de bajas y exportación de datos.
+- Iteración 2 (Integración): Incorpora portabilidad y supresión; contacto y plazo de retención.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.95
+**Riesgos**: cambios regulatorios; revisión local sugerida.
+**Pendientes**: validación jurídica en AR/UY.
