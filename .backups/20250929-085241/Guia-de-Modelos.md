@@ -6,7 +6,7 @@
 - **DALL·E 3**: generación/edición de imágenes (banners, composiciones).
 - **Whisper**: transcripción de audio.
 
-# # Patrón de asignación
+## Patrón de asignación
 - Diseño inicial: gpt-4o → validación crítica: gpt-4 → abaratar: gpt-3.5-turbo.
-- Imágenes: DALL·E 3 (o herramienta externa si aplica).
+- Imágenes: DALL·E 3 (o herramienta externa si aplica).  
 - Audio → texto: Whisper.
