@@ -1,7 +1,7 @@
 # PROMPT MAESTRO — MULTI-AGENTE v2.1.0 (UNIFICADO)
 Convergent Edition + PEIPM-50 + Asignación de Roles + Encadenamientos (Secuencial/Paralelo/Comité/DAG/ReAct)
 
-# # Uso
+## Uso
 1) Ajustar `config/config.example.json`.
 2) Correr FASE 1–8 (según el documento).
 

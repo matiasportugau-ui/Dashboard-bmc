@@ -13,37 +13,37 @@ Orquestar varios modelos/roles en pasos coordinados para resolver tareas complej
 ---
 
 # # 2) Formas de encadenamiento (patrones)
-# # # A. Secuencial
+## # A. Secuencial
 **A → B → C.** Ideal para descomponer tareas: resumir → traducir → validar, o brief → borrador → edición → QA.
 - **Ventajas:** simple, depurable, bajo acoplamiento.
 - **Cuándo usar:** tareas lineales con dependencias claras.
 
-# # # B. Paralelo
+## # B. Paralelo
 **A || B || C → Integración.** Varias tareas en simultáneo (p. ej., análisis de sentimiento y extracción de entidades).
 - **Ventajas:** rapidez, exploración de variantes.
 - **Clave:** definir cómo se fusionan resultados (reglas/ponderaciones).
 
-# # # C. Multi‑Agente (roles)
+## # C. Multi‑Agente (roles)
 Equipo virtual con roles especializados (PLN, RSR, BLD, CRT, INT, SAFE, OPS, AU1/AU2).
 - **Ventajas:** calidad y cobertura de requisitos.
 - **Clave:** comunicación explícita entre roles y formato por ciclo.
 
-# # # D. Iterativo (bucles)
+## # D. Iterativo (bucles)
 Repite ciclos hasta cumplir KPIs/early‑stop. Útil para mejorar versiones: código con tests, renders, fichas técnicas.
 - **Criterios de parada:** delta de mejora, cobertura=100%, estabilidad.
 
-# # # E. Convergente (resolución de conflictos)
+## # E. Convergente (resolución de conflictos)
 Genera alternativas (AU1/AU2), puntúa con CRT y **INT** decide o combina. **SAFE** puede vetar.
 - **Útil cuando:** hay enfoques contrapuestos (tiempo vs calidad, coste vs exactitud).
 
-# # # F. Híbrido (adaptativo)
+## # F. Híbrido (adaptativo)
 Mezcla secuencial + paralelo + iterativo + convergente según condiciones. Ideal para proyectos con ramas/decisiones.
 
 ---
 
 # # 3) Marcos rápidos (plug‑and‑play)
 
-# # # 3.1 Cadena Secuencial — Plantilla
+## # 3.1 Cadena Secuencial — Plantilla
 **Prompt (bloque único):**
 ```
 [SISTEMA] Vas a ejecutar una cadena SECuencial A→B→C. Mantén formato y no saltees pasos.
@@ -63,7 +63,7 @@ D) Aplica mejoras y entrega V_FINAL.
 - V_FINAL
 ```
 
-# # # 3.2 Cadena Paralela — Plantilla
+## # 3.2 Cadena Paralela — Plantilla
 ```
 [SISTEMA] Ejecuta tareas en paralelo y luego integra.
 
@@ -79,7 +79,7 @@ P3) <tarea/rol/modelo>
 - Entrega V_FINAL + tabla de decisiones.
 ```
 
-# # # 3.3 Multi‑Agente (Roles) — Plantilla
+## # 3.3 Multi‑Agente (Roles) — Plantilla
 ```
 [SISTEMA] Orquestador multi‑agente. Roles: PLN, RSR, BLD, CRT, INT, SAFE, OPS, AU1, AU2.
 
@@ -93,7 +93,7 @@ F3 Cierre → versión final, changelog, matriz de evidencia.
 RESUMEN_i, CAMBIOS_i, METRICAS_i {calidad, cobertura, estabilidad}, RIESGOS_i, PENDIENTES_i.
 ```
 
-# # # 3.4 Iterativo (PEIPM‑like) — Plantilla
+## # 3.4 Iterativo (PEIPM‑like) — Plantilla
 ```
 [Config JSON]
 {
@@ -111,7 +111,7 @@ RESUMEN_i, CAMBIOS_i, METRICAS_i {calidad, cobertura, estabilidad}, RIESGOS_i, P
 [Detener si] KPIs OK o mejora<delta por ventana.
 ```
 
-# # # 3.5 Convergente (AU1/AU2) — Plantilla
+## # 3.5 Convergente (AU1/AU2) — Plantilla
 ```
 [Generar] AU1 y AU2 con enfoques distintos.
 [Evaluar] CRT: matriz de criterios + score 0..1 por alternativa.

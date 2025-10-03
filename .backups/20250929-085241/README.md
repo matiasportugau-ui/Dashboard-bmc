@@ -103,7 +103,7 @@ copyFiles()
 Methods
 -------
 
-# # # Async
+## # Async
 
 - [copy](docs/copy.md)
 - [emptyDir](docs/emptyDir.md)
@@ -121,7 +121,7 @@ Methods
 - [remove](docs/remove.md)
 - [writeJson](docs/writeJson.md)
 
-# # # Sync
+## # Sync
 
 - [copySync](docs/copy-sync.md)
 - [emptyDirSync](docs/emptyDir-sync.md)
@@ -142,7 +142,7 @@ Methods
 
 **NOTE:** You can still use the native Node.js methods. They are promisified and copied over to `fs-extra`. See [notes on `fs.read()`, `fs.write()`, & `fs.writev()`](docs/fs-read-write-writev.md)
 
-# # # What happened to `walk()` and `walkSync()`?
+## # What happened to `walk()` and `walkSync()`?
 
 They were removed from `fs-extra` in v2.0.0. If you need the functionality, `walk` and `walkSync` are available as separate packages, [`klaw`](https://github.com/jprichardson/node-klaw) and [`klaw-sync`](https://github.com/manidlou/node-klaw-sync).
 
@@ -150,24 +150,24 @@ They were removed from `fs-extra` in v2.0.0. If you need the functionality, `wal
 Third Party
 -----------
 
-# # # CLI
+## # CLI
 
 [fse-cli](https://www.npmjs.com/package/@atao60/fse-cli) allows you to run `fs-extra` from a console or from [npm](https://www.npmjs.com) scripts.
 
-# # # TypeScript
+## # TypeScript
 
 If you like TypeScript, you can use `fs-extra` with it: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/fs-extra
 
 
-# # # File / Directory Watching
+## # File / Directory Watching
 
 If you want to watch for changes to files or directories, then you should use [chokidar](https://github.com/paulmillr/chokidar).
 
-# # # Obtain Filesystem (Devices, Partitions) Information
+## # Obtain Filesystem (Devices, Partitions) Information
 
 [fs-filesystem](https://github.com/arthurintelligence/node-fs-filesystem) allows you to read the state of the filesystem of the host on which it is run. It returns information about both the devices and the partitions (volumes) of the system.
 
-# # # Misc.
+## # Misc.
 
 - [fs-extra-debug](https://github.com/jdxcode/fs-extra-debug) - Send your fs-extra calls to [debug](https://npmjs.org/package/debug).
 - [mfs](https://github.com/cadorn/mfs) - Monitor your fs-extra calls.
@@ -189,7 +189,7 @@ What's needed?
 
 Note: If you make any big changes, **you should definitely file an issue for discussion first.**
 
-# # # Running the Test Suite
+## # Running the Test Suite
 
 fs-extra contains hundreds of tests.
 
@@ -198,7 +198,7 @@ fs-extra contains hundreds of tests.
 - `npm test`: runs both the linter and the tests
 
 
-# # # Windows
+## # Windows
 
 If you run the tests on the Windows and receive a lot of symbolic link `EPERM` permission errors, it's
 because on Windows you need elevated privilege to create symbolic links. You can add this to your Windows's

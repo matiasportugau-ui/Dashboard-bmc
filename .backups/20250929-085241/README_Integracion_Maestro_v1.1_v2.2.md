@@ -3,21 +3,21 @@
 
 Este paquete enlaza el **Prompt Maestro v1.1** (Foto→Pack) con el **Encadenamiento Multi-IA v2.2** (patrón **P2_dual_split**).
 
-# # Cómo usar (modo rápido)
+## Cómo usar (modo rápido)
 1. Colocá tus fotos en: `input/fotos/` (p.ej. frente.jpg, espalda.jpg).
-2. Ejecutá (modo dry-run por defecto):
+2. Ejecutá (modo dry-run por defecto):  
    ```bash
    python maestro_pipeline_entry.py --images input/fotos/frente.jpg input/fotos/espalda.jpg --talle M --ancho_tela 150 --dry-run
    ```
 3. Verás el plan en `output/dry_run_plan.json`. Para ejecución real, quitá `--dry-run` cuando conectes tus herramientas/modelos.
 
-# # Qué hace
+## Qué hace
 - **P2_dual_split**: `IMG` y `FIT` en **paralelo** → `DAT` → `CRT` (gate KPIs) → rama correctiva si falla → `PAT` + `BLD` → marcadores/consumo → **AU1/AU2** si hay conflicto → `INT` → empaquetado.
 - **KPIs**: calidad≥0.90; estabilidad≥0.92; cobertura=100%.
 - **Early-stop**: delta<0.01 por 2 ciclos → detener y registrar motivo.
 - **Determinismo**: `seed=1337` y orden fijo.
 
-# # Carpetas
+## Carpetas
 - `input/` (tus imágenes) · `output/` (resultados) · `config/` (JSONs) · `docs/` (DAG/Protocolos) · `logs/`.
 
 <!-- === EXPORT_SEAL v1 ===

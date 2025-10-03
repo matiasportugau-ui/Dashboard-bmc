@@ -2,7 +2,7 @@
 
 # # Modelos puntuados (ranking descendente por desempeño global)
 
-# # # GPT-5
+## # GPT-5
 **Categoría:** Texto/Multimodal (orquestación)
 **Modalidad:** Texto, Imagen*, Código (*análisis)
 **Roles ideales:** PLN, RSR, CRT, INT, SAFE, AU1, AU2
@@ -46,7 +46,7 @@
 **Controles de determinismo:** 8.0
 **Comentarios:** Ideal como cerebro del flujo y juez crítico.
 
-# # # GPT-4o
+## # GPT-4o
 **Categoría:** Texto/Visión (multimodal)
 **Modalidad:** Texto, Imagen (visión), Código
 **Roles ideales:** IMG, FIT, DAT, BLD, INT
@@ -84,7 +84,7 @@
 **Controles de determinismo:** 7.5
 **Comentarios:** Los ‘ojos y manos’ del pipeline de prendas.
 
-# # # GPT-4
+## # GPT-4
 **Categoría:** Texto (alto desempeño)
 **Modalidad:** Texto, Código
 **Roles ideales:** CRT, SAFE, PLN
@@ -121,7 +121,7 @@
 **Controles de determinismo:** 8.8
 **Comentarios:** Auditor/validador ideal de entregables.
 
-# # # GPT-3.5
+## # GPT-3.5
 **Categoría:** Texto (ligero)
 **Modalidad:** Texto, Código
 **Roles ideales:** RSR (ligero), BLD (borradores), OPS (asistencias)
@@ -159,7 +159,7 @@
 **Controles de determinismo:** 6.5
 **Comentarios:** Útil para abaratar etapas preliminares.
 
-# # # DALL·E 3
+## # DALL·E 3
 **Categoría:** Imagen (generativa)
 **Modalidad:** Imagen (generación)
 **Roles ideales:** BLD visual (conceptos, moodboards)
@@ -194,7 +194,7 @@
 **Controles de determinismo:** 6.0
 **Comentarios:** Excelente para visuales, complementa a modelos de texto.
 
-# # # Whisper
+## # Whisper
 **Categoría:** Audio (ASR)
 **Modalidad:** Audio → Texto
 **Roles ideales:** RSR (audio), DAT (transcripción para análisis)
@@ -235,7 +235,7 @@
 ---
 # # Módulos/Extensiones (no puntuados)
 
-# # # PEIPM (Evaluador Iterativo del Prompt Maestro)
+## # PEIPM (Evaluador Iterativo del Prompt Maestro)
 **Tipo:** Orquestación/QA
 **Roles:** CRT (meta), INT, OPS
 **Propósito:** QA iterativo con métricas; convergencia en bucles; changelog
@@ -251,7 +251,7 @@
 **Complementa a:** GPT-5 (CRT/INT), GPT-4 (SAFE/QA)
 **Notas:** Actúa como cinturón de calidad; no un modelo separado
 
-# # # Frankenstein Auditor
+## # Frankenstein Auditor
 **Tipo:** Híbrido Auditor (AU1/AU2 + PEIPM)
 **Roles:** CRT reforzado, AU1/AU2, SAFE
 **Propósito:** Auditor duro con resolución de conflictos; 50 ciclos fijos
@@ -266,7 +266,7 @@
 **Complementa a:** GPT-5/GPT-4 (CRT), GPT-4o (BLD)
 **Notas:** Ideal en homologaciones y aprobaciones formales
 
-# # # Suegro Insoportable
+## # Suegro Insoportable
 **Tipo:** Benchmark estricto
 **Roles:** CRT comparativo, INT
 **Propósito:** Comparar contra histórico (≥95% de benchmark)
@@ -279,7 +279,7 @@
 **Complementa a:** GPT-5 (INT/CRT), GPT-4 (SAFE)
 **Notas:** Muy útil para operaciones repetibles/industriales
 
-# # # PromptMaker (Fase 0)
+## # PromptMaker (Fase 0)
 **Tipo:** Pre‑estudio y capacitación
 **Roles:** PLN, RSR
 **Propósito:** Tarjeta de Estudio; KPIs; Plan V0; glosario y riesgos
@@ -292,7 +292,7 @@
 **Complementa a:** Todos los modelos; especialmente GPT-5/4
 **Notas:** Base para arrancar con buen pie
 
-# # # FFmpeg/CLI (herramienta)
+## # FFmpeg/CLI (herramienta)
 **Tipo:** Procesamiento media (no-IA)
 **Roles:** OPS
 **Propósito:** Conversión y manipulación de audio/video
