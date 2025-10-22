@@ -1,0 +1,51 @@
+# Configuración del entorno Code
+environment:
+  name: "code-env"
+  version: "1.0.0"
+  
+development:
+  auto_format: true
+  auto_lint: true
+  hot_reload: true
+  debug: true
+  
+ai_integration:
+  enabled: true
+  provider: "anthropic"  # anthropic, openai, local
+  auto_sync: true
+  sync_interval: 300  # seconds
+  
+cursor_integration:
+  rules_file: ".cursor/rules"
+  instructions_file: ".cursor/instructions"
+  auto_update_rules: true
+  
+project_templates:
+  web_app:
+    framework: "react"
+    backend: "node"
+    database: "postgresql"
+  api:
+    framework: "fastapi"
+    database: "postgresql"
+    auth: "jwt"
+  desktop_app:
+    framework: "electron"
+    language: "typescript"
+  mobile_app:
+    framework: "react-native"
+    platform: "cross-platform"
+    
+automation:
+  auto_deploy: false
+  test_before_deploy: true
+  backup_before_deploy: true
+  notification_channels:
+    - "slack"
+    - "email"
+    
+quality_control:
+  code_coverage_min: 80
+  performance_tests: true
+  security_scans: true
+  dependency_updates: "weekly"

@@ -1,0 +1,37 @@
+# Python dependencies para el entorno Code
+# Core dependencies
+flask==2.3.3
+fastapi==0.103.1
+uvicorn==0.23.2
+requests==2.31.0
+python-dotenv==1.0.0
+
+# Development tools
+black==23.7.0
+flake8==6.0.0
+pytest==7.4.0
+mypy==1.5.1
+
+# AI/ML libraries
+openai==0.28.0
+anthropic==0.3.11
+langchain==0.0.270
+transformers==4.33.2
+
+# Data processing
+pandas==2.0.3
+numpy==1.25.2
+pydantic==2.3.0
+
+# File handling
+pyyaml==6.0.1
+jinja2==3.1.2
+
+# Database
+sqlalchemy==2.0.20
+alembic==1.12.0
+
+# Automation
+click==8.1.7
+typer==0.9.0
+rich==13.5.2
