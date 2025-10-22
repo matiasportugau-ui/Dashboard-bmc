@@ -1,0 +1,250 @@
+{
+  "version": "2025-10-22",
+  "project": "project-audio-chains",
+  "documentation": {
+    "source_plan": "# Plan de Mantenimiento y Evolución.md",
+    "source_changelog": "# Changelog.md",
+    "notes": "Initial curated knowledge base for Ableton Live master-bus chains. Keep metrics aligned with maintenance KPIs."
+  },
+  "module_catalog": {
+    "eq-eight": {
+      "name": "EQ Eight",
+      "category": "equalizer",
+      "recommended_use": "Tonal shaping and surgical cleanup at the start of the chain.",
+      "default_parameters": {
+        "low_cut_hz": 30,
+        "mid_notch_hz": 250,
+        "high_shelf_hz": 14500,
+        "gain_staging_db": 0.0
+      }
+    },
+    "multiband-dynamics": {
+      "name": "Multiband Dynamics",
+      "category": "dynamics",
+      "recommended_use": "Transparent control of low, mid and high energy bands.",
+      "default_parameters": {
+        "crossover_hz": [120, 5500],
+        "low_band_range_db": [-3.5, 1.5],
+        "mid_band_range_db": [-2.5, 1.5],
+        "high_band_range_db": [-1.5, 0.5]
+      }
+    },
+    "glue-compressor": {
+      "name": "Glue Compressor",
+      "category": "dynamics",
+      "recommended_use": "Final bus cohesion with subtle compression.",
+      "default_parameters": {
+        "attack_ms": 3.0,
+        "release_mode": "auto",
+        "ratio": 2.0,
+        "make_up_db": 1.5
+      }
+    },
+    "saturator": {
+      "name": "Saturator",
+      "category": "color",
+      "recommended_use": "Parallel or gentle full-band saturation for harmonic content.",
+      "default_parameters": {
+        "mode": "analog_clip",
+        "drive_db": 1.5,
+        "dry_wet": 15
+      }
+    },
+    "utility": {
+      "name": "Utility",
+      "category": "utility",
+      "recommended_use": "Stereo image control, gain trim and mono-below routing.",
+      "default_parameters": {
+        "stereo_width_percent": 115,
+        "mono_below_hz": 120,
+        "gain_db": 0.0
+      }
+    },
+    "limiter": {
+      "name": "Limiter",
+      "category": "limiter",
+      "recommended_use": "True-peak safe output ceiling at the end of the chain.",
+      "default_parameters": {
+        "ceiling_db": -0.8,
+        "lookahead_ms": 1.0,
+        "release_ms": 100
+      }
+    }
+  },
+  "macro_templates": {
+    "LowCut": {"unit": "Hz", "range": [20, 120], "description": "Controls high-pass filtering before dynamics."},
+    "Dynamics": {"unit": "%", "range": [0, 100], "description": "Adjusts global multiband input drive."},
+    "Glue": {"unit": "%", "range": [0, 100], "description": "Sets bus compression intensity."},
+    "Exciter": {"unit": "%", "range": [0, 50], "description": "Amount of harmonic saturation applied."},
+    "Stereo": {"unit": "%", "range": [80, 140], "description": "Stereo widening beyond the mono bass crossover."},
+    "Ceiling": {"unit": "dB", "range": [-2.0, -0.3], "description": "Limiter output ceiling."},
+    "Drive": {"unit": "dB", "range": [0, 30], "description": "Additional saturation drive for guitar-heavy mixes."},
+    "Presence": {"unit": "dB", "range": [-3.0, 3.0], "description": "High-shelf gain for vocal and guitar clarity."},
+    "Width": {"unit": "%", "range": [90, 130], "description": "Stereo control tuned for hip-hop masters."}
+  },
+  "metering_targets": {
+    "club": {"lufs_integrated": -8.5, "true_peak_db": -0.8, "crest_factor": 8.5},
+    "rock": {"lufs_integrated": -10.5, "true_peak_db": -0.9, "crest_factor": 10.0},
+    "hiphop": {"lufs_integrated": -9.5, "true_peak_db": -1.0, "crest_factor": 9.5},
+    "neutral": {"lufs_integrated": -11.5, "true_peak_db": -1.0, "crest_factor": 11.0}
+  },
+  "chains_by_genre": {
+    "electronic": [
+      {
+        "id": "electronic_club_v1",
+        "name": "Club Master (Wide Glue)",
+        "source_signal_path_id": "club_master_v1",
+        "objective_tags": ["club_mix", "wide", "loud"],
+        "description": "High-energy chain for club and festival oriented electronic music.",
+        "signal_chain": [
+          {"order": 1, "module_id": "eq-eight", "notes": "High-pass at 30 Hz, soft shelf at 15 kHz", "settings": {"low_cut_hz": 30, "high_shelf_hz": 15000}},
+          {"order": 2, "module_id": "multiband-dynamics", "notes": "Tighter low band with 2.5 dB range", "settings": {"low_band_range_db": [-4.0, 1.0], "mid_band_range_db": [-3.0, 1.5]}},
+          {"order": 3, "module_id": "glue-compressor", "notes": "Auto release, 2:1, 1.5 dB gain reduction", "settings": {"ratio": 2.0, "make_up_db": 1.7}},
+          {"order": 4, "module_id": "saturator", "notes": "Analog clip, drive 2 dB, dry/wet 20%", "settings": {"drive_db": 2.0, "dry_wet": 20}},
+          {"order": 5, "module_id": "utility", "notes": "Width 125%, mono below 120 Hz", "settings": {"stereo_width_percent": 125}},
+          {"order": 6, "module_id": "limiter", "notes": "Ceiling -0.8 dB, lookahead 1 ms", "settings": {"ceiling_db": -0.8}}
+        ],
+        "macro_snapshot": {"LowCut": 28, "Dynamics": 60, "Glue": 50, "Exciter": 35, "Stereo": 125, "Ceiling": -0.8},
+        "metering": {"lufs_integrated": -8.4, "true_peak_db": -0.78, "crest_factor": 8.6},
+        "post_checks": ["SPAN: match subs below 60 Hz", "Youlean Loudness: -9 LUFS short-term cap"],
+        "reference_tracks": ["Ben Böhmer - Beyond Beliefs", "Bicep - Glue"]
+      },
+      {
+        "id": "electronic_transparent_v1",
+        "name": "Electronic Master (Transparent)",
+        "source_signal_path_id": "neutral_master_v1",
+        "objective_tags": ["streaming", "balanced", "wide"],
+        "description": "Clean chain when mix is already balanced.",
+        "signal_chain": [
+          {"order": 1, "module_id": "eq-eight", "notes": "High-pass 32 Hz, minor mid dips", "settings": {"low_cut_hz": 32, "mid_notch_hz": 320}},
+          {"order": 2, "module_id": "multiband-dynamics", "notes": "Low ratio 1.2:1 across bands", "settings": {"low_band_range_db": [-2.5, 1.0]}},
+          {"order": 3, "module_id": "glue-compressor", "notes": "Mix knob at 80% for parallel feel", "settings": {"ratio": 1.5, "attack_ms": 10}},
+          {"order": 4, "module_id": "utility", "notes": "Stereo 115%, mono below 100 Hz", "settings": {"stereo_width_percent": 115, "mono_below_hz": 100}},
+          {"order": 5, "module_id": "limiter", "notes": "Ceiling -0.9 dB", "settings": {"ceiling_db": -0.9}}
+        ],
+        "macro_snapshot": {"LowCut": 32, "Dynamics": 40, "Glue": 25, "Stereo": 118, "Ceiling": -0.9},
+        "metering": {"lufs_integrated": -10.0, "true_peak_db": -0.9, "crest_factor": 9.8},
+        "post_checks": ["RMS vs LUFS delta < 1.5", "Phase correlation >= 0.95"],
+        "reference_tracks": ["RÜFÜS DU SOL - Innerbloom (Sasha Remix)"]
+      }
+    ],
+    "rock": [
+      {
+        "id": "rock_punch_v1",
+        "name": "Rock Master (Punchy)",
+        "source_signal_path_id": "rock_master_v1",
+        "objective_tags": ["guitar_forward", "transient", "balanced"],
+        "description": "Maintains snare impact and guitar bite with controlled highs.",
+        "signal_chain": [
+          {"order": 1, "module_id": "eq-eight", "notes": "High-pass 40 Hz, cut 300 Hz muddiness", "settings": {"low_cut_hz": 40, "mid_notch_hz": 300}},
+          {"order": 2, "module_id": "glue-compressor", "notes": "Attack 10 ms, release auto, 1.5 dB GR", "settings": {"attack_ms": 10, "ratio": 2.0}},
+          {"order": 3, "module_id": "saturator", "notes": "Warmth via soft sine, drive 1.8 dB", "settings": {"mode": "soft_sine", "drive_db": 1.8}},
+          {"order": 4, "module_id": "utility", "notes": "Stereo 110%, mono bass 150 Hz", "settings": {"stereo_width_percent": 110, "mono_below_hz": 150}},
+          {"order": 5, "module_id": "limiter", "notes": "Ceiling -0.9 dB", "settings": {"ceiling_db": -0.9}}
+        ],
+        "macro_snapshot": {"LowCut": 40, "Glue": 35, "Drive": 20, "Presence": 12, "Ceiling": -0.9},
+        "metering": {"lufs_integrated": -10.6, "true_peak_db": -0.92, "crest_factor": 10.2},
+        "post_checks": ["Clipper optional before limiter", "Check vocal sibiliance in 6-8 kHz"],
+        "reference_tracks": ["Muse - Knights of Cydonia", "Foo Fighters - The Pretender"]
+      },
+      {
+        "id": "rock_warm_v1",
+        "name": "Rock Master (Warm)",
+        "source_signal_path_id": "warmth_bus_v1",
+        "objective_tags": ["tape_like", "softer", "streaming"],
+        "description": "Less aggressive chain for acoustic or indie rock.",
+        "signal_chain": [
+          {"order": 1, "module_id": "eq-eight", "notes": "High-pass 45 Hz, gentle shelf -1 dB at 3 kHz", "settings": {"low_cut_hz": 45}},
+          {"order": 2, "module_id": "saturator", "notes": "Tape mode, drive 1.2 dB, dry/wet 30%", "settings": {"mode": "tape", "drive_db": 1.2, "dry_wet": 30}},
+          {"order": 3, "module_id": "utility", "notes": "Stereo 105%, mono 150 Hz", "settings": {"stereo_width_percent": 105, "mono_below_hz": 150}},
+          {"order": 4, "module_id": "limiter", "notes": "Ceiling -1.1 dB, long release", "settings": {"ceiling_db": -1.1, "release_ms": 150}}
+        ],
+        "macro_snapshot": {"LowCut": 42, "Drive": 15, "Presence": 5, "Stereo": 105, "Ceiling": -1.1},
+        "metering": {"lufs_integrated": -11.8, "true_peak_db": -1.05, "crest_factor": 11.2},
+        "post_checks": ["Match RMS to reference playlist", "Check phase on summed mono"],
+        "reference_tracks": ["The War on Drugs - Thinking of a Place"]
+      }
+    ],
+    "hiphop": [
+      {
+        "id": "hiphop_warmth_v1",
+        "name": "Hip-Hop Master (Warm 808)",
+        "source_signal_path_id": "hiphop_master_v1",
+        "objective_tags": ["808", "warm", "streaming"],
+        "description": "Keeps 808 weight with smooth top end and loudness around -9.5 LUFS.",
+        "signal_chain": [
+          {"order": 1, "module_id": "eq-eight", "notes": "High-pass 28 Hz, lift 5 kHz shelf", "settings": {"low_cut_hz": 28}},
+          {"order": 2, "module_id": "multiband-dynamics", "notes": "Slow release on low band for groove", "settings": {"low_band_range_db": [-4.0, 1.5]}},
+          {"order": 3, "module_id": "saturator", "notes": "Tube mode, drive 1.6 dB", "settings": {"mode": "tube", "drive_db": 1.6}},
+          {"order": 4, "module_id": "utility", "notes": "Width 112%, mono bass 100 Hz", "settings": {"stereo_width_percent": 112, "mono_below_hz": 100}},
+          {"order": 5, "module_id": "limiter", "notes": "Ceiling -1 dB, lookahead 1 ms", "settings": {"ceiling_db": -1.0}}
+        ],
+        "macro_snapshot": {"LowCut": 28, "Dynamics": 45, "Exciter": 25, "Width": 112, "Ceiling": -1.0},
+        "metering": {"lufs_integrated": -9.6, "true_peak_db": -1.0, "crest_factor": 9.4},
+        "post_checks": ["Ozone Tonal Balance: ensure low-range within bounds", "Check vocal sibilance"],
+        "reference_tracks": ["Kendrick Lamar - HUMBLE.", "Travis Scott - SICKO MODE"]
+      },
+      {
+        "id": "hiphop_transparent_v1",
+        "name": "Hip-Hop Master (Transparent)",
+        "source_signal_path_id": "neutral_master_v1",
+        "objective_tags": ["lofi", "balanced", "podcast"],
+        "description": "When mix already polished; minimal coloration with streaming headroom.",
+        "signal_chain": [
+          {"order": 1, "module_id": "eq-eight", "notes": "Low cut 32 Hz, low-mid dip 250 Hz", "settings": {"low_cut_hz": 32}},
+          {"order": 2, "module_id": "multiband-dynamics", "notes": "Ratio 1.3:1, focus on mid band", "settings": {"mid_band_range_db": [-2.0, 1.0]}},
+          {"order": 3, "module_id": "utility", "notes": "Stereo 108%, mono bass 110 Hz", "settings": {"stereo_width_percent": 108, "mono_below_hz": 110}},
+          {"order": 4, "module_id": "limiter", "notes": "Ceiling -1 dB", "settings": {"ceiling_db": -1.0}}
+        ],
+        "macro_snapshot": {"LowCut": 32, "Dynamics": 35, "Width": 108, "Ceiling": -1.0},
+        "metering": {"lufs_integrated": -10.8, "true_peak_db": -1.0, "crest_factor": 10.5},
+        "post_checks": ["Spotify Loudness penalty within -2 dB", "Check translation on mono speaker"],
+        "reference_tracks": ["J. Cole - Middle Child"]
+      }
+    ]
+  },
+  "default_chains": [
+    {
+      "id": "neutral_master_chain",
+      "name": "Neutral Master Chain",
+      "source_signal_path_id": "neutral_master_v1",
+      "objective_tags": ["balanced", "streaming", "reference"],
+      "description": "Baseline chain when genre-specific targets are not provided.",
+      "signal_chain": [
+        {"order": 1, "module_id": "eq-eight", "notes": "High-pass 32 Hz, gentle mid clean-up", "settings": {"low_cut_hz": 32}},
+        {"order": 2, "module_id": "multiband-dynamics", "notes": "Low ratio uniform control", "settings": {"low_band_range_db": [-2.8, 1.3]}},
+        {"order": 3, "module_id": "glue-compressor", "notes": "Parallel mix 80%", "settings": {"ratio": 1.5, "attack_ms": 10}},
+        {"order": 4, "module_id": "utility", "notes": "Stereo 112%, mono 120 Hz", "settings": {"stereo_width_percent": 112, "mono_below_hz": 120}},
+        {"order": 5, "module_id": "limiter", "notes": "Ceiling -1 dB", "settings": {"ceiling_db": -1.0}}
+      ],
+      "macro_snapshot": {"LowCut": 32, "Dynamics": 42, "Glue": 30, "Stereo": 112, "Ceiling": -1.0},
+      "metering": {"lufs_integrated": -11.2, "true_peak_db": -1.0, "crest_factor": 10.8}
+    },
+    {
+      "id": "warmth_stem_prep",
+      "name": "Warmth Stem Prep",
+      "source_signal_path_id": "warmth_bus_v1",
+      "objective_tags": ["stem_pre", "warming", "pre_limiter"],
+      "description": "Use before final limiting to add cohesion to stems.",
+      "signal_chain": [
+        {"order": 1, "module_id": "eq-eight", "notes": "Tilt EQ -0.5 dB @ 5 kHz", "settings": {"low_cut_hz": 40}},
+        {"order": 2, "module_id": "saturator", "notes": "Analog clip, dry/wet 25%", "settings": {"drive_db": 1.7, "dry_wet": 25}},
+        {"order": 3, "module_id": "utility", "notes": "Stereo 105%, mono 150 Hz", "settings": {"stereo_width_percent": 105, "mono_below_hz": 150}},
+        {"order": 4, "module_id": "limiter", "notes": "Catch peaks only", "settings": {"ceiling_db": -1.2}}
+      ],
+      "macro_snapshot": {"LowCut": 38, "Exciter": 18, "Stereo": 105, "Ceiling": -1.2},
+      "metering": {"lufs_integrated": -12.4, "true_peak_db": -1.2, "crest_factor": 11.6}
+    }
+  ],
+  "objectives_index": [
+    {"tag": "club_mix", "description": "High energy dance floors with LUFS around -8 to -9."},
+    {"tag": "wide", "description": "Focus on widening high-frequency content while keeping lows mono."},
+    {"tag": "loud", "description": "Prioritize competitive loudness without audible pumping."},
+    {"tag": "balanced", "description": "Even spectral response aimed at general streaming platforms."},
+    {"tag": "streaming", "description": "Targets -10 to -12 LUFS with conservative peaks for DSP normalization."},
+    {"tag": "guitar_forward", "description": "Keeps upper-mids present for guitar-centric mixes."},
+    {"tag": "transient", "description": "Preserve percussive detail and minimize over-compression."},
+    {"tag": "808", "description": "Maintain extended sub information and punch for hip-hop."},
+    {"tag": "warm", "description": "Adds harmonic content and softer top-end sheen."}
+  ]
+}

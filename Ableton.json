@@ -1,0 +1,242 @@
+{
+    "version": "2025-10-22",
+    "modules": [
+        {
+            "id": "eq-eight",
+            "name": "EQ Eight",
+            "category": "equalizer",
+            "device": "EQ Eight",
+            "recommended_settings": {
+                "low_cut_hz": 30,
+                "high_shelf_hz": 14500,
+                "dynamic_notches": [
+                    {"freq_hz": 250, "gain_db": -2.0, "q": 1.0},
+                    {"freq_hz": 3500, "gain_db": -1.5, "q": 0.7}
+                ]
+            },
+            "notes": "Surgical cleanup and tonal balancing; enable oversampling when using on the master bus."
+        },
+        {
+            "id": "multiband-dynamics",
+            "name": "Multiband Dynamics",
+            "category": "dynamics",
+            "device": "Multiband Dynamics",
+            "recommended_settings": {
+                "low_band_range_db": [-3.5, 1.5],
+                "mid_band_range_db": [-2.5, 1.5],
+                "high_band_range_db": [-1.5, 0.5],
+                "crossover_hz": [120, 5500]
+            },
+            "notes": "Primary control for energy distribution; use gentle ratios and slow release for transparent mastering."
+        },
+        {
+            "id": "glue-compressor",
+            "name": "Glue Compressor",
+            "category": "dynamics",
+            "device": "Glue Compressor",
+            "recommended_settings": {
+                "attack_ms": 3.0,
+                "release_mode": "auto",
+                "ratio": 2.0,
+                "make_up_db": 1.5
+            },
+            "notes": "Bus compression to unify the mix; keep gain reduction below 2 dB for mastering contexts."
+        },
+        {
+            "id": "saturator",
+            "name": "Saturator",
+            "category": "color",
+            "device": "Saturator",
+            "recommended_settings": {
+                "mode": "analog_clip",
+                "drive_db": 1.5,
+                "dry_wet": 15
+            },
+            "notes": "Add subtle harmonic excitement after compression; keep dry/wet under 20% to avoid audible distortion."
+        },
+        {
+            "id": "utility",
+            "name": "Utility",
+            "category": "utility",
+            "device": "Utility",
+            "recommended_settings": {
+                "stereo_width_percent": 115,
+                "mono_below_hz": 120,
+                "gain_db": 0.0
+            },
+            "notes": "Final gain staging and stereo image control; collapse lows to mono for tighter bass."
+        },
+        {
+            "id": "limiter",
+            "name": "Limiter",
+            "category": "limiter",
+            "device": "Limiter",
+            "recommended_settings": {
+                "ceiling_db": -0.8,
+                "lookahead_ms": 1.0,
+                "release_ms": 100
+            },
+            "notes": "Brick-wall limiting at the end of the chain; adapt ceiling per delivery platform."
+        }
+    ],
+    "effects": [
+        {
+            "id": "club_master_rack",
+            "name": "Club Master Rack",
+            "modules": ["eq-eight", "multiband-dynamics", "glue-compressor", "saturator", "utility", "limiter"],
+            "macros": ["LowCut", "Dynamics", "Glue", "Exciter", "Stereo", "Ceiling"],
+            "description": "Tight low end with wide stereo image for high-energy electronic tracks."
+        },
+        {
+            "id": "rock_transient_rack",
+            "name": "Rock Transient Rack",
+            "modules": ["eq-eight", "glue-compressor", "saturator", "utility", "limiter"],
+            "macros": ["LowCut", "Glue", "Drive", "Presence", "Ceiling"],
+            "description": "Preserves guitar bite and drum transients while taming harshness."
+        },
+        {
+            "id": "hiphop_warmth_rack",
+            "name": "Hip-Hop Warmth Rack",
+            "modules": ["eq-eight", "multiband-dynamics", "saturator", "utility", "limiter"],
+            "macros": ["LowCut", "Dynamics", "Exciter", "Width", "Ceiling"],
+            "description": "Emphasizes low-end weight and smooth vocal presence for modern hip-hop."
+        }
+    ],
+    "presets": [
+        {
+            "id": "preset_club_master",
+            "name": "Club Master - Wide Glue",
+            "target_chain_id": "club_master_v1",
+            "macros": {
+                "LowCut": 30,
+                "Dynamics": 55,
+                "Glue": 45,
+                "Exciter": 35,
+                "Stereo": 120,
+                "Ceiling": -0.8
+            },
+            "lufs_target": -8.5,
+            "true_peak_db": -0.8,
+            "crest_factor": 8.5
+        },
+        {
+            "id": "preset_rock_master",
+            "name": "Rock Master - Punchy",
+            "target_chain_id": "rock_master_v1",
+            "macros": {
+                "LowCut": 40,
+                "Glue": 35,
+                "Drive": 20,
+                "Presence": 15,
+                "Ceiling": -0.9
+            },
+            "lufs_target": -10.5,
+            "true_peak_db": -0.9,
+            "crest_factor": 10.5
+        },
+        {
+            "id": "preset_hiphop_master",
+            "name": "Hip-Hop Master - Warm",
+            "target_chain_id": "hiphop_master_v1",
+            "macros": {
+                "LowCut": 28,
+                "Dynamics": 45,
+                "Exciter": 25,
+                "Width": 110,
+                "Ceiling": -1.0
+            },
+            "lufs_target": -9.5,
+            "true_peak_db": -1.0,
+            "crest_factor": 9.0
+        }
+    ],
+    "macros": [
+        {"id": "LowCut", "parameter": "Highpass Frequency", "range": [20, 120], "unit": "Hz", "description": "Controls the low-frequency cleanup pre-compression."},
+        {"id": "Dynamics", "parameter": "Multiband Drive", "range": [0, 100], "unit": "%", "description": "Balances the amount of dynamic control across bands."},
+        {"id": "Glue", "parameter": "Bus Compression Amount", "range": [0, 100], "unit": "%", "description": "Sets the bus compression intensity for cohesion."},
+        {"id": "Exciter", "parameter": "Saturation Dry/Wet", "range": [0, 50], "unit": "%", "description": "Adds harmonic excitement after compression."},
+        {"id": "Stereo", "parameter": "Stereo Width", "range": [80, 140], "unit": "%", "description": "Spreads high-frequency content for wider imaging."},
+        {"id": "Ceiling", "parameter": "Limiter Ceiling", "range": [-2.0, -0.3], "unit": "dB", "description": "Adjusts brick-wall limiting for delivery format."},
+        {"id": "Drive", "parameter": "Saturator Drive", "range": [0, 30], "unit": "dB", "description": "Controls analog warmth for rock masters."},
+        {"id": "Presence", "parameter": "High Shelf Gain", "range": [-3, 3], "unit": "dB", "description": "Balances high-frequency sheen for guitars and vocals."},
+        {"id": "Width", "parameter": "Utility Stereo Width", "range": [90, 130], "unit": "%", "description": "Stereo widening tuned for hip-hop detail."}
+    ],
+    "signal_paths": [
+        {
+            "id": "neutral_master_v1",
+            "name": "Neutral Master V1",
+            "stages": [
+                {"order": 1, "module_id": "eq-eight", "purpose": "Surgical high-pass and tonal balancing"},
+                {"order": 2, "module_id": "multiband-dynamics", "purpose": "Transparent multiband control"},
+                {"order": 3, "module_id": "glue-compressor", "purpose": "Gentle bus compression"},
+                {"order": 4, "module_id": "utility", "purpose": "Stereo trim and mono bass"},
+                {"order": 5, "module_id": "limiter", "purpose": "Delivery-ready limiting"}
+            ],
+            "metering_targets": {"lufs_integrated": -11.5, "true_peak_db": -1.0, "crest_factor": 11.0},
+            "notes": "Starting point for acoustic or balanced material." ,
+            "macro_defaults": {"LowCut": 32, "Dynamics": 45, "Glue": 25, "Stereo": 110, "Ceiling": -1.0}
+        },
+        {
+            "id": "club_master_v1",
+            "name": "Club Master V1",
+            "stages": [
+                {"order": 1, "module_id": "eq-eight", "purpose": "Tighten sub cleanup with 30 Hz high-pass"},
+                {"order": 2, "module_id": "multiband-dynamics", "purpose": "Control subs and highs separately"},
+                {"order": 3, "module_id": "glue-compressor", "purpose": "Glue drums and bass"},
+                {"order": 4, "module_id": "saturator", "purpose": "Add harmonic drive"},
+                {"order": 5, "module_id": "utility", "purpose": "Stereo expansion and mono bass"},
+                {"order": 6, "module_id": "limiter", "purpose": "Ceiling at -0.8 dB"}
+            ],
+            "metering_targets": {"lufs_integrated": -8.5, "true_peak_db": -0.8, "crest_factor": 8.5},
+            "notes": "Designed for club-ready electronic masters with punchy low end.",
+            "macro_defaults": {"LowCut": 28, "Dynamics": 55, "Glue": 45, "Exciter": 35, "Stereo": 125, "Ceiling": -0.8}
+        },
+        {
+            "id": "rock_master_v1",
+            "name": "Rock Master V1",
+            "stages": [
+                {"order": 1, "module_id": "eq-eight", "purpose": "High-pass at 40 Hz and notch resonances"},
+                {"order": 2, "module_id": "glue-compressor", "purpose": "Medium attack, auto release for punch"},
+                {"order": 3, "module_id": "saturator", "purpose": "Parallel drive for harmonic richness"},
+                {"order": 4, "module_id": "utility", "purpose": "Gain staging and subtle widening"},
+                {"order": 5, "module_id": "limiter", "purpose": "Safe peak control"}
+            ],
+            "metering_targets": {"lufs_integrated": -10.5, "true_peak_db": -0.9, "crest_factor": 10.0},
+            "notes": "Maintains drum transients while smoothing guitar harshness.",
+            "macro_defaults": {"LowCut": 38, "Glue": 35, "Drive": 22, "Presence": 12, "Ceiling": -0.9}
+        },
+        {
+            "id": "hiphop_master_v1",
+            "name": "Hip-Hop Master V1",
+            "stages": [
+                {"order": 1, "module_id": "eq-eight", "purpose": "Gentle low cut and vocal presence lift"},
+                {"order": 2, "module_id": "multiband-dynamics", "purpose": "Control subs and de-ess highs"},
+                {"order": 3, "module_id": "saturator", "purpose": "Tube mode for low-mid warmth"},
+                {"order": 4, "module_id": "utility", "purpose": "Stereo width shaping"},
+                {"order": 5, "module_id": "limiter", "purpose": "Catch peaks while keeping punch"}
+            ],
+            "metering_targets": {"lufs_integrated": -9.5, "true_peak_db": -1.0, "crest_factor": 9.5},
+            "notes": "Balances 808 weight with vocal clarity and translates to streaming platforms.",
+            "macro_defaults": {"LowCut": 28, "Dynamics": 45, "Exciter": 25, "Width": 112, "Ceiling": -1.0}
+        },
+        {
+            "id": "warmth_bus_v1",
+            "name": "Warmth Bus V1",
+            "stages": [
+                {"order": 1, "module_id": "eq-eight", "purpose": "Gentle tilt EQ"},
+                {"order": 2, "module_id": "saturator", "purpose": "Add harmonics with mild drive"},
+                {"order": 3, "module_id": "utility", "purpose": "Trim gain and ensure mono bass"},
+                {"order": 4, "module_id": "limiter", "purpose": "Catch stray peaks"}
+            ],
+            "metering_targets": {"lufs_integrated": -12.0, "true_peak_db": -1.2, "crest_factor": 11.5},
+            "notes": "Use as a neutral fallback or for stem balancing before the main limiter.",
+            "macro_defaults": {"LowCut": 35, "Exciter": 20, "Stereo": 105, "Ceiling": -1.2}
+        }
+    ],
+    "chains_by_genre": {
+        "electronic": ["club_master_v1", "neutral_master_v1"],
+        "rock": ["rock_master_v1", "neutral_master_v1"],
+        "hiphop": ["hiphop_master_v1", "warmth_bus_v1"]
+    },
+    "default_chains": ["neutral_master_v1", "warmth_bus_v1"]
+}
