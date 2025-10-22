@@ -1,0 +1,243 @@
+{
+  "proyecto": {
+    "nombre": "Dashboard BMC",
+    "tipo": "Tablero Financiero",
+    "version": "1.0.0",
+    "fecha_creacion": "2025-09-25",
+    "descripcion": "Sistema integral de visualización y análisis de datos financieros"
+  },
+  "arquitectura": {
+    "frontend": {
+      "tecnologia_principal": "React",
+      "librerias": ["D3.js", "Chart.js", "Material-UI", "Redux"],
+      "caracteristicas": [
+        "Componentes reutilizables",
+        "Visualizaciones interactivas",
+        "Responsive design",
+        "Real-time updates"
+      ]
+    },
+    "backend": {
+      "tecnologia_principal": "Node.js",
+      "framework": "Express",
+      "base_datos": "PostgreSQL",
+      "caracteristicas": [
+        "API RESTful",
+        "Autenticación JWT",
+        "WebSockets para real-time",
+        "Microservicios"
+      ]
+    },
+    "infraestructura": {
+      "contenedores": "Docker",
+      "orquestacion": "Kubernetes",
+      "cloud": "AWS/GCP/Azure",
+      "ci_cd": "GitHub Actions"
+    }
+  },
+  "funcionalidades": {
+    "core": [
+      {
+        "nombre": "Dashboard Principal",
+        "descripcion": "Vista general de métricas financieras clave",
+        "prioridad": "alta",
+        "complejidad": "media"
+      },
+      {
+        "nombre": "Análisis de Tendencias",
+        "descripcion": "Visualización de tendencias históricas y proyecciones",
+        "prioridad": "alta",
+        "complejidad": "alta"
+      },
+      {
+        "nombre": "Reportes Personalizados",
+        "descripcion": "Generación de reportes configurables",
+        "prioridad": "media",
+        "complejidad": "media"
+      },
+      {
+        "nombre": "Alertas Inteligentes",
+        "descripcion": "Sistema de notificaciones basado en umbrales",
+        "prioridad": "media",
+        "complejidad": "alta"
+      }
+    ],
+    "avanzadas": [
+      {
+        "nombre": "Integración GPT",
+        "descripcion": "Asistente IA para análisis y consultas",
+        "prioridad": "alta",
+        "complejidad": "muy alta"
+      },
+      {
+        "nombre": "Análisis Predictivo",
+        "descripcion": "Modelos de ML para predicciones financieras",
+        "prioridad": "media",
+        "complejidad": "muy alta"
+      },
+      {
+        "nombre": "API Externa",
+        "descripcion": "Integración con sistemas externos",
+        "prioridad": "baja",
+        "complejidad": "media"
+      }
+    ]
+  },
+  "metricas": {
+    "rendimiento": {
+      "tiempo_respuesta_objetivo": "< 2 segundos",
+      "disponibilidad_objetivo": "99.9%",
+      "usuarios_concurrentes": 1000,
+      "transacciones_por_segundo": 100
+    },
+    "calidad": {
+      "cobertura_tests": "80%",
+      "deuda_tecnica_maxima": "5%",
+      "bugs_criticos_tolerados": 0,
+      "satisfaccion_usuario_minima": "90%"
+    }
+  },
+  "fases_desarrollo": [
+    {
+      "fase": 1,
+      "nombre": "Diseño y Prototipado",
+      "duracion_semanas": 4,
+      "entregables": [
+        "Diseño de arquitectura",
+        "Prototipo UI/UX",
+        "Especificación de APIs",
+        "Modelo de datos"
+      ]
+    },
+    {
+      "fase": 2,
+      "nombre": "Desarrollo Core",
+      "duracion_semanas": 12,
+      "entregables": [
+        "Backend funcional",
+        "Frontend básico",
+        "Integración de datos",
+        "Suite de tests"
+      ]
+    },
+    {
+      "fase": 3,
+      "nombre": "Funcionalidades Avanzadas",
+      "duracion_semanas": 8,
+      "entregables": [
+        "Análisis avanzado",
+        "Integración GPT",
+        "Sistema de alertas",
+        "Optimizaciones"
+      ]
+    },
+    {
+      "fase": 4,
+      "nombre": "Despliegue y Estabilización",
+      "duracion_semanas": 4,
+      "entregables": [
+        "Infraestructura productiva",
+        "Documentación completa",
+        "Capacitación usuarios",
+        "Plan de mantenimiento"
+      ]
+    }
+  ],
+  "equipo_recomendado": {
+    "roles": [
+      {
+        "rol": "Tech Lead",
+        "cantidad": 1,
+        "responsabilidades": ["Arquitectura", "Decisiones técnicas", "Mentoring"]
+      },
+      {
+        "rol": "Backend Developer",
+        "cantidad": 2,
+        "responsabilidades": ["APIs", "Base de datos", "Integraciones"]
+      },
+      {
+        "rol": "Frontend Developer",
+        "cantidad": 2,
+        "responsabilidades": ["UI/UX", "Visualizaciones", "Interactividad"]
+      },
+      {
+        "rol": "DevOps Engineer",
+        "cantidad": 1,
+        "responsabilidades": ["Infraestructura", "CI/CD", "Monitoreo"]
+      },
+      {
+        "rol": "QA Engineer",
+        "cantidad": 1,
+        "responsabilidades": ["Testing", "Automatización", "Calidad"]
+      }
+    ],
+    "total_personas": 7
+  },
+  "presupuesto_estimado": {
+    "desarrollo": {
+      "horas_totales": 5600,
+      "costo_hora_promedio": 75,
+      "total_desarrollo": 420000
+    },
+    "infraestructura": {
+      "mensual": 2000,
+      "anual": 24000
+    },
+    "licencias": {
+      "anual": 5000
+    },
+    "total_primer_año": 449000
+  },
+  "riesgos": [
+    {
+      "tipo": "Técnico",
+      "descripcion": "Complejidad de integración con sistemas legacy",
+      "probabilidad": "media",
+      "impacto": "alto",
+      "mitigacion": "POC temprano de integraciones críticas"
+    },
+    {
+      "tipo": "Negocio",
+      "descripcion": "Cambios en requerimientos durante desarrollo",
+      "probabilidad": "alta",
+      "impacto": "medio",
+      "mitigacion": "Metodología ágil con sprints cortos"
+    },
+    {
+      "tipo": "Seguridad",
+      "descripcion": "Manejo de datos financieros sensibles",
+      "probabilidad": "baja",
+      "impacto": "muy alto",
+      "mitigacion": "Auditorías de seguridad regulares"
+    }
+  ],
+  "integracion_gpt": {
+    "casos_uso": [
+      "Análisis de datos en lenguaje natural",
+      "Generación automática de insights",
+      "Asistente para consultas complejas",
+      "Explicación de métricas y tendencias",
+      "Recomendaciones basadas en datos"
+    ],
+    "configuracion": {
+      "modelo": "GPT-4",
+      "tokens_maximos": 4000,
+      "temperatura": 0.7,
+      "contexto_financiero": true
+    },
+    "prompts_optimizados": [
+      {
+        "tipo": "analisis_metricas",
+        "template": "Analiza las siguientes métricas financieras y proporciona insights clave: {metricas}"
+      },
+      {
+        "tipo": "explicacion_tendencia",
+        "template": "Explica la tendencia observada en {metrica} durante el período {periodo}"
+      },
+      {
+        "tipo": "recomendaciones",
+        "template": "Basándote en los datos actuales, ¿qué acciones recomiendas para mejorar {objetivo}?"
+      }
+    ]
+  }
+}
