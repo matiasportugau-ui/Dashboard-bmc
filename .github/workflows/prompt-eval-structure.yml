@@ -1,0 +1,74 @@
+name: Prompt Eval Structure
+
+on:
+  pull_request:
+    paths:
+      - 'docs/eval/**'
+      - 'docs/templates/**'
+      - 'MasterPrompts/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml jsonschema
+          npm install -g yaml-lint
+
+      - name: Validate JSONL (enhanced)
+        run: |
+          set -e
+          if compgen -G "docs/eval/datasets/**/*.jsonl" > /dev/null; then
+            for f in $(find docs/eval/datasets -type f -name "*.jsonl"); do
+              echo "Validating $f"
+              awk 'BEGIN{ok=1; line=0} {line++; json=$0; cmd="python3 -c \"import json; json.loads('\''" json "'\'')\""; if (system(cmd)!=0) {print "Error in line " line ": " json; ok=0}} END{exit ok?0:1}' "$f"
+            done
+          fi
+
+      - name: Validate YAML rules (enhanced)
+        run: |
+          set -e
+          if compgen -G "docs/eval/rules/**/*.yaml" > /dev/null; then
+            for f in $(find docs/eval/rules -type f -name "*.yaml"); do
+              echo "Validating $f"
+              python3 -c "import yaml; yaml.safe_load(open('$f'))"
+            done
+          fi
+
+      - name: Validate prompt structure
+        run: |
+          set -e
+          if compgen -G "MasterPrompts/**/*.md" > /dev/null; then
+            for f in $(find MasterPrompts -type f -name "*.md"); do
+              echo "Checking prompt structure in $f"
+              # Check for required sections
+              if ! grep -q "## Rol\|## Contexto\|## Tarea\|## Condiciones\|## Output\|## Ejemplos" "$f"; then
+                echo "Warning: $f may not follow RCT-COE structure"
+              fi
+            done
+          fi
+
+      - name: Check for broken links
+        run: |
+          if command -v lychee >/dev/null 2>&1; then
+            lychee --verbose --no-progress --require-https --timeout 20 --max-concurrency 8 "**/*.md" || true
+          else
+            echo "Lychee not available, skipping link check"
+          fi

@@ -1,0 +1,33 @@
+name: Docs & Prompts Quality
+
+on:
+  pull_request:
+    branches: [ "**" ]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Markdownlint
+        run: npx --yes markdownlint-cli@0.39.0 .
+
+      - name: Prettier check (Markdown)
+        run: npx --yes prettier@3.3.3 --check "**/*.{md,mdx}"
+
+      - name: Broken links (Lychee)
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --verbose --no-progress --require-https --timeout 20 --max-concurrency 8
+            "**/*.md"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,46 @@
+name: Mejora Continua de Prompts
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+
+jobs:
+  mejorar-prompts:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Check OPENAI_API_KEY is present
+        run: |
+          if [ -z "${{ secrets.OPENAI_API_KEY }}" ]; then
+            echo "Missing required secret: OPENAI_API_KEY" >&2
+            exit 1
+          fi
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Analizar y mejorar prompts
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python3 scripts/prompt_library_watcher_v2_1.py \
+            --paths ./ \
+            --mode API \
+            --orchestrator scripts/PE-QA_Orchestrator_v1_3.prompt.md \
+            --root-master ./ \
+            --organize move
+
+      - name: Commit de los prompts mejorados
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: Mejora automática de prompts por CI/CD"
+          branch: main
