@@ -1,0 +1,33 @@
+# Mockups Low‑Fi — Descripción para Figma
+
+## 1) Home / Mis Asados
+- Header: Logo + avatar
+- Lista (ListItem): título, fecha, BadgeStatus
+- FAB “Crear Asado”
+- Empty state: “Aún no creaste un asado” + CTA
+
+## 2) Crear Asado
+- Form: Título (InputText), Fecha/Hora (picker), MapPicker, GroupSize (Select), Tipo (Select), Preferencias (chips)
+- Footer: Button primary “Guardar”
+- Error: campos requeridos
+
+## 3) Lista Inteligente
+- Toolbar: Perfil (Select: liviano/estándar/alto), Modo (toggle ahorro)
+- Cards por rubro (Card): QuantityRange + est. costo
+- Chip “Editar” por ítem
+- Empty: “Agregá tu primer ítem”
+
+## 4) Asignación
+- Lista de ítems con botón “Lo traigo yo”
+- Chip de balance de costos (guía)
+- Estado en vivo (Avatar + check)
+
+## 5) Resumen & Recordatorios
+- CostSimulator (perCapita/total)
+- Checklist personal
+- Buttons: “Enviar recordatorio”, “Compartir”
+
+## 6) Cierre & Feedback
+- Switches sobrante/faltante (%)
+- Escala satisfacción (1–5)
+- Button primary “Guardar y cerrar”

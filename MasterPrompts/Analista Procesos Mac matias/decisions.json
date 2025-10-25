@@ -1,0 +1,66 @@
+{
+  "decisions": [
+    {
+      "pid": 101,
+      "name": "MyHeavyApp",
+      "issue": "",
+      "suggested_action": "take_sample",
+      "autopilot_decision": "YES",
+      "reason": "CPU sostenido alto",
+      "applied": false,
+      "cmd": null
+    },
+    {
+      "pid": 202,
+      "name": "MemoryLeaker",
+      "issue": "",
+      "suggested_action": "restart_app",
+      "autopilot_decision": "YES",
+      "reason": "Crecimiento de memoria sostenido; mitiga leak",
+      "applied": false,
+      "cmd": null
+    },
+    {
+      "pid": 303,
+      "name": "mds_stores",
+      "issue": "",
+      "suggested_action": "defer_indexing",
+      "autopilot_decision": "YES",
+      "reason": "Indexación afecta idle; seguro y reversible",
+      "applied": false,
+      "cmd": null
+    },
+    {
+      "pid": 404,
+      "name": "nsurlsessiond",
+      "issue": "",
+      "suggested_action": "pause_sync",
+      "autopilot_decision": "YES",
+      "reason": "Tráfico saliente en background; pausar cola",
+      "applied": false,
+      "cmd": null
+    },
+    {
+      "pid": 505,
+      "name": "ThirdPartyAgent",
+      "issue": "",
+      "suggested_action": "disable_login_item_third_party",
+      "autopilot_decision": "YES",
+      "reason": "Persistencia no Apple; deshabilitar con rollback",
+      "applied": false,
+      "cmd": null
+    },
+    {
+      "pid": 606,
+      "name": "WindowServer",
+      "issue": "",
+      "suggested_action": "reduce_transparency_and_desktops",
+      "autopilot_decision": "YES",
+      "reason": "Carga UI alta sin cambios de interacción",
+      "applied": false,
+      "cmd": null
+    }
+  ],
+  "apply": false,
+  "ts": 1758868432
+}

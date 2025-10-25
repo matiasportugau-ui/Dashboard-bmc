@@ -1,0 +1,25 @@
+# UI Componentes — MVP (Design Tokens + Estados)
+
+## Tokens
+- Color primario: #2E7D32 (verde parrilla); secundario: #F57C00 (naranja asado)
+- Tipografía: Inter/Roboto 14–18; títulos 20–24
+- Espaciado: 4/8/12/16/24
+- Elevación: 0/2/4
+
+## Componentes
+- Button {variant: primary/secondary/ghost, loading}
+- InputText {mask: phone/date, error}
+- Select {options, search}
+- Chip {selected, removable}
+- Card {header, content, footer}
+- ListItem {title, subtitle, rightAction}
+- Avatar {image, initials}
+- BadgeStatus {planificando/en_curso/cerrado}
+- MapPicker {lat,lng,address}
+- QuantityRange {min,max,unit}
+- CostSimulator {perCapita,total}
+
+## Estados
+- Loading: skeletons en listas y cards
+- Empty: mensajes con CTA
+- Error: retry + soporte

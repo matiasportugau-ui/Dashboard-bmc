@@ -1,0 +1,9 @@
+# Checklist‑QA para Prompts
+
+- [ ] Cumple RCT‑COE.
+- [ ] Métrica de éxito definida.
+- [ ] Formato de salida explícito.
+- [ ] Ejemplos + corner cases.
+- [ ] Riesgos y límites claros.
+- [ ] Tono/idioma acordes.
+- [ ] Versionado y registro.

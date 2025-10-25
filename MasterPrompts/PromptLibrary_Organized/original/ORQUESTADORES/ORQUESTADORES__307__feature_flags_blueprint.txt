@@ -1,0 +1,18 @@
+# Feature Flags — Blueprint
+
+## Tipos
+- release: habilita deshabilita una feature global
+- experiment: variantes A/B
+- ops: límites/quotas, silencios, degradación
+
+## Estructura (ejemplo)
+flag_id: "ff.listas_historico.v1"
+type: "release"
+owners: ["producto","tech"]
+segments: { country:["AR","UY"], minVersion: "1.0.0" }
+metrics: ["retencion_W1","tiempo_coordinacion","crash_free"]
+
+## Gobernanza
+- Registro en repos docs/flags.md
+- Expiración/limpieza por release +2
+- Auditoría de cambios (commit/PR)

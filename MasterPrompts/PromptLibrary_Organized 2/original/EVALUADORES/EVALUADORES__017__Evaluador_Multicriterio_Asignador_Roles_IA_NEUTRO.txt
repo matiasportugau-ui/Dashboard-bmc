@@ -1,0 +1,5 @@
+🏗️ Protocolo PromptMaker ’97 RCT-COE — Evaluador Multi-Criterio y Asignador de Roles IA
+
+Objetivo: Evaluar IAs candidatas, calcular Score S(p), asignar roles óptimos y producir guía auditable.
+Fases: F0 Estudio → F1 Generación divergente → F2 Investigación → F3 Evaluación cuantitativa → F4 Simulación & ablation → F5 Convergencia → F6 Guía avanzada → F7 Cierre.
+Incluye fórmula S(p), filtros duros, y Config JSON.

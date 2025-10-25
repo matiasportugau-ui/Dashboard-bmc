@@ -1,0 +1,36 @@
+# SORA — PROMO E‑COMMERCE (10 s, 9:16, 30 fps) · Beneficios + Web Real en Pantalla
+
+**Instrucción:** Generá un único video **vertical** de **10 segundos** (1080×1920, **30 fps**), ritmo ágil (~120 BPM).
+**Usá EXACTAMENTE los archivos subidos** como contenido de pantalla cuando se indiquen. **Sin logos inventados**, **sin marcas de agua**, **sin rostros** (solo manos). Texto **grande**, **alto contraste**, centrado dentro de zona segura.
+
+**Look & Feel**
+- Estilo: industrial limpio, realista.
+- Luz: daylight suave; texturas nítidas de materiales.
+- Cámara: gimbal suave; cortes limpios.
+- Tipografía: bold, legible en móvil.
+
+**Escena (4 beats × 2.5 s) — con assets**
+[0–2.5s] HOOK — Teléfono mostrando **la web real**
+- Visual: plano corto de mano sosteniendo un smartphone (sin rostro).
+- **En la pantalla del teléfono, usar el asset subido `assets/phone_home.png` (o `assets/phone_scroll.mp4`).**
+- Texto (XL): **“Comprá online — fácil”**
+
+[2.5–5s] PROOF — Macro de encastre real
+- Visual: macro “satisfying” de accesorio encastrando en panel aislante; tornillería visible.
+- (Si subí `assets/macro_accessory.png`, integralo de forma sutil.)
+- Texto: **“Vélo y decidí mejor”**
+
+[5–7.5s] AVAILABILITY — Productos reales en grilla
+- Visual: **mostrar `assets/grid_top_products.png`** (collage 2×2 de productos reales) como flat‑lay ordenado con leve parallax.
+- Texto: **“Stock permanente”**
+
+[7.5–10s] CTA — URL grande
+- Visual: end‑card limpio, alto contraste.
+- Texto (XL, centrado): **“bmcuruguay.com.uy”**
+- Footer pequeño: “Capturas reales del sitio. Imágenes ilustrativas.”
+
+**Restricciones / Negativos**
+- No inventar UI: usar las capturas subidas tal cual para la pantalla del teléfono.
+- No prometer envío gratis ni descarga incluida; copy informativo y veraz.
+- Mantener todo el texto dentro de la zona segura central.
+- Evitar fondos cargados; priorizar nitidez y legibilidad.

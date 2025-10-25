@@ -1,0 +1,33 @@
+# MVP V0 — Sale Asado
+
+## Objetivo
+Facilitar la organización de asados entre amigos con reparto equitativo de compras y claridad en quién aporta qué, reduciendo tiempos de coordinación y desperdicios.
+
+## Funcionalidades MVP
+1) Crear asado: fecha/hora, ubicación, tipo de evento (amigos/familiar), tamaño del grupo.
+2) Lista inteligente: ítems sugeridos (carnes, guarniciones, bebidas, carbón/leña, hielo, utensilios), editable.
+3) Perfiles de consumo: presets ajustables por grupo (carne/bebida/ensaladas/hielo).
+4) Cálculo de cantidades y costo estimado: simulación por persona y total.
+5) Asignación equitativa: selección de quién aporta cada ítem; sugerencias para balancear costos.
+6) Confirmaciones: cada invitado acepta su aporte; estado en vivo.
+7) Checklist y notificaciones: recordatorios previos al evento.
+8) Resumen y cierre: qué se trajo, gasto final, observaciones para próximos asados.
+
+## UX/Flows
+- 3 pasos: Crear → Lista → Asignar/Confirmar.
+- Mapa/ubicación compartida + “plan B por lluvia”.
+- Roles (parrillero/anfitrión/invitado) como etiquetas; no obligatorios.
+- Preferencias: veggie/sin alcohol/niños.
+
+## Datos y Modelo
+- Entidades: Grupo, Evento, Usuario, Aporte, Ítem, PerfilConsumo, Confirmación, Resumen.
+- Métricas iniciales (KPIs): cobertura de aportes ≥95%; desviación de cantidades ≤15%; tiempo de coordinación ≤24 h; NPS ≥40.
+
+## Roadmap
+- Fase 1 (0–3 m): MVP completo, registro manual de pagos, catálogos iniciales por país, push notifications, beta cerrada.
+- Fase 2 (3–6 m): división de gastos con pasarelas locales, listas inteligentes por histórico, gamificación básica, proveedores (opc.).
+
+## Riesgos/Mitigación
+- Estimaciones de consumo inexactas → presets + feedback post‑evento.
+- Complejidad en pagos → posponer a Fase 2 y validar compliance.
+- Notificaciones intrusivas → controles por usuario.

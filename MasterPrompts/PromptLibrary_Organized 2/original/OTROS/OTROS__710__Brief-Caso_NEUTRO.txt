@@ -1,0 +1,22 @@
+# Brief del Caso (completar)
+
+- Objetivo de negocio:
+- Usuarios/segmentos:
+- Restricciones/políticas:
+- Datos/activos disponibles:
+- Métricas de éxito:
+- Casos límite/negativos:
+- Formato de salida requerido:
+
+# === EXPORT_SEAL v1 ===
+# project: PromptPack Neutro
+# prompt_id: NEUTRO::Brief-Caso.md
+# version: v1.0.0
+# file: Brief-Caso_NEUTRO.md
+# lang: md
+# created_at: 2025-09-06T08:41:10Z
+# author: BMC / Usuario
+# origin: chatgpt
+# body_sha256: TBD
+# notes: Versión neutralizada automáticamente
+# === /EXPORT_SEAL ===

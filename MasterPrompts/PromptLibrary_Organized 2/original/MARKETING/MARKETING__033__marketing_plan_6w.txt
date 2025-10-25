@@ -1,0 +1,20 @@
+# Plan de Contenidos — 6 Semanas (AR/UY)
+
+## Canales
+- Instagram/TikTok (videos breves), WhatsApp comunidades, LinkedIn (nota producto), Landing
+- Referral: código por grupo (ej. ASADO2025-<grupo>)
+
+## Piezas por Semana (resumen)
+- W1: Teaser + landing (beta waitlist) / encuesta “¿cuánto comprás para un asado?”
+- W2: Demo MVP (lista inteligente) / carrusel “roles del asado” / CTA beta
+- W3: Video “cómo repartir aportes sin drama” / nota blog (guía consumo)
+- W4: Historias beta testers / tips “plan B por lluvia”
+- W5: Comparativa costos (modo estándar vs ahorro) / invitación a grupos
+- W6: Caso práctico real + llamado a cerrar beta
+
+## KPIs
+- Suscripciones a beta (W1→W6), tasa de conversión landing, % uso referral, coste por lead (si pauta)
+- Retención primer uso→segundo uso
+
+## UTM estándar
+utm_source, utm_medium, utm_campaign=sale_asado_beta, utm_content

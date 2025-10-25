@@ -1,0 +1,46 @@
+{
+  "prompt_id": "RCT-COE_vFinal_v1.2+PEIPM50",
+  "created_at": "2025-09-07T08:44:35Z",
+  "timezone": "America/Montevideo",
+  "config": {
+    "version": "vFinal-PEIPM50",
+    "ciclos_max": 50,
+    "early_stop": false,
+    "recursos": true,
+    "explorar_fuentes": true,
+    "paso_a_paso": false,
+    "timezone": "America/Montevideo",
+    "gates": {
+      "security": 0.995,
+      "robustness": 0.85,
+      "score": 0.8
+    },
+    "au_protocol": {
+      "arbiter": "INT",
+      "scorer": "CRT(0..1)",
+      "veto": "SAFE"
+    }
+  },
+  "weights": {
+    "utility": 0.3,
+    "robustness": 0.2,
+    "efficiency": 0.15,
+    "security": 0.2,
+    "generalization": 0.1,
+    "explainability": 0.05
+  },
+  "start_score": 0.85133,
+  "end_score": 0.872193,
+  "delta_score_total": 0.020863,
+  "gates_ok": true,
+  "au_events": 3,
+  "safe_vetos": 2,
+  "final_metrics": {
+    "utility": 0.82991,
+    "robustness": 0.94,
+    "efficiency": 0.83788,
+    "security": 1.0,
+    "generalization": 0.739925,
+    "explainability": 0.71091
+  }
+}

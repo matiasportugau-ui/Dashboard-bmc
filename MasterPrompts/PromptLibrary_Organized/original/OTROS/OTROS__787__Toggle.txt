@@ -1,0 +1,5 @@
+# Toggle de Funcionalidades
+- Dashboard/registro global: ON/OFF
+- Reporte de recursos: ON/OFF
+- Modo: rápido / paso-a-paso
+- Nivel de recursos: 1 / 2 / 3

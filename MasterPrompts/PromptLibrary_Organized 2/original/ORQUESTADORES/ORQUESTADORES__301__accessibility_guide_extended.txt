@@ -1,0 +1,21 @@
+# Accesibilidad — Guía Ampliada (AA+)
+
+## Pautas
+- Tamaños de fuente escalables (Dynamic Type)
+- Contrastes ≥ 4.5:1 (texto normal)
+- Focus visible en elementos interactivos
+- Targets táctiles ≥ 44px
+- Soporte screen readers: labels/roles/hints
+
+## Checklist
+- [ ] Labels semánticos en botones y links
+- [ ] Orden lógico de navegación
+- [ ] Evitar sólo color para transmitir estado
+- [ ] Alternativas textuales en iconos críticos
+
+## Ejemplo RN
+<Button
+  accessibilityLabel="Guardar asado"
+  accessibilityRole="button"
+  onPress={handleSave}
+/>

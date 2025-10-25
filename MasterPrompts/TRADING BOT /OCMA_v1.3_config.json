@@ -1,0 +1,48 @@
+{
+  "proyecto": "OCMA v1.3 — Mejora Continua",
+  "kpis": [
+    "calidad>=0.90",
+    "robustez>=0.85",
+    "seguridad>=0.995",
+    "cobertura=100%"
+  ],
+  "limites": {
+    "ventana_sin_mejora": 2,
+    "epsilon_mejora": 0.01,
+    "tiempo_max_min": 60
+  },
+  "roles_activos": [
+    "PLN",
+    "RSR",
+    "BLD",
+    "CRT",
+    "INT",
+    "OPS",
+    "SAFE",
+    "AU1",
+    "AU2"
+  ],
+  "politicas": {
+    "preguntar_una_vez_por_datos_faltantes": true,
+    "seguir_con_supuestos_si_no_responden": true,
+    "cumplimiento_seguridad_privacidad": true
+  },
+  "encadenamiento": {
+    "patrones": [
+      "Secuencial-Core",
+      "Paralelo-Exploratorio",
+      "Comité-CRT",
+      "DAG-AU",
+      "Iterativo-PEIPM"
+    ],
+    "reglas_seleccion": "usar disparadores definidos en el prompt"
+  },
+  "registro": {
+    "ruta": "Historial/",
+    "guardar_matriz_evidencia": true,
+    "guardar_changelog": true
+  },
+  "tiempo": {
+    "timezone": "America/Montevideo"
+  }
+}

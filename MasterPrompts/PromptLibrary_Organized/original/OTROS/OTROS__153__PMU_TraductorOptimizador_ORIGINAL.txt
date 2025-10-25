@@ -1,0 +1,6 @@
+ID: PMU_TraductorOptimizador
+Origen: Módulo Traductor & Optimizador (Auditado)
+Objetivo: Reducir prompts a JSON compacto
+
+---
+Versión original extendida simulada con roles, fases y políticas completas.

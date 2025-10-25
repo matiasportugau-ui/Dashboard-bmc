@@ -1,0 +1,17 @@
+# Guía Técnica — Push (FCM) & Maps (Google Maps) en React Native/Expo
+
+## Push (FCM)
+1. Configurar Expo Notifications + FCM server key (secret en CI).
+2. Obtener pushToken por usuario (consent).
+3. Programar notificaciones locales h‑24 y h‑2 del evento.
+4. Deep link a `saleasado://event/<id>`.
+5. Digest nocturno opcional; silencios configurables.
+
+Pruebas: foreground/background, bloqueo de pantalla, múltiples dispositivos.
+
+## Maps (Google)
+1. API key segura (env/CI); MapPicker con autocompletar.
+2. Vista de evento: marcador ubicación + botón abrir en Maps nativo.
+3. Fallback sin ubicación: texto y link compartible.
+
+Límites: cuotas y cuotas gratis; alertas al 80%.

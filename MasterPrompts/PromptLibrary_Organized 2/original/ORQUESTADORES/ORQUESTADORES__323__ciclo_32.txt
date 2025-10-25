@@ -1,0 +1,16 @@
+# CICLO 32 — Auditoría de Datos & Privacidad
+Fecha: 2025-09-02T04:24:20.541303
+
+## Consulta del Orquestador
+Checklist de auditoría de datos/privacidad (recolección, base legal, retención, derechos, seguridad), con matriz de riesgos. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Cumplir con lo esencial sin complicar.
+- AU2: Trazabilidad y respuestas a solicitudes de usuarios.
+
+## Bucle 2×
+- Iteración 1 (Integración): Checklist y matriz de riesgos.
+- Iteración 1 (Crítica): Añadir flujo de solicitudes (DSAR) y tiempos.
+- Iteración 2 (Integración): Incluye SLAs para DSAR y registro de casos.
+
+**Métricas**: calidad=0.91, estabilidad=0.94, cobertura=0.96

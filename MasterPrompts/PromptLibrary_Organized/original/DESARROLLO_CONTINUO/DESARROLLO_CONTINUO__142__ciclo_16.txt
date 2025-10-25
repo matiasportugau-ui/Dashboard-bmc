@@ -1,0 +1,16 @@
+# CICLO 16 — Seguridad & Cumplimiento Técnico
+Fecha: 2025-09-02T04:14:36.260144
+
+## Consulta del Orquestador
+Checklist OWASP Mobile Top 10 adaptado, manejo de secretos, permisos mínimos, y política de versiones/rotación. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Mantener simple sin frenar el release.
+- AU2: Controles esenciales y automatizables.
+
+## Bucle 2×
+- Iteración 1 (Integración): Checklist y medidas base.
+- Iteración 1 (Crítica): Añadir revisión de dependencias y SCA.
+- Iteración 2 (Integración): Integra SCA en CI + política de rotación de claves.
+
+**Métricas**: calidad=0.91, estabilidad=0.94, cobertura=0.96

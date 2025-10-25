@@ -1,0 +1,19 @@
+# Playbook de Comunidad
+
+## Tono & Normas
+- Respetuoso, inclusivo, práctico (no spam, no agresiones)
+- Contenido permitido: tips, recetas, fotos de asados, dudas
+- Moderación ligera y transparente
+
+## Dinámicas
+- “Tip del parrillero” semanal
+- Retos mensuales (“asado ahorro”)
+- Destacados de la comunidad
+
+## Protocolo de Moderación
+- Niveles: advertencia → suspensión temporal → bloqueo
+- Escalamiento a soporte en P0 (conducta agresiva)
+
+## Métricas
+- Posts/semana, participantes activos, reportes, satisfacción
+- Reporte mensual con decisiones y aprendizajes

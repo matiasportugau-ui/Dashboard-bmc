@@ -1,0 +1,16 @@
+# CICLO 15 — Plan de Contenidos & Marketing (6 semanas)
+Fecha: 2025-09-02T04:14:36.260144
+
+## Consulta del Orquestador
+Definir plan de contenidos de 6 semanas para captar beta testers y comunidad, con canales, piezas, calendario y KPIs. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Bajo costo, foco AR/UY, orgánico + referidos.
+- AU2: Mensajes claros y consistentes con branding.
+
+## Bucle 2×
+- Iteración 1 (Integración): Calendario, piezas por semana, KPIs de adquisición.
+- Iteración 1 (Crítica): Añadir UTM, referral simple y pauta mínima.
+- Iteración 2 (Integración): UTM estándar, template de landing y referral por código.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.95

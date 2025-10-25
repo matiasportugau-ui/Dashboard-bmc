@@ -1,0 +1,16 @@
+# CICLO 33 — Guía de Testing de Usabilidad
+Fecha: 2025-09-02T04:24:20.541303
+
+## Consulta del Orquestador
+Definir protocolo de 5–7 tareas por sesión, perfiles de usuarios, guion y plantilla de observación; métricas SUS/NPS y hallazgos. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Sesiones cortas (30–40 min) y remotas cuando sea posible.
+- AU2: Métricas comparables entre versiones.
+
+## Bucle 2×
+- Iteración 1 (Integración): Guion y tareas.
+- Iteración 1 (Crítica): Añadir métricas de tiempo/éxito y capturas.
+- Iteración 2 (Integración): Incluye template de hallazgos priorizados.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.95

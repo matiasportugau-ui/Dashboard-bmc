@@ -1,0 +1,16 @@
+# CICLO 26 — Métricas Técnicas: Crash & Performance
+Fecha: 2025-09-02T04:20:08.032516
+
+## Consulta del Orquestador
+Definir KPIs técnicos (crash-free rate, TTI, TTFB, ANR), umbrales, eventos y tableros; plan de captura/logs y alertas. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Alarmas solo para lo crítico.
+- AU2: Métricas estables y comparables por versión/cohorte.
+
+## Bucle 2×
+- Iteración 1 (Integración): Lista de KPIs y eventos.
+- Iteración 1 (Crítica): Añadir segmentación por dispositivo/OS/red y por build.
+- Iteración 2 (Integración): Incluye panel comparativo por release, alertas con umbrales.
+
+**Métricas**: calidad=0.91, estabilidad=0.94, cobertura=0.96

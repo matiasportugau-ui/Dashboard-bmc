@@ -1,0 +1,49 @@
+{
+  "prompts_canon": [
+    {
+      "id": "p_001",
+      "titulo": "Orquestador Multi‑Agente — Sistema",
+      "tipo": [
+        "Sistema / Rol",
+        "Orquestación / Multi‑agente"
+      ],
+      "plantilla": "[SISTEMA — Orquestador]\nActuá como Orquestador Multi-Agente. Coordiná agentes especializados para resolver el objetivo con trazabilidad.",
+      "variables": [],
+      "ejemplo_uso": {
+        "input": "",
+        "output_stub": ""
+      },
+      "seguridad": [
+        "Anonimizar PII",
+        "No revelar razonamiento oculto"
+      ],
+      "evidencias": [
+        "doc_NEUTRO#seg_01"
+      ],
+      "tags": [],
+      "version": "1.0.0"
+    },
+    {
+      "id": "p_002",
+      "titulo": "Plan por Fases",
+      "tipo": [
+        "Razonamiento & Planificación"
+      ],
+      "plantilla": "[Formato por ciclo]\nRESUMEN_i, CAMBIOS_i, METRICAS_i {calidad, cobertura, estabilidad, delta}, RIESGOS_i, PENDIENTES_i.",
+      "variables": [],
+      "ejemplo_uso": {
+        "input": "",
+        "output_stub": ""
+      },
+      "seguridad": [
+        "Anonimizar PII",
+        "No revelar razonamiento oculto"
+      ],
+      "evidencias": [
+        "doc_NEUTRO#seg_02"
+      ],
+      "tags": [],
+      "version": "1.0.0"
+    }
+  ]
+}

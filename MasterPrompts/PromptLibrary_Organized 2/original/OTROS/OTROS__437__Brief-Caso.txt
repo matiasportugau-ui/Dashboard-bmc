@@ -1,0 +1,9 @@
+# Brief del Caso (completar)
+
+- Objetivo de negocio:
+- Usuarios/segmentos:
+- Restricciones/políticas:
+- Datos/activos disponibles:
+- Métricas de éxito:
+- Casos límite/negativos:
+- Formato de salida requerido:

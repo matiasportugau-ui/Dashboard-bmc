@@ -1,0 +1,7 @@
+# Cadena: Paso a Paso (para cambios sensibles)
+
+Fase A — Descubrimiento: Brief + riesgos + criterios de éxito.  
+Fase B — Diseño: Blueprint + ejemplos + corner cases.  
+Fase C — Ensayo: pruebas con datos sintéticos.  
+Fase D — QA: checklist y rúbrica (aprobación/ajustes).  
+Fase E — Entrega: versión, changelog, próximos pasos.

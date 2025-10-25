@@ -1,0 +1,15 @@
+# Soporte & SLAs — MVP
+
+## Canales
+- WhatsApp/Discord beta + email soporte@saleasado.app
+- Horario: 9–18 (GMT‑3)
+
+## SLAs Internos
+- P0 (caída total): respuesta ≤30 min, resolución ≤4 h
+- P1 (feature crítica): respuesta ≤4 h, resolución ≤24 h
+- P2 (menor): respuesta ≤1 día hábil, resolución ≤5 días
+
+## Operación
+- Registro de tickets (plantilla), escalamiento a Tech/Producto
+- Runbook incidentes: detección → comunicación → mitigación → cierre → post‑mortem ligero
+- Métricas: tiempo de respuesta/resolución, N° incidentes por categoría

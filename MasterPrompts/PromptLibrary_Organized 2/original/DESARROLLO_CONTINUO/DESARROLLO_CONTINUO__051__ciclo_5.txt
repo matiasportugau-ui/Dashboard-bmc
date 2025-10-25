@@ -1,0 +1,19 @@
+# CICLO 5 — API Spec (v1) y Wireframes Outline
+Fecha: 2025-09-02T04:05:51.029525
+
+## Consulta del Orquestador
+Producir un primer borrador de especificación de API (endpoints principales) y outline de wireframes para las pantallas MVP. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Priorizar lo mínimo para mover el MVP.
+- AU2: Cuidar consistencia de naming y contratos.
+
+## Bucle 2×
+- Iteración 1 (Integración): Define endpoints REST y estructura básica; describe wireframes clave.
+- Iteración 1 (Crítica): Agregar control de versiones y límites de tasa; estandarizar respuestas; estados de error.
+- Iteración 2 (Integración): Añade versionado /v1, rate limiting lógico y esquema de errores.
+- Iteración 2 (Crítica): Conforme para MVP.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.96
+**Riesgos**: sobre-especificación temprana; ajustes tras pruebas beta.
+**Pendientes**: decidir si GraphQL aporta en Fase 2.

@@ -1,0 +1,16 @@
+# CICLO 20 — Evaluación de Proveedores (Matriz)
+Fecha: 2025-09-02T04:14:36.260144
+
+## Consulta del Orquestador
+Armar matriz comparativa para pasarelas y mapas (costo, cobertura, facilidad), con recomendación inicial por país. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Bajar comisiones.
+- AU2: UX estable y soporte confiable.
+
+## Bucle 2×
+- Iteración 1 (Integración): Matriz base.
+- Iteración 1 (Crítica): Añadir soporte y sandbox.
+- Iteración 2 (Integración): Recomendación inicial por AR/UY.
+
+**Métricas**: calidad=0.88, estabilidad=0.92, cobertura=0.93

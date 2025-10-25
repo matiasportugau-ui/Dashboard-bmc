@@ -1,0 +1,13 @@
+Build Timestamp: 2025-09-25T23:52:09Z
+=== Self-checks ===
+[OK] Prompts ZIP includes maestro/politicas/reanudar
+[OK] Full bundle contains required files
+[OK] config.yaml references reanudar prompt
+[OK] ai-sync includes reanudar
+=== SHA256 ===
+prompts_zip  3fbf22fe54a98e4bc2d68e035a65f4862eccc1c17ea2389314c4e154982cd1f8
+full_bundle  e5aac77146fa0cf57dd97108cf18eb804a398d5e28431180b7c03370f3381080
+=== ZIP Contents (first 20) ===
+PROMPTS: prompts/maestro.md, prompts/politicas.md, prompts/prompt_reanudar_v2.2c.md
+BUNDLE : .cursor/instructions, .cursor/rules, .editorconfig, .env.example, .gitattributes, .gitignore, README.md, agent/main.py, agent/skills/code_analysis.py, agent/skills/refactor_apply.py, agent/skills/reporter.py, agent/skills/test_runner.py, config.yaml, package.json, prompts/maestro.md, prompts/politicas.md, prompts/prompt_reanudar_v2.2c.md, requirements.txt, scripts/ai-sync.js, tests/test_agent_smoke.py
+[INFO 2025-09-25T23:54:16Z] QUICKSTART.md, demo/README.md y reports/ placeholders añadidos. .cursor/instructions actualizado.

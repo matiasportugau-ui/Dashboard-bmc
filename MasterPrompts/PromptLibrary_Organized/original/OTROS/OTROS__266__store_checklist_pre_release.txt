@@ -1,0 +1,10 @@
+# Checklist de Store (Pre-Release)
+
+- Cuenta de desarrollador (Android/iOS) activa.
+- Nombre: "Sale Asado" (disponibilidad verificada).
+- Paquete/BundleId correcto; versionado semántico.
+- Iconos, splash, screenshots (min 5), video opcional.
+- Privacidad: política y uso de datos (analytics opt-in).
+- Enlaces de soporte y web.
+- Notificaciones/pedidos de permisos explicados.
+- Registro de cambios (release notes) claro.

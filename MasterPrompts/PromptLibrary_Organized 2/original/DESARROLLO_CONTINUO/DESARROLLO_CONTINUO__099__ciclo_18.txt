@@ -1,0 +1,16 @@
+# CICLO 18 — Guía de Contribución & Repos
+Fecha: 2025-09-02T04:14:36.260144
+
+## Consulta del Orquestador
+Definir estructura de repos, ramas, convención de commits, PR checklist, y scripts de desarrollo. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Simplicidad y velocidad.
+- AU2: Calidad y revisión mínima.
+
+## Bucle 2×
+- Iteración 1 (Integración): Estructura y normas.
+- Iteración 1 (Crítica): Añadir plantilla de PR y reglas de revisión.
+- Iteración 2 (Integración): Incluye husky/pre-commit para lint/tests.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.95

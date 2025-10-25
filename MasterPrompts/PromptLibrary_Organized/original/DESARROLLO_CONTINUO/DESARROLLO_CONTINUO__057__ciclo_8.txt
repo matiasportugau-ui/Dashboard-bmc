@@ -1,0 +1,19 @@
+# CICLO 8 — Plan de Lanzamiento Beta
+Fecha: 2025-09-02T04:08:54.260925
+
+## Consulta del Orquestador
+Definir plan de beta cerrada (cohorte, objetivos, métricas de éxito, soporte), checklist de store y comunicación. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Beta breve y enfocada para acelerar aprendizajes.
+- AU2: Medición estricta de KPIs y canales de soporte claros.
+
+## Bucle 2×
+- Iteración 1 (Integración): Define cohorte de 50–100 usuarios (AR/UY), KPIs operativos, canal de soporte (WhatsApp/Discord).
+- Iteración 1 (Crítica): Añadir criterios de egreso de beta y plan de contingencia.
+- Iteración 2 (Integración): Incorpora egreso por umbrales KPI y plan de rollback.
+- Iteración 2 (Crítica): Conforme.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.96
+**Riesgos**: sesgo de cohorte; ruido estacional.
+**Pendientes**: plan de incentivos para feedback.

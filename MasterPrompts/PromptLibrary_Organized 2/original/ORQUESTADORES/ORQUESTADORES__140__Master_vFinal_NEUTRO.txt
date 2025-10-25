@@ -1,0 +1,25 @@
+{
+  "id": "Master_vFinal",
+  "objetivo": "Versión neutra, aplicable a cualquier proyecto",
+  "roles": [
+    "PLN",
+    "RSR",
+    "BLD",
+    "CRT",
+    "INT",
+    "OPS",
+    "SAFE",
+    "AU1",
+    "AU2"
+  ],
+  "fases": [
+    "estudio",
+    "planificacion",
+    "bucle_50",
+    "cierre"
+  ],
+  "politicas": {
+    "recursos": "on",
+    "explorar_fuentes": true
+  }
+}

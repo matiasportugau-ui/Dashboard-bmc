@@ -1,0 +1,18 @@
+# Patch Focalizado — Plantilla
+
+## Objetivo
+(qué corrige/mejora y por qué)
+
+## Antes / Después (diff breve)
+```diff
+- código anterior
++ código nuevo
+```
+
+## Riesgos y mitigaciones
+- …
+
+## QA
+- Pruebas funcionales
+- Lighthouse/mediciones
+- Rollback plan

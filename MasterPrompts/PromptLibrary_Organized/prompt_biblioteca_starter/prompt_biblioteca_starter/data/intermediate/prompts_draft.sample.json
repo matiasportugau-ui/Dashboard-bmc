@@ -1,0 +1,98 @@
+{
+  "version": "1.0",
+  "chat_id": "doc_NEUTRO",
+  "prompts_draft": [
+    {
+      "id_sugerido": "p_orquestacion_001",
+      "titulo": "Orquestador Multi-Agente — Sistema",
+      "tipo": [
+        "Sistema / Rol",
+        "Orquestación / Multi‑agente"
+      ],
+      "plantilla": "Actuá como Orquestador Multi‑Agente. Coordiná agentes especializados para resolver el objetivo con trazabilidad.\n[Objetivo]: {{objetivo}}\n[Contexto]: {{contexto}}\n[Roles disponibles]: {{roles}}\n[Plan]: {{plan}}\n[Formato por ciclo]: RESUMEN_i, CAMBIOS_i, METRICAS_i {calidad, cobertura, estabilidad, delta}, RIESGOS_i, PENDIENTES_i.",
+      "variables": [
+        "objetivo",
+        "contexto",
+        "roles",
+        "plan"
+      ],
+      "seguridad": [
+        "Anonimizar PII",
+        "No revelar razonamiento oculto"
+      ],
+      "evidencias": [
+        "doc_NEUTRO#seg_01"
+      ],
+      "ejemplo_uso": {
+        "input": "objetivo=Optimizar onboarding",
+        "output_stub": "Plan F0-F3 con métricas"
+      },
+      "tags": [
+        "orquestacion",
+        "multi-agente"
+      ],
+      "notas": "Extraído del bloque [SISTEMA — Orquestador]"
+    },
+    {
+      "id_sugerido": "p_plan_002",
+      "titulo": "Plan por Fases F0–F3",
+      "tipo": [
+        "Razonamiento & Planificación"
+      ],
+      "plantilla": "F0 Estudio → tarjeta, riesgos, KPIs.\nF1 Plan → roadmap y dependencias; si faltan datos críticos, UNA consulta.\nF2 Ejecución → patrón: {{patron}}.\nF3 Cierre → V_FINAL, matriz de evidencia, changelog, próximos pasos.",
+      "variables": [
+        "patron"
+      ],
+      "seguridad": [
+        "Anonimizar PII"
+      ],
+      "evidencias": [
+        "doc_NEUTRO#seg_02"
+      ],
+      "ejemplo_uso": {
+        "input": "patron=Convergente AU1/AU2",
+        "output_stub": "Roadmap con dependencias"
+      },
+      "tags": [
+        "plan",
+        "fases"
+      ],
+      "notas": "Bloque [Plan]"
+    },
+    {
+      "id_sugerido": "p_eval_003",
+      "titulo": "Checklist de Entrega y Criterios",
+      "tipo": [
+        "Evaluación / Crítica"
+      ],
+      "plantilla": "Entrega: Artefacto final; Tabla de criterios/decisiones; KPIs y cómo se midieron; Checklist QA marcada.\nCriterios de éxito: Claridad, precisión, completitud; evitar contradicciones y huecos.",
+      "variables": [],
+      "seguridad": [
+        "Anonimizar PII"
+      ],
+      "evidencias": [
+        "doc_NEUTRO#seg_03"
+      ],
+      "ejemplo_uso": {
+        "input": "",
+        "output_stub": "Lista de verificación marcada"
+      },
+      "tags": [
+        "qa",
+        "criterios"
+      ],
+      "notas": "Bloques [Entrega] y [Criterios de éxito]"
+    }
+  ],
+  "export_seal": {
+    "project": "Automatismos VMC",
+    "prompt_id": "PROMPTS_DRAFT_SEED",
+    "version": "v1",
+    "file": "data/intermediate/prompts_draft.sample.json",
+    "lang": "json",
+    "created_at": "2025-09-16T00:00:00Z",
+    "author": "@matias.portugau",
+    "origin": "Seed de extracción desde doc_NEUTRO",
+    "body_sha256": "TBD"
+  }
+}

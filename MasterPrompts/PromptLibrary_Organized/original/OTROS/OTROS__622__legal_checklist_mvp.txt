@@ -1,0 +1,7 @@
+# Checklist Legal — MVP
+- [ ] Política de Privacidad publicada en app y web
+- [ ] Términos de Servicio accesibles y aceptados
+- [ ] Consentimiento para analytics (opt-in) y push
+- [ ] Verificación de edad para funcionalidades con alcohol (si aplica)
+- [ ] Exportación/supresión de datos a pedido
+- [ ] Canal de contacto y DPO (si corresponde)

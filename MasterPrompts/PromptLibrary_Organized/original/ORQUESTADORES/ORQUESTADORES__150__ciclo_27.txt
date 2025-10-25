@@ -1,0 +1,16 @@
+# CICLO 27 — Feature Flags & Experimentos
+Fecha: 2025-09-02T04:20:08.032516
+
+## Consulta del Orquestador
+Diseñar blueprint de feature flags (config remota), rollout gradual y experimentación A/B simple. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Desplegar sin miedo; flags por segmento.
+- AU2: Medición limpia y reversión rápida.
+
+## Bucle 2×
+- Iteración 1 (Integración): Esquema de flags y segmentos.
+- Iteración 1 (Crítica): Añadir gobernanza, expiración y auditoría.
+- Iteración 2 (Integración): Incluye convención de nombres, owners y métricas ligadas al flag.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.95

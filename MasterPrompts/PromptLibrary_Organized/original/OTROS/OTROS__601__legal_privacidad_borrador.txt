@@ -1,0 +1,12 @@
+# Política de Privacidad (borrador MVP)
+- Datos: nombre, email, foto, preferencias, telemetría anónima (opt-in).
+- Finalidades: coordinar eventos, asignaciones, recordatorios, mejora del servicio.
+- Derechos: acceso, rectificación, supresión, portabilidad.
+- Retención: mientras exista cuenta o por exigencias legales.
+- Contacto: soporte@saleasado.app
+
+# Términos (borrador MVP)
+- Edad legal para funciones relacionadas con alcohol según país.
+- Uso responsable; prohibiciones (spam, abuso).
+- Limitación de responsabilidad (app coordinadora).
+- Cambios: notificación previa.

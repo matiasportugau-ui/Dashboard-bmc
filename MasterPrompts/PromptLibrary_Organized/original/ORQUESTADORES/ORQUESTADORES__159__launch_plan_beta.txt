@@ -1,0 +1,23 @@
+# Plan de Lanzamiento — Beta Cerrada
+
+## Cohorte
+- 50–100 usuarios (AR/UY), mezcla amigos/familia, 3–5 grupos.
+- Canal de soporte: WhatsApp/Discord dedicado + formulario rápido.
+
+## Objetivos & KPIs
+- Cobertura de aportes ≥95%
+- Desviación de cantidades ≤15%
+- Tiempo de coordinación ≤24 h
+- Satisfacción (encuesta) ≥4/5
+
+## Operación
+- Sprints semanales de ajuste; reportes quincenales.
+- Telemetría activa; export anonimizada bajo solicitud.
+
+## Egreso de Beta
+- Cumplimiento de KPIs por 2 ciclos quincenales.
+- Tasa de fallos P0 en E2E: 0; P1: ≤1 por sprint.
+
+## Contingencia
+- Rollback a build estable anterior (EAS).
+- Feature flags para desactivar módulos conflictivos.

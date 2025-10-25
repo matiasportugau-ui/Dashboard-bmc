@@ -1,0 +1,13 @@
+# Definition of Ready (DoR) & Definition of Done (DoD)
+
+## DoR
+- Historia con valor claro, criterios de aceptación medibles.
+- Dependencias identificadas (APIs, auth, maps).
+- Diseño/Wireframe (si aplica) disponible.
+- Estimación acordada (SP) y riesgos anotados.
+
+## DoD
+- Criterios de aceptación verificados (manual o test).
+- Sin P0/P1 abiertos relacionados.
+- Telemetría de evento instrumentada (si aplica).
+- Documentación mínima (README/Changelog) actualizada.

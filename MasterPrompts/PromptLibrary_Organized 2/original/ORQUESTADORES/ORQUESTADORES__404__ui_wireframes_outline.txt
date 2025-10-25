@@ -1,0 +1,30 @@
+# Wireframes Outline — MVP
+
+1) **Home / Mis Asados**
+   - Lista de eventos (estado: planificando/en curso/cerrado)
+   - CTA “Crear Asado”
+
+2) **Crear Asado**
+   - Título, fecha, hora, ubicación (mapa), tamaño grupo, tipo evento
+   - Preferencias (veggie/niños/sin alcohol), temporada
+   - Guardar → Link de invitación
+
+3) **Lista Inteligente**
+   - Preset por perfil (liviano/estándar/alto) + modo ahorro
+   - Ítems con cantidades (rangos) y costo estimado
+   - Editar / excluir rubros
+
+4) **Asignación**
+   - Seleccionar “lo traigo yo” por ítem
+   - Balance sugerido de costos (chip de guía)
+   - Estado en vivo
+
+5) **Resumen & Recordatorios**
+   - Checklist personal
+   - Botón “Enviar recordatorio”
+   - Push 24 h / 2 h
+
+6) **Cierre & Feedback**
+   - Registrar qué se trajo, sobrantes/faltantes
+   - Encuesta satisfacción
+   - Guardar para recalibración

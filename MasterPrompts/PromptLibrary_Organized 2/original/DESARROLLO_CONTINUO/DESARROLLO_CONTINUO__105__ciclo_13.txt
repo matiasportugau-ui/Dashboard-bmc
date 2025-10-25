@@ -1,0 +1,16 @@
+# CICLO 13 — Métricas de Negocio & Dashboard
+Fecha: 2025-09-02T04:11:43.827299
+
+## Consulta del Orquestador
+Definir KPIs de negocio y esquema de dashboard operativo (fuentes, cálculos, vistas). Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Foco en uso real y retención.
+- AU2: Métricas accionables, no vanity.
+
+## Bucle 2×
+- Iteración 1 (Integración): Lista de KPIs y vistas.
+- Iteración 1 (Crítica): Agregar segmentaciones y metas.
+- Iteración 2 (Integración): Añade cortes por cohorte y grupo.
+
+**Métricas**: calidad=0.89, estabilidad=0.92, cobertura=0.94

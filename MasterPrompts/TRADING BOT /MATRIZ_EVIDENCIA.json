@@ -1,0 +1,27 @@
+{
+  "baseline": "BASELINE_V1_2.json",
+  "ciclos_previos": [
+    "PEC_EVIDENCIA_DAN_C2.json",
+    "PEC_EVIDENCIA_DAN_C3.json",
+    "PEC_EVIDENCIA_DAN_C4.json",
+    "PEC_EVIDENCIA_DAN_C5.json"
+  ],
+  "reportes_previos": [
+    "PEC_REPORTE_ANALITICO_C2.json",
+    "PEC_REPORTE_ANALITICO_C3.json",
+    "PEC_REPORTE_ANALITICO_C4.json",
+    "PEC_REPORTE_ANALITICO_C5.json"
+  ],
+  "baem_previos": [
+    "PEC_BAEM_C2.json",
+    "PEC_BAEM_C3.json",
+    "PEC_BAEM_C4.json",
+    "PEC_BAEM_C5.json"
+  ],
+  "otros": [
+    "SCALING_PROFILE_C4.json",
+    "ROI_CONFIG_C5.json",
+    "ROI_RESULTS_C5.json",
+    "ORQUESTADOR_C3.json"
+  ]
+}

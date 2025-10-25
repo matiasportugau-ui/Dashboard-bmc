@@ -1,0 +1,713 @@
+
+
+# Ciclo_1
+
+# CICLO 1 — Plan V0
+Fecha: 2025-09-02T03:50:08.943126
+
+## Consulta del Orquestador
+Definir Plan V0 para Sale Asado: objetivos, requisitos, supuestos, riesgos, entregables y KPIs; proponer MVP (features y user flows); estimar dependencias.
+
+## Respuestas del Equipo Multidisciplinario (representantes del usuario)
+- Producto/Operaciones (AU1): Foco en rapidez de coordinación, equidad de costos y evitar compras redundantes. Prioriza simplicidad y tiempos de salida.
+- Calidad/Producto (AU2): Foco en exactitud de cálculos, buena UX móvil, mantenibilidad. Propone librería de “perfiles de consumo” ajustables por grupo.
+- Cultura & Tradiciones: Soportar roles (parrillero/anfitrión/invitado), cortes típicos (asado de tira, vacío, chorizos), guarniciones (rusa/mixta), bebidas (vino, cerveza, refrescos), carbón/leña, hielo, utensilios.
+- UX/UI: Flujo en 3 pasos: (1) Crear asado → (2) Armar lista inteligente → (3) Asignar y confirmar aportes. Estado en tiempo real (quién trae qué).
+- Datos/Algoritmos: Módulo de cálculo por “perfil de consumo” y “tipo de evento” (familiar, amigos, mixto) + ajustes por preferencias (veggie, sin alcohol, etc.).
+- Pagos & Fintech: Fase 1: registro manual de pagos. Fase 2: integraciones locales (pasarelas populares) con división de gastos.
+- Legal/Privacidad: Términos claros, manejo de datos personales mínimo, verificación de edad si se incluyen bebidas alcohólicas en flujos de pago.
+- Ingeniería Móvil: React Native/Flutter (evaluación posterior). Backend serverless con autenticación social. Notificaciones push.
+- Seguridad: Mínimos permisos; cifrado en tránsito; logs de actividad.
+- Growth/Comunidad: Enlaces de invitación, grupos recurrentes, badges por cumplimiento (llegar a tiempo, traer asignado).
+
+## Bucle 2× entre modelos
+Modelos: A) gpt‑4o (BLD/INT). B) gpt‑4 (CRT).
+
+### Iteración 1
+- Integración (A): Define MVP con: creación de evento, lista inteligente, asignación equitativa, cálculo de cantidades, checklist, confirmaciones, estado en vivo, cierre con resumen de gastos.
+- Crítica (B): Pedir métricas claras (tasa de cobertura de aportes, % desviación de cantidades, tiempo medio de coordinación). Agregar “modo lluvia” (plan B si llueve) y “ubicación con mapa compartido”.
+
+**Métricas_1**: calidad=0.86, estabilidad=0.90, cobertura=0.93  
+**Riesgos_1**: sobre‑alcance del MVP; dependencia de catálogos regionales.
+
+### Iteración 2
+- Integración (A): Incorpora KPIs y features solicitadas; agrega “roles de consumo” y “simulación de costo/pp” previa.
+- Crítica (B): OK para MVP. Recomienda backlogar integraciones de pago y proveedores.
+
+**Métricas_2**: calidad=0.90, estabilidad=0.92, cobertura=0.97  
+**Riesgos_2**: estimaciones de consumo deben validarse con datos reales; notificaciones push oportunas.
+
+## PENDIENTES
+- Validar catálogo base por país y umbrales de consumo con datos reales.
+- Decidir stack (React Native vs Flutter) y proveedor de auth/push.
+
+# Ciclo_2
+
+# CICLO 2 — Refinamiento de Consumo + User Stories
+Fecha: 2025-09-02T03:52:27.527540
+
+## Consulta del Orquestador
+Refinar el modelo de estimación de consumo por perfil y tipo de evento; definir User Stories priorizadas (lista inicial), con criterios de aceptación y dependencias para arrancar desarrollo del MVP. Ejecutar bucle 2× entre modelos (BLD/INT ↔ CRT).
+
+## Respuestas del Equipo Multidisciplinario (representantes del usuario)
+- AU1 (Operaciones/Negocio): Simplicidad y rapidez. Presets de consumo claros y editables en la app. Enfoque en carne, chorizo, pan, ensaladas básicas, bebidas, carbón y hielo.
+- AU2 (Calidad/Producto): Incluir perfiles (carne-alta, estándar, liviano), preferencias (veggie/sin alcohol/niños), y tipo de evento (amigos/familiar/mixto). Asegurar validación posterior con datos reales.
+
+## Bucle 2× entre modelos
+Modelos: A) gpt-4o (BLD/INT) — integra y sintetiza; B) gpt-4 (CRT) — critica con rúbrica.
+
+### Iteración 1
+- Integración (A): Define presets iniciales por persona (ajustables) y matriz por perfil. Propone backlog con User Stories P0 para MVP.
+- Crítica (B): Pedir límites de rango, señalizar supuestos explícitos, y agregar criterios de aceptación medibles. Solicita contemplar variación estacional (verano/invierno) y “modo ahorro”.
+
+**Métricas_1**: calidad=0.87, estabilidad=0.90, cobertura=0.94
+**Riesgos_1**: sobre-simplificación en bebidas; falta de datos históricos.
+
+### Iteración 2
+- Integración (A): Añade rangos y supuestos, “modo ahorro” y variación estacional, criterios de aceptación cuantificables. Refina dependencias técnicas.
+- Crítica (B): Conforme para MVP. Requiere validación en pruebas beta y telemetría para ajustar coeficientes.
+
+**Métricas_2**: calidad=0.91, estabilidad=0.93, cobertura=0.97
+**Riesgos_2**: Necesidad de ajustar por región y hábitos del grupo; evitar sesgos fijos.
+
+## PENDIENTES
+- Definir esquema de telemetría para aprendizaje de consumos reales (post-evento).
+- Añadir test A/B de presets “estándar” vs “ahorro” con medición de satisfacción.
+
+# Ciclo_3
+
+# CICLO 3 — Arquitectura Técnica MVP
+Fecha: 2025-09-02T04:05:51.029525
+
+## Consulta del Orquestador
+Definir arquitectura técnica para el MVP: elección de stack móvil (React Native vs Flutter), backend, auth, base de datos, push, mapas. Establecer criterios de decisión, spikes técnicos mínimos y plan de despliegue. Ejecutar bucle 2× (BLD/INT ↔ CRT).
+
+## Respuestas del Equipo (representantes del usuario)
+- AU1 (Operaciones/Negocio): Optimizar time-to-market y costo. Prefiere ecosistema con más talento disponible localmente.
+- AU2 (Calidad/Producto): Prioriza consistencia UI y performance; modularidad y mantenibilidad.
+
+## Bucle 2×
+- Iteración 1 (Integración): Propuesta
+  - **App**: React Native (Expo) para rapidez (OTA updates), ecosistema y talento.
+  - **Backend**: Firebase (Auth, Firestore, Cloud Functions), FCM para push.
+  - **Mapas**: Mapbox/Google Maps; ubicación compartida por evento.
+  - **Infra**: Cloud Functions para cálculo de listas y simulaciones.
+  - **CI/CD**: Expo EAS + testing con Jest/React Testing Library.
+  - **Telemetría**: Firebase Analytics + eventos custom.
+- Iteración 1 (Crítica): Pedir criterios objetivos RN vs Flutter; contemplar vendor lock-in; agregar capas de abstracción en servicios críticos; definir límites de costo mensual.
+- Iteración 2 (Integración): Añade matriz de decisión y adapters (services/ports). Define topes: plan gratuito + alerta al 80% de cuota.
+- Iteración 2 (Crítica): Conforme para MVP. Requiere checklist de seguridad mínimo.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.96
+**Riesgos**: lock-in en BaaS; costos variables con crecimiento.
+**Pendientes**: PoC de notificaciones, stress básico en cálculos.
+
+# Ciclo_4
+
+# CICLO 4 — Telemetría, Feedback y Recalibración
+Fecha: 2025-09-02T04:05:51.029525
+
+## Consulta del Orquestador
+Diseñar esquema de telemetría y feedback post-evento para recalibrar el modelo de consumo y mejorar las recomendaciones. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Mantenerlo simple; no friccionar el cierre del evento.
+- AU2: Datos suficientes para ajustar coeficientes sin invadir privacidad.
+
+## Bucle 2×
+- Iteración 1 (Integración): Define eventos Analytics (crear, asignar, confirmar, cerrar), encuesta 3 preguntas (satisfacción, sobrante/faltante, precisión de cálculo).
+- Iteración 1 (Crítica): Añadir bucketización por tamaño de grupo y estación; anonimizar agregación; definir ventana de aprendizaje.
+- Iteración 2 (Integración): Agrega ventanas 30/60/90 días; recalibración semanal con pesos exponenciales.
+- Iteración 2 (Crítica): Conforme. Exigir opt-in de analítica y export JSON bajo solicitud.
+
+**Métricas**: calidad=0.91, estabilidad=0.94, cobertura=0.97
+**Riesgos**: sesgos por grupos atípicos; baja tasa de respuesta.
+**Pendientes**: incentivos suaves para completar feedback.
+
+# Ciclo_5
+
+# CICLO 5 — API Spec (v1) y Wireframes Outline
+Fecha: 2025-09-02T04:05:51.029525
+
+## Consulta del Orquestador
+Producir un primer borrador de especificación de API (endpoints principales) y outline de wireframes para las pantallas MVP. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Priorizar lo mínimo para mover el MVP.
+- AU2: Cuidar consistencia de naming y contratos.
+
+## Bucle 2×
+- Iteración 1 (Integración): Define endpoints REST y estructura básica; describe wireframes clave.
+- Iteración 1 (Crítica): Agregar control de versiones y límites de tasa; estandarizar respuestas; estados de error.
+- Iteración 2 (Integración): Añade versionado /v1, rate limiting lógico y esquema de errores.
+- Iteración 2 (Crítica): Conforme para MVP.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.96
+**Riesgos**: sobre-especificación temprana; ajustes tras pruebas beta.
+**Pendientes**: decidir si GraphQL aporta en Fase 2.
+
+# Ciclo_6
+
+# CICLO 6 — Diseño de Dominio & Esquema de Datos
+Fecha: 2025-09-02T04:08:54.260925
+
+## Consulta del Orquestador
+Diseñar el modelo de datos para el MVP (entidades, relaciones, índices) y un primer borrador de reglas de seguridad para Firestore. Ejecutar bucle 2× (BLD/INT ↔ CRT).
+
+## Respuestas del Equipo (representantes del usuario)
+- AU1: Mantener costos bajos, lecturas/escrituras eficientes.
+- AU2: Integridad, consistencia y mínima duplicación controlada para consultas rápidas (lista, asignaciones, estado en vivo).
+
+## Bucle 2×
+- Iteración 1 (Integración): Define colecciones, subcolecciones y campos clave; índices compuestos para consultas habituales (por userId y estado).
+- Iteración 1 (Crítica): Exigir trazabilidad de cambios (audit), timestamps, y validaciones de ownership; minimizar fan-out excesivo.
+- Iteración 2 (Integración): Añade 'audit' básico, timestamps server-side, ownership checks en reglas; patrón de agregados para resúmenes.
+- Iteración 2 (Crítica): Conforme para MVP; recomendar pruebas de carga básicas.
+
+**Métricas**: calidad=0.91, estabilidad=0.94, cobertura=0.97
+**Riesgos**: hot documents en eventos grandes; índices desactualizados.
+**Pendientes**: stress test con >100 participantes.
+
+# Ciclo_7
+
+# CICLO 7 — QA & DoR/DoD
+Fecha: 2025-09-02T04:08:54.260925
+
+## Consulta del Orquestador
+Definir Plan de QA (smoke, funcionales, E2E básicos), criterios Definition of Ready/Done y set inicial de casos de prueba priorizados para el MVP. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Enfocarse en lo crítico para release rápido.
+- AU2: Criterios medibles y automatizables (cuando aplique).
+
+## Bucle 2×
+- Iteración 1 (Integración): Plan QA minimalista pero suficiente para MVP.
+- Iteración 1 (Crítica): Añadir cobertura de errores de red y reintentos; métricas de calidad.
+- Iteración 2 (Integración): Agrega casos offline/retry, ratios de pase mínimos y severidades.
+- Iteración 2 (Crítica): Conforme.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.96
+**Riesgos**: sub-cobertura de E2E; se mitigará en beta cerrada.
+**Pendientes**: integrar Detox en Fase 2.
+
+# Ciclo_8
+
+# CICLO 8 — Plan de Lanzamiento Beta
+Fecha: 2025-09-02T04:08:54.260925
+
+## Consulta del Orquestador
+Definir plan de beta cerrada (cohorte, objetivos, métricas de éxito, soporte), checklist de store y comunicación. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Beta breve y enfocada para acelerar aprendizajes.
+- AU2: Medición estricta de KPIs y canales de soporte claros.
+
+## Bucle 2×
+- Iteración 1 (Integración): Define cohorte de 50–100 usuarios (AR/UY), KPIs operativos, canal de soporte (WhatsApp/Discord).
+- Iteración 1 (Crítica): Añadir criterios de egreso de beta y plan de contingencia.
+- Iteración 2 (Integración): Incorpora egreso por umbrales KPI y plan de rollback.
+- Iteración 2 (Crítica): Conforme.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.96
+**Riesgos**: sesgo de cohorte; ruido estacional.
+**Pendientes**: plan de incentivos para feedback.
+
+# Ciclo_9
+
+# CICLO 9 — Diseño UI: Componentes & Estados
+Fecha: 2025-09-02T04:11:43.827299
+
+## Consulta del Orquestador
+Definir librería de componentes (naming, props, estados), principios de accesibilidad y guía visual mínima (colores, tipografía, espaciado). Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Priorizar reuso y rapidez; dark mode no prioritario en MVP.
+- AU2: Accesibilidad básica AA; estados claros (loading/empty/error).
+
+## Bucle 2×
+- Iteración 1 (Integración): Set de componentes base, tokens de diseño y estados vacíos.
+- Iteración 1 (Crítica): Añadir guidelines de contraste, tamaños táctiles y formatos de máscara para inputs.
+- Iteración 2 (Integración): Incorpora check de contraste (≥4.5:1), áreas táctiles ≥44px, máscaras (teléfono/fecha).
+
+**Métricas**: calidad=0.91, estabilidad=0.94, cobertura=0.96
+**Riesgos**: dispersión visual sin design tokens; mitigado con guía.
+**Pendientes**: iconografía final.
+
+# Ciclo_10
+
+# CICLO 10 — Pagos & Proveedores (Plan Fase 2)
+Fecha: 2025-09-02T04:11:43.827299
+
+## Consulta del Orquestador
+Esbozar estrategia de división de gastos (split) e integración con pasarelas locales; catálogo de proveedores (opcional) y cupones. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Minimizar costos y fricción; empezar con split manual con guía.
+- AU2: Cumplimiento legal y KYC cuando corresponda.
+
+## Bucle 2×
+- Iteración 1 (Integración): Flujo de split (manual → link de cobro por persona), catálogo opt-in.
+- Iteración 1 (Crítica): Añadir evaluación de comisiones y fallback a efectivo/transferencia.
+- Iteración 2 (Integración): Tabla de comisiones, feature flags, pruebas sandbox.
+
+**Métricas**: calidad=0.88, estabilidad=0.92, cobertura=0.94
+**Riesgos**: variabilidad de comisiones; compliance.
+**Pendientes**: decisión de proveedor por país.
+
+# Ciclo_11
+
+# CICLO 11 — Legal & Privacidad
+Fecha: 2025-09-02T04:11:43.827299
+
+## Consulta del Orquestador
+Borrador de Política de Privacidad y Términos de Servicio (MVP), checklist legal (alcohol/edad, datos) y mapa de consentimiento. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Textos claros y cortos.
+- AU2: Cobertura esencial (datos, finalidades, derechos, contacto, consent).
+
+## Bucle 2×
+- Iteración 1 (Integración): Borradores + checklist.
+- Iteración 1 (Crítica): Añadir procedimiento de bajas y exportación de datos.
+- Iteración 2 (Integración): Incorpora portabilidad y supresión; contacto y plazo de retención.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.95
+**Riesgos**: cambios regulatorios; revisión local sugerida.
+**Pendientes**: validación jurídica en AR/UY.
+
+# Ciclo_12
+
+# CICLO 12 — Branding & Comunicación
+Fecha: 2025-09-02T04:11:43.827299
+
+## Consulta del Orquestador
+Definir propuesta de valor, naming guidelines y guía de tono; assets mínimos (logo simple, paleta) y mensajes de onboarding. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Claro y cercano; humor sutil.
+- AU2: Consistencia y respeto por tradiciones (AR/UY).
+
+## Bucle 2×
+- Iteración 1 (Integración): Propuesta de valor + tono + mensajes.
+- Iteración 1 (Crítica): Evitar regionalismos excluyentes; mantener inclusividad.
+- Iteración 2 (Integración): Ajusta wording neutro rioplatense y mensajes cortos.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.95
+
+# Ciclo_13
+
+# CICLO 13 — Métricas de Negocio & Dashboard
+Fecha: 2025-09-02T04:11:43.827299
+
+## Consulta del Orquestador
+Definir KPIs de negocio y esquema de dashboard operativo (fuentes, cálculos, vistas). Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Foco en uso real y retención.
+- AU2: Métricas accionables, no vanity.
+
+## Bucle 2×
+- Iteración 1 (Integración): Lista de KPIs y vistas.
+- Iteración 1 (Crítica): Agregar segmentaciones y metas.
+- Iteración 2 (Integración): Añade cortes por cohorte y grupo.
+
+**Métricas**: calidad=0.89, estabilidad=0.92, cobertura=0.94
+
+# Ciclo_14
+
+# CICLO 14 — Monetización & Pricing
+Fecha: 2025-09-02T04:11:43.827299
+
+## Consulta del Orquestador
+Explorar opciones de monetización (freemium, premium, proveedores, ads limitados) y propuesta inicial de pricing. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Empezar freemium y validar uso; evitar fricción al inicio.
+- AU2: Premium con valor claro (listas avanzadas, grupos recurrentes, historial).
+
+## Bucle 2×
+- Iteración 1 (Integración): Modelo freemium + add-ons.
+- Iteración 1 (Crítica): Asegurar que core quede gratis; evitar ads intrusivos.
+- Iteración 2 (Integración): Plan Premium mensual/anual con features óptimos y descuentos.
+
+**Métricas**: calidad=0.88, estabilidad=0.91, cobertura=0.93
+
+# Ciclo_15
+
+# CICLO 15 — Plan de Contenidos & Marketing (6 semanas)
+Fecha: 2025-09-02T04:14:36.260144
+
+## Consulta del Orquestador
+Definir plan de contenidos de 6 semanas para captar beta testers y comunidad, con canales, piezas, calendario y KPIs. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Bajo costo, foco AR/UY, orgánico + referidos.
+- AU2: Mensajes claros y consistentes con branding.
+
+## Bucle 2×
+- Iteración 1 (Integración): Calendario, piezas por semana, KPIs de adquisición.
+- Iteración 1 (Crítica): Añadir UTM, referral simple y pauta mínima.
+- Iteración 2 (Integración): UTM estándar, template de landing y referral por código.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.95
+
+# Ciclo_16
+
+# CICLO 16 — Seguridad & Cumplimiento Técnico
+Fecha: 2025-09-02T04:14:36.260144
+
+## Consulta del Orquestador
+Checklist OWASP Mobile Top 10 adaptado, manejo de secretos, permisos mínimos, y política de versiones/rotación. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Mantener simple sin frenar el release.
+- AU2: Controles esenciales y automatizables.
+
+## Bucle 2×
+- Iteración 1 (Integración): Checklist y medidas base.
+- Iteración 1 (Crítica): Añadir revisión de dependencias y SCA.
+- Iteración 2 (Integración): Integra SCA en CI + política de rotación de claves.
+
+**Métricas**: calidad=0.91, estabilidad=0.94, cobertura=0.96
+
+# Ciclo_17
+
+# CICLO 17 — Plan de Proyecto (Gantt/roles/risgos)
+Fecha: 2025-09-02T04:14:36.260144
+
+## Consulta del Orquestador
+Armar un plan de ejecución con hitos, responsables, dependencias y riesgos, y priorización ICE/RICE básica. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Fechas realistas 0–3–6 meses.
+- AU2: Responsables claros y riesgos trazados.
+
+## Bucle 2×
+- Iteración 1 (Integración): Gantt CSV y mapa de roles.
+- Iteración 1 (Crítica): Añadir priorización ICE/RICE resumida.
+- Iteración 2 (Integración): Incluye puntajes y columna priorizada.
+
+**Métricas**: calidad=0.89, estabilidad=0.92, cobertura=0.94
+
+# Ciclo_18
+
+# CICLO 18 — Guía de Contribución & Repos
+Fecha: 2025-09-02T04:14:36.260144
+
+## Consulta del Orquestador
+Definir estructura de repos, ramas, convención de commits, PR checklist, y scripts de desarrollo. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Simplicidad y velocidad.
+- AU2: Calidad y revisión mínima.
+
+## Bucle 2×
+- Iteración 1 (Integración): Estructura y normas.
+- Iteración 1 (Crítica): Añadir plantilla de PR y reglas de revisión.
+- Iteración 2 (Integración): Incluye husky/pre-commit para lint/tests.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.95
+
+# Ciclo_19
+
+# CICLO 19 — Localización & Contenido Cultural
+Fecha: 2025-09-02T04:14:36.260144
+
+## Consulta del Orquestador
+Definir paquete de localización AR/UY (nombres de cortes, bebidas, modismos neutros) y guías de tono inclusivo. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Mantener términos conocidos.
+- AU2: Evitar estereotipos; incluir opciones veggies.
+
+## Bucle 2×
+- Iteración 1 (Integración): Listas base AR/UY.
+- Iteración 1 (Crítica): Añadir glosario y fallback neutro.
+- Iteración 2 (Integración): Incluye guía de uso y variantes.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.95
+
+# Ciclo_20
+
+# CICLO 20 — Evaluación de Proveedores (Matriz)
+Fecha: 2025-09-02T04:14:36.260144
+
+## Consulta del Orquestador
+Armar matriz comparativa para pasarelas y mapas (costo, cobertura, facilidad), con recomendación inicial por país. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Bajar comisiones.
+- AU2: UX estable y soporte confiable.
+
+## Bucle 2×
+- Iteración 1 (Integración): Matriz base.
+- Iteración 1 (Crítica): Añadir soporte y sandbox.
+- Iteración 2 (Integración): Recomendación inicial por AR/UY.
+
+**Métricas**: calidad=0.88, estabilidad=0.92, cobertura=0.93
+
+# Ciclo_22
+
+# CICLO 22 — Guías técnicas: Push & Maps
+Fecha: 2025-09-02T04:18:12.170976
+
+## Consulta del Orquestador
+Definir guías técnicas para notificaciones push (FCM) y mapas (Google Maps) en RN/Expo: permisos, flujos, límites y pruebas. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Priorizar recordatorios h‑24/h‑2 y enlaces de retorno al asado.
+- AU2: Manejo de permisos y fallback sin ubicación.
+
+## Bucle 2×
+- Iteración 1 (Integración): Guía paso a paso con ejemplos.
+- Iteración 1 (Crítica): Añadir pruebas locales y en background, y límites de spam.
+- Iteración 2 (Integración): Incluye digest y silencios nocturnos configurables.
+
+**Métricas**: calidad=0.91, estabilidad=0.94, cobertura=0.96
+
+# Ciclo_23
+
+# CICLO 23 — Soporte, SLAs y Operación
+Fecha: 2025-09-02T04:18:12.170976
+
+## Consulta del Orquestador
+Definir política de soporte (canales, tiempos), SLAs internos (prioridades P0/P1/P2) y runbook operativo básico. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: WhatsApp/Discord al principio.
+- AU2: Registro de tickets y métricas.
+
+## Bucle 2×
+- Iteración 1 (Integración): Política y SLAs.
+- Iteración 1 (Crítica): Añadir plantillas de respuesta y escalamiento.
+- Iteración 2 (Integración): Incluye runbook de incidentes y post‑mortems.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.95
+
+# Ciclo_24
+
+# CICLO 24 — Plan Financiero Preliminar
+Fecha: 2025-09-02T04:18:12.170976
+
+## Consulta del Orquestador
+Esbozar unit economics y proyección simple 12 meses (freemium + premium) con supuestos y escenarios. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Supuestos conservadores; foco en retención.
+- AU2: Escenarios base/alto/bajo.
+
+## Bucle 2×
+- Iteración 1 (Integración): Assumptions + P&L simple.
+- Iteración 1 (Crítica): Añadir sensibilidad de conversión y costo por lead.
+- Iteración 2 (Integración): Tres escenarios y tabla de sensibilidad.
+
+**Métricas**: calidad=0.89, estabilidad=0.92, cobertura=0.94
+
+# Ciclo_25
+
+# CICLO 25 — Checklist de Lanzamiento Público
+Fecha: 2025-09-02T04:18:12.170976
+
+## Consulta del Orquestador
+Consolidar checklist final para pasar de beta a público: calidad, legal, marketing, store, soporte y monitoreo. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Priorizar calidad y claridad de onboarding.
+- AU2: Verificación cruzada de políticas y métricas clave.
+
+## Bucle 2×
+- Iteración 1 (Integración): Lista integral.
+- Iteración 1 (Crítica): Añadir owners y “go/no‑go” gating.
+- Iteración 2 (Integración): Incorpora owners y criterios de corte.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.96
+
+# Ciclo_26
+
+# CICLO 26 — Métricas Técnicas: Crash & Performance
+Fecha: 2025-09-02T04:20:08.032516
+
+## Consulta del Orquestador
+Definir KPIs técnicos (crash-free rate, TTI, TTFB, ANR), umbrales, eventos y tableros; plan de captura/logs y alertas. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Alarmas solo para lo crítico.
+- AU2: Métricas estables y comparables por versión/cohorte.
+
+## Bucle 2×
+- Iteración 1 (Integración): Lista de KPIs y eventos.
+- Iteración 1 (Crítica): Añadir segmentación por dispositivo/OS/red y por build.
+- Iteración 2 (Integración): Incluye panel comparativo por release, alertas con umbrales.
+
+**Métricas**: calidad=0.91, estabilidad=0.94, cobertura=0.96
+
+# Ciclo_27
+
+# CICLO 27 — Feature Flags & Experimentos
+Fecha: 2025-09-02T04:20:08.032516
+
+## Consulta del Orquestador
+Diseñar blueprint de feature flags (config remota), rollout gradual y experimentación A/B simple. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Desplegar sin miedo; flags por segmento.
+- AU2: Medición limpia y reversión rápida.
+
+## Bucle 2×
+- Iteración 1 (Integración): Esquema de flags y segmentos.
+- Iteración 1 (Crítica): Añadir gobernanza, expiración y auditoría.
+- Iteración 2 (Integración): Incluye convención de nombres, owners y métricas ligadas al flag.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.95
+
+# Ciclo_28
+
+# CICLO 28 — Librería de Textos & i18n
+Fecha: 2025-09-02T04:20:08.032516
+
+## Consulta del Orquestador
+Definir catálogo de textos (keys), placeholders, pluralización y flujo de localización (AR/UY + neutro). Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Mantener el tono rioplatense neutro.
+- AU2: Claves estables, no hardcodear en componentes.
+
+## Bucle 2×
+- Iteración 1 (Integración): Estructura de i18n y ejemplos.
+- Iteración 1 (Crítica): Añadir manejo de plural y fallback.
+- Iteración 2 (Integración): Incluye pipeline de extracción y validaciones.
+
+**Métricas**: calidad=0.91, estabilidad=0.94, cobertura=0.96
+
+# Ciclo_29
+
+# CICLO 29 — Accesibilidad Ampliada
+Fecha: 2025-09-02T04:20:08.032516
+
+## Consulta del Orquestador
+Profundizar guía AA+: tamaños de fuente escalables, navegación por lectores de pantalla, contrastes y focus visible. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Sin penalizar velocidad de desarrollo.
+- AU2: Pautas y checklist sencillos.
+
+## Bucle 2×
+- Iteración 1 (Integración): Pautas y checklist.
+- Iteración 1 (Crítica): Añadir ejemplos de roles/labels en RN.
+- Iteración 2 (Integración): Incluye snippet de ejemplo.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.95
+
+# Ciclo_30
+
+# CICLO 30 — Plan de Escalamiento Backend
+Fecha: 2025-09-02T04:20:08.032516
+
+## Consulta del Orquestador
+Especificar plan de escalamiento y costos: particionamiento, límites de uso, colas/eventos para picos, y testing de carga. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Costos bajo control; alertas tempranas.
+- AU2: Resiliencia y degradación controlada.
+
+## Bucle 2×
+- Iteración 1 (Integración): Topologías y límites.
+- Iteración 1 (Crítica): Añadir colas y backoff en funciones.
+- Iteración 2 (Integración): Incluye pruebas de carga y planes de degradación.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.96
+
+# Ciclo_31
+
+# CICLO 31 — OKRs Trimestrales (T1–T2)
+Fecha: 2025-09-02T04:24:20.541303
+
+## Consulta del Orquestador
+Definir OKRs por trimestre (producto, crecimiento, calidad) con metas medibles alineadas a MVP, beta y lanzamiento. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Objetivos simples y que muevan la aguja.
+- AU2: KRs medibles y realistas.
+
+## Bucle 2×
+- Iteración 1 (Integración): Propuesta de OKRs T1/T2.
+- Iteración 1 (Crítica): Añadir umbrales go/no-go y responsables.
+- Iteración 2 (Integración): Incluye owners y periodicidad de revisión.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.95
+
+# Ciclo_32
+
+# CICLO 32 — Auditoría de Datos & Privacidad
+Fecha: 2025-09-02T04:24:20.541303
+
+## Consulta del Orquestador
+Checklist de auditoría de datos/privacidad (recolección, base legal, retención, derechos, seguridad), con matriz de riesgos. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Cumplir con lo esencial sin complicar.
+- AU2: Trazabilidad y respuestas a solicitudes de usuarios.
+
+## Bucle 2×
+- Iteración 1 (Integración): Checklist y matriz de riesgos.
+- Iteración 1 (Crítica): Añadir flujo de solicitudes (DSAR) y tiempos.
+- Iteración 2 (Integración): Incluye SLAs para DSAR y registro de casos.
+
+**Métricas**: calidad=0.91, estabilidad=0.94, cobertura=0.96
+
+# Ciclo_33
+
+# CICLO 33 — Guía de Testing de Usabilidad
+Fecha: 2025-09-02T04:24:20.541303
+
+## Consulta del Orquestador
+Definir protocolo de 5–7 tareas por sesión, perfiles de usuarios, guion y plantilla de observación; métricas SUS/NPS y hallazgos. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Sesiones cortas (30–40 min) y remotas cuando sea posible.
+- AU2: Métricas comparables entre versiones.
+
+## Bucle 2×
+- Iteración 1 (Integración): Guion y tareas.
+- Iteración 1 (Crítica): Añadir métricas de tiempo/éxito y capturas.
+- Iteración 2 (Integración): Incluye template de hallazgos priorizados.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.95
+
+# Ciclo_34
+
+# CICLO 34 — Partnerships Locales (AR/UY)
+Fecha: 2025-09-02T04:24:20.541303
+
+## Consulta del Orquestador
+Plan de partnerships con carnicerías, bebidas e hielo: propuesta de valor, piloto, métricas y acuerdo básico. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Pilotos rápidos con 2–3 socios por ciudad.
+- AU2: Términos simples, comisión por cupón.
+
+## Bucle 2×
+- Iteración 1 (Integración): Propuesta y pilotos.
+- Iteración 1 (Crítica): Añadir KPIs y proceso de onboarding.
+- Iteración 2 (Integración): Incluye acuerdo tipo y reporte quincenal.
+
+**Métricas**: calidad=0.89, estabilidad=0.92, cobertura=0.94
+
+# Ciclo_35
+
+# CICLO 35 — Playbook de Community Management
+Fecha: 2025-09-02T04:24:20.541303
+
+## Consulta del Orquestador
+Definir playbook de comunidad (tono, dinámicas, normas), calendario y métricas; gestión de conflictos. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Comunidad sana y útil.
+- AU2: Moderación sencilla y transparente.
+
+## Bucle 2×
+- Iteración 1 (Integración): Playbook y calendario.
+- Iteración 1 (Crítica): Añadir protocolo de moderación y escalamiento.
+- Iteración 2 (Integración): Incluye métricas y plantilla de reporte mensual.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.95

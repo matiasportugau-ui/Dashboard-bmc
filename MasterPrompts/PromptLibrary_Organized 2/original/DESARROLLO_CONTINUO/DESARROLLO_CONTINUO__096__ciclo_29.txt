@@ -1,0 +1,16 @@
+# CICLO 29 — Accesibilidad Ampliada
+Fecha: 2025-09-02T04:20:08.032516
+
+## Consulta del Orquestador
+Profundizar guía AA+: tamaños de fuente escalables, navegación por lectores de pantalla, contrastes y focus visible. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Sin penalizar velocidad de desarrollo.
+- AU2: Pautas y checklist sencillos.
+
+## Bucle 2×
+- Iteración 1 (Integración): Pautas y checklist.
+- Iteración 1 (Crítica): Añadir ejemplos de roles/labels en RN.
+- Iteración 2 (Integración): Incluye snippet de ejemplo.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.95

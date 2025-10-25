@@ -1,0 +1,14 @@
+# KPIs de Negocio
+- Usuarios activos diarios/semanales (DAU/WAU)
+- Asados creados por semana
+- Tasa de cobertura de aportes (%)
+- Tiempo medio de coordinación (h)
+- Satisfacción media (1–5)
+- Retención (W1/W4)
+- Conversión a cierre de evento (%)
+
+# Dashboard (vistas)
+- Visión general (últimos 7/28 días)
+- Cohortes por mes de alta
+- Rendimiento por tamaño de grupo
+- Embudo: Crear→Lista→Asignar→Confirmar→Cierre

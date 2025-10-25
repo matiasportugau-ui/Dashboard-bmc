@@ -1,0 +1,16 @@
+# CICLO 25 — Checklist de Lanzamiento Público
+Fecha: 2025-09-02T04:18:12.170976
+
+## Consulta del Orquestador
+Consolidar checklist final para pasar de beta a público: calidad, legal, marketing, store, soporte y monitoreo. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Priorizar calidad y claridad de onboarding.
+- AU2: Verificación cruzada de políticas y métricas clave.
+
+## Bucle 2×
+- Iteración 1 (Integración): Lista integral.
+- Iteración 1 (Crítica): Añadir owners y “go/no‑go” gating.
+- Iteración 2 (Integración): Incorpora owners y criterios de corte.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.96

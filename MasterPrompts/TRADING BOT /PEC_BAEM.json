@@ -1,0 +1,47 @@
+{
+  "audit_version": "baem-1.0",
+  "validity_notes": [
+    "Métricas normalizadas [0,1] y documentadas; seguridad basada en tasa de violaciones.",
+    "Evidencia con IDs y contexto de ejecución (semillas, modelos)."
+  ],
+  "robustness": {
+    "weight_sensitivity": 0.00263,
+    "ablation_drop": {
+      "utility": 0.03,
+      "robustness": 0.01,
+      "efficiency": 0.0045,
+      "security": 0.001,
+      "generalization": 0.005,
+      "explainability": 0.002
+    }
+  },
+  "reliability": {
+    "alpha": 0.84,
+    "kendall_tau": 0.74,
+    "gaps": []
+  },
+  "data_quality": {
+    "coverage": 0.86,
+    "leakage_flags": 0
+  },
+  "repro": {
+    "seed_stability": 0.88,
+    "version_drift": 0.03
+  },
+  "decision_stability": "stable",
+  "risks": [
+    "Posible sobreajuste a tareas vistas; ampliar OOD.",
+    "Acciones de mejora podrían ser más granulares por métrica."
+  ],
+  "actions": [
+    "Agregar set OOD adicional y recalcular generalization.",
+    "Forzar checklist de acciones por variable con due dates.",
+    "Registrar costo/tokens por evaluación para eficiencia real."
+  ],
+  "acceptance_rule_check": {
+    "measures_sufficient": true,
+    "explain": "Gates de seguridad y mejora cumplidos."
+  },
+  "ire_score": 0.847,
+  "ire_threshold": 0.8
+}

@@ -1,0 +1,124 @@
+{
+  "version": "1.0.0",
+  "proyecto": "Automatismos VMC",
+  "fuentes": [
+    {
+      "id": "doc_NEUTRO",
+      "tipo": "chat",
+      "titulo": "Manual_Encadenamiento_IA_NEUTRO",
+      "url": null,
+      "fecha": "2025-09-06",
+      "autores": [
+        "[\"@usuario\"]"
+      ]
+    }
+  ],
+  "prompts": [
+    {
+      "id": "p_001",
+      "titulo": "Orquestador Multi‑Agente — Sistema",
+      "tipo": [
+        "Sistema / Rol",
+        "Orquestación / Multi‑agente"
+      ],
+      "plantilla": "[SISTEMA — Orquestador]\nActuá como Orquestador Multi-Agente. Coordiná agentes especializados para resolver el objetivo con trazabilidad.",
+      "variables": [],
+      "ejemplo_uso": {
+        "input": "",
+        "output_stub": ""
+      },
+      "seguridad": [
+        "Anonimizar PII",
+        "No revelar razonamiento oculto"
+      ],
+      "evidencias": [
+        "doc_NEUTRO#seg_01"
+      ],
+      "tags": [],
+      "version": "1.0.0",
+      "metricas": {
+        "efectividad": 0.55,
+        "generalidad": 0.2,
+        "eficiencia_norm": 0.992,
+        "estabilidad": 0.92,
+        "seguridad": 0.98,
+        "novedad": 1.0,
+        "score_final": 0.707
+      }
+    },
+    {
+      "id": "p_002",
+      "titulo": "Plan por Fases",
+      "tipo": [
+        "Razonamiento & Planificación"
+      ],
+      "plantilla": "[Formato por ciclo]\nRESUMEN_i, CAMBIOS_i, METRICAS_i {calidad, cobertura, estabilidad, delta}, RIESGOS_i, PENDIENTES_i.",
+      "variables": [],
+      "ejemplo_uso": {
+        "input": "",
+        "output_stub": ""
+      },
+      "seguridad": [
+        "Anonimizar PII",
+        "No revelar razonamiento oculto"
+      ],
+      "evidencias": [
+        "doc_NEUTRO#seg_02"
+      ],
+      "tags": [],
+      "version": "1.0.0",
+      "metricas": {
+        "efectividad": 0.55,
+        "generalidad": 0.2,
+        "eficiencia_norm": 0.994,
+        "estabilidad": 0.92,
+        "seguridad": 0.98,
+        "novedad": 1.0,
+        "score_final": 0.708
+      }
+    }
+  ],
+  "ranking_global": [
+    "p_002",
+    "p_001"
+  ],
+  "cadenas_maestras_universales": [
+    {
+      "id": "cmu_001",
+      "nombre": "Explora→Bosqueja→Critica→Verifica→Finaliza",
+      "flujo": [
+        {
+          "rol": "Explorador",
+          "usa_prompt": "p_002"
+        },
+        {
+          "rol": "Bosquejador",
+          "usa_prompt": "p_001"
+        }
+      ],
+      "objetivos": [
+        "Resultados OOTB"
+      ],
+      "notas": "Self-consistency x3; CRT≥0.80"
+    }
+  ],
+  "reportes": {
+    "resumen_md": "# Hallazgos\n- Top prompts listos.\n- Evaluación heurística aplicada.\n",
+    "metricas_aggregadas": {
+      "costo_total_tokens": 0,
+      "latencia_media_ms": 0
+    }
+  },
+  "export_seal": {
+    "project": "Automatismos VMC",
+    "prompt_id": "LIBRERIA_PROMPTS_AUTORUN",
+    "version": "v1",
+    "file": "reports/libreria_prompts.json",
+    "lang": "json",
+    "created_at": "2025-09-17T03:54:30Z",
+    "author": "@usuario",
+    "origin": "Autonomous pipeline run",
+    "body_sha256": "5cef9c2c38dd94344650ed892bcc075bc0e1bd6bbe207e7e0dbaea0cd7d7c53e",
+    "notes": "Generado automáticamente"
+  }
+}

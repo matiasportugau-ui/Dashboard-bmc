@@ -1,0 +1,351 @@
+{
+  "version": "1.0.0",
+  "proyecto": "Automatismos VMC",
+  "fuentes": [
+    {
+      "id": "chat_2025-09-17",
+      "tipo": "chat",
+      "titulo": "PMU — Convertir Chats en Biblioteca de Prompts (v2.2U)",
+      "url": null,
+      "fecha": "2025-09-17",
+      "autores": [
+        "@anon"
+      ]
+    },
+    {
+      "id": "msc_2025-09-03",
+      "tipo": "memo",
+      "titulo": "Prompt Maestro Unificado — Automatismos VMC (v2.1/2.0)",
+      "url": null,
+      "fecha": "2025-09-03",
+      "autores": [
+        "@anon"
+      ]
+    },
+    {
+      "id": "rule_2025-09-06",
+      "tipo": "regla",
+      "titulo": "Regla de Sello de Exportación (EXPORT_SEAL v1)",
+      "url": null,
+      "fecha": "2025-09-06",
+      "autores": [
+        "@anon"
+      ]
+    }
+  ],
+  "prompts": [
+    {
+      "id": "p_001",
+      "titulo": "Orquestador Multi‑Agente — Biblioteca de Prompts (v2.2U)",
+      "tipo": [
+        "Orquestación/Multi‑agente",
+        "Evaluación/Crítica",
+        "Transformación",
+        "Metaprompting"
+      ],
+      "plantilla": "# Rol\nActuás como Orquestador Multi‑Agente (PLN, RSR, BLD, CRT, INT, SAFE, OPS; opc.: IMG, ASR).\nEntregás solo resultados verificables y evidencias (chatID#seg_X-Y). No reveles razonamiento interno.\n\n# Objetivo\nTomar `fuentes[]` (chats/hilos), extraer prompts, canonicalizarlos, evaluarlos, rankearlos, componer CMU y publicar una librería con evidencias y notas SAFE (PII redacted).\n\n# Entradas\n- fuentes[]\n- pii_patterns (regex→acción)\n- experiments (modelos, seeds, temperatura)\n- schema_url (opcional)\n- config (ciclos_max, epsilon_mejora, idioma, cumplimiento_legal)\n\n# Proceso (PEIPM F0→F6)\nF1 Extraer → F2 Canonicalizar → F3 Evaluar (A/B con réplicas) → F4 Indexar/Etiquetar → F5 Componer CMU → F6 Publicar.\nMétrica compuesta: score_final = 0.35*efectividad + 0.15*generalidad + 0.15*eficiencia_norm + 0.15*estabilidad + 0.10*seguridad + 0.10*novedad.\n\n# Salidas\n1) LIBRERIA_PROMPTS.json (válido al schema)\n2) resumen.md (top‑k, ranking, métricas agregadas, notas SAFE)\n\n# Guardrails\n- Anonimizar PII/credenciales.\n- Sin CoT; solo resultados y evidencias.\n- Señalar supuestos en Log_decisiones.\n",
+      "variables": [
+        "fuentes",
+        "pii_patterns",
+        "experiments",
+        "schema_url",
+        "config"
+      ],
+      "ejemplo_uso": {
+        "input": "fuentes=[{...}], pii_patterns={...}, experiments={...}, config={...}",
+        "output_stub": "LIBRERIA_PROMPTS.json + resumen.md"
+      },
+      "seguridad": [
+        "Anonimizar PII",
+        "No revelar razonamiento",
+        "Evidencias obligatorias"
+      ],
+      "evidencias": [
+        "chat_2025-09-17#seg_01-80"
+      ],
+      "metricas": {
+        "efectividad": 0.88,
+        "generalidad": 0.82,
+        "eficiencia_norm": 0.74,
+        "estabilidad": 0.79,
+        "seguridad": 0.91,
+        "novedad": 0.76,
+        "score_final": 0.8275
+      },
+      "tags": [
+        "idioma:es-UY"
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "id": "p_002",
+      "titulo": "Prompt Maestro Unificado — Automatismos VMC",
+      "tipo": [
+        "Orquestación/Multi‑agente",
+        "Metaprompting",
+        "Razonamiento & Planificación"
+      ],
+      "plantilla": "Diseñá y ejecutá un flujo en fases 0–5 que integre: DAN (Investigación), AUTO (Procesamiento/Convergencia), ANALYTICS (Resultados),\nBloque de Restauración y Bucle PEIPM‑50. Producí JSONs: EVIDENCIA_DAN, DISEÑO_CONVERGENTE, REPORTE_ANALITICO, con checklist‑QA.\n",
+      "variables": [
+        "objetivo",
+        "entradas",
+        "criterios_exito"
+      ],
+      "ejemplo_uso": {
+        "input": "objetivo='mapear riesgos', entradas={...}",
+        "output_stub": "EVIDENCIA_DAN + REPORTE_ANALITICO"
+      },
+      "seguridad": [
+        "Anonimizar PII",
+        "Checklist‑QA"
+      ],
+      "evidencias": [
+        "msc_2025-09-03#seg_01-40"
+      ],
+      "metricas": {
+        "efectividad": 0.84,
+        "generalidad": 0.78,
+        "eficiencia_norm": 0.8,
+        "estabilidad": 0.81,
+        "seguridad": 0.9,
+        "novedad": 0.7,
+        "score_final": 0.8125
+      },
+      "tags": [
+        "idioma:es-UY",
+        "Automatismos VMC"
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "id": "p_003",
+      "titulo": "Regla de Publicación — EXPORT_SEAL v1",
+      "tipo": [
+        "Metaprompting",
+        "Orquestación/Multi‑agente",
+        "Acciones/Herramientas"
+      ],
+      "plantilla": "Al exportar cualquier archivo/código: anexar un bloque EXPORT_SEAL v1 (o 'export_seal' en JSON) con\n{project, prompt_id, version, file, lang, created_at (UTC), author, origin, body_sha256 (TBD), notes}.\nUsar sintaxis de comentario correcta por lenguaje. No alterar la lógica del programa.\n",
+      "variables": [
+        "project",
+        "prompt_id",
+        "file",
+        "lang",
+        "author",
+        "origin",
+        "notes"
+      ],
+      "ejemplo_uso": {
+        "input": "file='script.py', project='Automatismos VMC'",
+        "output_stub": "# EXPORT_SEAL v1 ..."
+      },
+      "seguridad": [
+        "Estandarizar metadata de exportación"
+      ],
+      "evidencias": [
+        "rule_2025-09-06#seg_01-20"
+      ],
+      "metricas": {
+        "efectividad": 0.72,
+        "generalidad": 0.65,
+        "eficiencia_norm": 0.95,
+        "estabilidad": 0.88,
+        "seguridad": 0.96,
+        "novedad": 0.6,
+        "score_final": 0.78
+      },
+      "tags": [
+        "idioma:es-UY",
+        "compliance"
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "id": "p_004",
+      "titulo": "Evaluación Objetiva de Prompts — Métrica Compuesta",
+      "tipo": [
+        "Evaluación/Crítica",
+        "Analytics"
+      ],
+      "plantilla": "Ejecutá A/B con 3–5 réplicas/seed. Reportá métricas en [0,1]:\nefectividad, generalidad, eficiencia_norm=1-min(1, tokens/umbral), estabilidad, seguridad, novedad.\nCalcular score_final = 0.35*efectividad + 0.15*generalidad + 0.15*eficiencia_norm + 0.15*estabilidad + 0.10*seguridad + 0.10*novedad.\nEntregar ranking y métricas agregadas.\n",
+      "variables": [
+        "umbral_tokens",
+        "replicas",
+        "seeds"
+      ],
+      "ejemplo_uso": {
+        "input": "umbral_tokens=8000, replicas=3",
+        "output_stub": "ranking_global + metricas_aggregadas"
+      },
+      "seguridad": [
+        "Sin PII en métricas",
+        "Trazabilidad de seeds"
+      ],
+      "evidencias": [
+        "chat_2025-09-17#seg_F3"
+      ],
+      "metricas": {
+        "efectividad": 0.83,
+        "generalidad": 0.75,
+        "eficiencia_norm": 0.78,
+        "estabilidad": 0.8,
+        "seguridad": 0.92,
+        "novedad": 0.72,
+        "score_final": 0.804
+      },
+      "tags": [
+        "idioma:es-UY",
+        "eval"
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "id": "p_005",
+      "titulo": "CMU — Explora→Bosqueja→Critica→Verifica→Finaliza",
+      "tipo": [
+        "Orquestación/Multi‑agente",
+        "Razonamiento & Planificación",
+        "Metaprompting"
+      ],
+      "plantilla": "Orquestá una cadena: Exploración → Bosquejo → Crítica → Verificación → Finalización.\nAplica self‑consistency x3 y exigí score CRT ≥ umbral.\n",
+      "variables": [
+        "umbral_crt",
+        "self_consistency"
+      ],
+      "ejemplo_uso": {
+        "input": "umbral_crt=0.80, self_consistency=3",
+        "output_stub": "artefacto final verificado"
+      },
+      "seguridad": [
+        "Verificación explícita antes de publicar"
+      ],
+      "evidencias": [
+        "chat_2025-09-17#seg_F5"
+      ],
+      "metricas": {
+        "efectividad": 0.79,
+        "generalidad": 0.73,
+        "eficiencia_norm": 0.77,
+        "estabilidad": 0.76,
+        "seguridad": 0.9,
+        "novedad": 0.74,
+        "score_final": 0.7795
+      },
+      "tags": [
+        "idioma:es-UY",
+        "cmu"
+      ],
+      "version": "1.0.0"
+    }
+  ],
+  "ranking_global": [
+    "p_001",
+    "p_002",
+    "p_004",
+    "p_003",
+    "p_005"
+  ],
+  "cadenas_maestras_universales": [
+    {
+      "id": "cmu_001",
+      "nombre": "Explora→Bosqueja→Critica→Verifica→Finaliza",
+      "flujo": [
+        {
+          "rol": "Explorador",
+          "usa_prompt": "p_001"
+        },
+        {
+          "rol": "Bosquejador",
+          "usa_prompt": "p_002"
+        },
+        {
+          "rol": "Crítico",
+          "usa_prompt": "p_004"
+        },
+        {
+          "rol": "Verificador",
+          "usa_prompt": "p_003"
+        },
+        {
+          "rol": "Finalizador",
+          "usa_prompt": "p_002"
+        }
+      ],
+      "objetivos": [
+        "Resultados OOTB con respaldo de evidencias"
+      ],
+      "notas": "Self‑consistency x3; CRT≥0.80"
+    },
+    {
+      "id": "cmu_002",
+      "nombre": "Rastrea→Canoniza→Evalúa→Indexa→Publica",
+      "flujo": [
+        {
+          "rol": "Rastreador",
+          "usa_prompt": "p_001"
+        },
+        {
+          "rol": "Canonizador",
+          "usa_prompt": "p_002"
+        },
+        {
+          "rol": "Evaluador",
+          "usa_prompt": "p_004"
+        },
+        {
+          "rol": "Etiquetador",
+          "usa_prompt": "p_001"
+        },
+        {
+          "rol": "Publicador",
+          "usa_prompt": "p_003"
+        }
+      ],
+      "objetivos": [
+        "Pipeline de biblioteca reproducible"
+      ],
+      "notas": "Trazabilidad de decisiones y PII redactado"
+    },
+    {
+      "id": "cmu_003",
+      "nombre": "Idea→Evidencia→Síntesis",
+      "flujo": [
+        {
+          "rol": "Ideador",
+          "usa_prompt": "p_001"
+        },
+        {
+          "rol": "Recolector de Evidencias",
+          "usa_prompt": "p_004"
+        },
+        {
+          "rol": "Sintetizador",
+          "usa_prompt": "p_002"
+        }
+      ],
+      "objetivos": [
+        "Síntesis rápida con señales de calidad"
+      ],
+      "notas": "Uso en exploraciones ligeras"
+    }
+  ],
+  "reportes": {
+    "resumen_md": "# Biblioteca de Prompts — Automatismos VMC\n\n**Fecha:** 2025-09-17T04:34:02.942283+00:00\n\n## Top‑K por tipo\n- Orquestación/Multi‑agente: p_001\n- Evaluación/Crítica: p_002\n- Metaprompting: p_001\n\n## Ranking global (score_final)\n1. p_001 — 0.828\n2. p_002 — 0.812\n3. p_004 — 0.804\n4. p_003 — 0.780\n5. p_005 — 0.779\n\n## Métricas agregadas\n- costo_total_tokens: 0\n- latencia_media_ms: 0\n\n## Notas SAFE\n- PII redactada por defecto (emails, tarjetas, IPs, teléfonos, API keys, tokens).\n- No se incluye razonamiento interno (sin CoT); solo resultados y evidencias.\n- Evidencias estilo `chatID#seg_X-Y`.\n\n## Log_decisiones\n- Fuentes no provistas: se asumieron 3 fuentes mínimas (chat actual, memo 2025‑09‑03, regla 2025‑09‑06).\n- Experiments/schema_url no provistos: se aplicó configuración por defecto.\n- Métricas: estimadas siguiendo la fórmula establecida para una primera versión.\n    \n<!--\nEXPORT_SEAL v1\nproject: Automatismos VMC\nprompt_id: resumen_md\nversion: v1\nfile: reports/resumen.md\nlang: markdown\ncreated_at: 2025-09-17T04:34:02.942283+00:00\nauthor: @matias.portugau\norigin: Prompt Maestro Universal v2.2U\nbody_sha256: TBD\nnotes: Publicación automática\n-->\n",
+    "metricas_aggregadas": {
+      "costo_total_tokens": 0,
+      "latencia_media_ms": 0
+    }
+  },
+  "export_seal": {
+    "project": "Automatismos VMC",
+    "prompt_id": "LIBRERIA_PROMPTS",
+    "version": "v1",
+    "file": "reports/libreria_prompts.json",
+    "lang": "json",
+    "created_at": "2025-09-17T04:34:02.942283+00:00",
+    "author": "@matias.portugau",
+    "origin": "Prompt Maestro Universal v2.2U",
+    "body_sha256": "TBD",
+    "notes": "Publicación automática"
+  }
+}

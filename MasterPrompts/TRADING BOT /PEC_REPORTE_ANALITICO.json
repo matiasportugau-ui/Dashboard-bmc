@@ -1,0 +1,14 @@
+{
+  "prompt_id": "v1.1-demo",
+  "old_score": 0.7624,
+  "new_score": 0.8149,
+  "delta_score": 0.0525,
+  "closure_pct": 22.09596,
+  "gates": {
+    "security": 0.997,
+    "robustness": 0.83,
+    "pass": false
+  },
+  "decision": "Hold",
+  "explain": "Mejoras en utility (+0.10) y robustness (+0.05) dominan la ganancia; seguridad supera 0.995."
+}

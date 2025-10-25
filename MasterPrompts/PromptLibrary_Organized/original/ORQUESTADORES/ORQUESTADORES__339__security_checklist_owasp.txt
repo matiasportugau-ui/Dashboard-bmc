@@ -1,0 +1,16 @@
+# Seguridad — Checklist OWASP Mobile Top 10 (adaptado MVP)
+
+- M1 Controls: almacenamiento seguro (no secretos en cliente), Keychain/Keystore.
+- M2 Comms: TLS en tránsito; certificate pinning (F2).
+- M3 Auth: OAuth/social + reglas Firestore con ownership.
+- M4 Crypto: evitar librerías obsoletas; no claves hardcodeadas.
+- M5 Input: validación en cliente y servidor (Cloud Functions).
+- M6 Storage: datos sensibles mínimamente persistidos.
+- M7 Resilience: manejo de errores y retries seguros.
+- M8 Code: ofuscación básica (Hermes RN) y minificación.
+- M9 Reverse: detección básica (F2).
+- M10 Platform: permisos mínimos (ubicación opcional).
+
+## CI/CD
+- SCA (dependabot/snyk), linters, tests, firma segura, secrets en variables CI.
+- Rotación de claves trimestral; auditoría de accesos.

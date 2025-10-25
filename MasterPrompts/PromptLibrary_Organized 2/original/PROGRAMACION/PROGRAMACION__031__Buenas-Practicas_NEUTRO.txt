@@ -1,0 +1,21 @@
+# Buenas Prácticas
+
+- Siempre definir **medida de éxito** y **casos límite**.
+- Pedir **formato explícito** (JSON/tabla/código) cuando corresponda.
+- Usar **ejemplos positivos y negativos**.
+- Separar **requerimientos** de **opciones**.
+- Versionar prompts con fecha, autor y cambios.
+- Revisar con **Checklist‑QA** antes de entregar.
+
+# === EXPORT_SEAL v1 ===
+# project: PromptPack Neutro
+# prompt_id: NEUTRO::Buenas-Practicas.md
+# version: v1.0.0
+# file: Buenas-Practicas_NEUTRO.md
+# lang: md
+# created_at: 2025-09-06T08:41:10Z
+# author: BMC / Usuario
+# origin: chatgpt
+# body_sha256: TBD
+# notes: Versión neutralizada automáticamente
+# === /EXPORT_SEAL ===

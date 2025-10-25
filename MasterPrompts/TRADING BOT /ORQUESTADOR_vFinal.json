@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "id": "PLN",
+      "role": "Planificador"
+    },
+    {
+      "id": "RSR",
+      "role": "Investigador"
+    },
+    {
+      "id": "BLD",
+      "role": "Constructor"
+    },
+    {
+      "id": "CRT",
+      "role": "Crítico/Auditor"
+    },
+    {
+      "id": "INT",
+      "role": "Integrador"
+    },
+    {
+      "id": "OPS",
+      "role": "Operaciones"
+    },
+    {
+      "id": "SAFE",
+      "role": "Compliance"
+    },
+    {
+      "id": "AU1",
+      "role": "Negocio/Operaciones"
+    },
+    {
+      "id": "AU2",
+      "role": "Calidad/Producto"
+    }
+  ],
+  "edges": [
+    [
+      "PLN",
+      "RSR"
+    ],
+    [
+      "RSR",
+      "BLD"
+    ],
+    [
+      "BLD",
+      "CRT"
+    ],
+    [
+      "CRT",
+      "INT"
+    ],
+    [
+      "INT",
+      "OPS"
+    ],
+    [
+      "OPS",
+      "SAFE"
+    ],
+    [
+      "AU1",
+      "INT"
+    ],
+    [
+      "AU2",
+      "INT"
+    ],
+    [
+      "SAFE",
+      "INT"
+    ]
+  ],
+  "policies": {
+    "version": "vFinal-PEIPM50",
+    "ciclos_max": 50,
+    "early_stop": false,
+    "recursos": true,
+    "explorar_fuentes": true,
+    "paso_a_paso": false,
+    "timezone": "America/Montevideo",
+    "gates": {
+      "security": 0.995,
+      "robustness": 0.85,
+      "score": 0.8
+    },
+    "au_protocol": {
+      "arbiter": "INT",
+      "scorer": "CRT(0..1)",
+      "veto": "SAFE"
+    }
+  }
+}

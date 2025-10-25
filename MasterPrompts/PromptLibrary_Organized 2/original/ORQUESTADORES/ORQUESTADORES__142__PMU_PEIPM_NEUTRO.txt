@@ -1,0 +1,21 @@
+{
+  "id": "PMU_PEIPM",
+  "objetivo": "Versión neutra, aplicable a cualquier proyecto",
+  "roles": [
+    "PLN",
+    "RSR",
+    "BLD",
+    "CRT",
+    "INT",
+    "SAFE"
+  ],
+  "fases": [
+    "analisis",
+    "evaluacion_iterativa",
+    "cierre"
+  ],
+  "politicas": {
+    "ciclos_max": 50,
+    "early_stop": true
+  }
+}

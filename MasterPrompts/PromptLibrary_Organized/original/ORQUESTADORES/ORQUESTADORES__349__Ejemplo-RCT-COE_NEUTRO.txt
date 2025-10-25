@@ -1,0 +1,23 @@
+# Ejemplo RCT‑COE — Prompt Blueprint
+
+**Rol**: Arquitecto de Prompts.  
+**Contexto**: eCommerce, catálogos, FAQ, bots.  
+**Tarea**: generar prompt para clasificar tickets por intención.  
+**Condiciones**: español, JSON, top‑n labels con score.  
+**Output**: JSON con `label`, `score`, `rationale`.  
+**Ejemplos**:
+- Positivo: "Necesito cotizar un galpón 10x20".  
+- Negativo: "Gracias".
+
+# === EXPORT_SEAL v1 ===
+# project: PromptPack Neutro
+# prompt_id: NEUTRO::Ejemplo-RCT-COE.md
+# version: v1.0.0
+# file: Ejemplo-RCT-COE_NEUTRO.md
+# lang: md
+# created_at: 2025-09-06T08:41:10Z
+# author: BMC / Usuario
+# origin: chatgpt
+# body_sha256: TBD
+# notes: Versión neutralizada automáticamente
+# === /EXPORT_SEAL ===

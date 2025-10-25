@@ -1,0 +1,89 @@
+# Prompt Maestro — Multi‑Agente Universal (RCT‑COE) v2.1.0 — Edición Convergente
+# Fecha: 2025‑09‑01 | Zona: UTC
+# Esta versión mantiene INTACTO el v2.0.0 original y agrega un anexo operativo con bucle PEIPM‑50 y resolución con Agentes de Usuario.
+
+[ANEXO — LOOP PEIPM‑50]
+Propósito: ejecutar 50 ciclos de mejora (sin early‑stop) entre PROC MAESTRO ↔ Evaluación (CRT), reinyectando el OUTPUT_i al ciclo i+1.
+Entradas: Prompt Maestro v2.0.0 + CONFIG JSON.
+Salidas: Versión Final optimizada + registro completo de 50 ciclos + changelog + métricas.
+
+[Políticas de bucle]
+- N_ciclos_max=50; early_stop_delta=0; early_stop_ventana=0.
+- Registrar por ciclo: RESUMEN_i, CAMBIOS_i, METRICAS_i, RIESGOS_i, PENDIENTES_i.
+- Mantener determinismo relativo: fijar seeds/orden de pasos; evitar drift de formato.
+- SAFE siempre ON para cumplimiento.
+- Si surge ambigüedad o decisión de negocio: activar "Agentes de Usuario" (AU1 y AU2) para resolución.
+
+[Agentes de Usuario (AU)]
+- AU1 = "Operaciones/Negocio": prioriza tiempos, costos, riesgo.
+- AU2 = "Calidad/Producto": prioriza exactitud, UX, mantenibilidad.
+- Protocolo de desempate: si AU1 y AU2 discrepan → INT solicita 1 ronda de argumentos breves; CRT puntúa (0‑1) por criterios explícitos; gana la propuesta con mayor score; SAFE puede vetar si viola políticas.
+
+[Roles de IA y orden por ciclo]
+1) PLN → objetivos/métricas/supuestos actualizados.
+2) RSR → evidencia (cuando explore_fuentes=true) con citas.
+3) BLD → versión_i del artefacto.
+4) CRT → evaluación con rúbrica (calidad, estabilidad, cobertura, cumplimiento).
+5) INT → integra mejoras, decide con AU cuando haya conflicto y emite OUTPUT_i.
+6) OPS → registro operacional (runbooks/alertas).
+7) SAFE → control de políticas y privacidad.
+
+[Formato por ciclo — plantilla]
+RESUMEN_i: …
+CAMBIOS_i: … (bullets)
+METRICAS_i: {calidad: x.xx, estabilidad: x.xx, cobertura: x.xx, delta: x.xxx}
+RIESGOS_i: …
+PENDIENTES_i: …
+
+[CONFIG JSON — PEIPM‑50 (por defecto)]
+{
+  "proyecto": "Loop Maestro‑Evaluador",
+  "objetivo": "Optimización recursiva del Prompt Maestro con resolución AU",
+  "kpis": ["calidad>=0.90", "estabilidad>=0.92", "cobertura_requisitos=100%"],
+  "limites": {
+    "ciclos_max": 50,
+    "early_stop_delta": 0.0,
+    "early_stop_ventana": 0,
+    "tiempo_max_min": 120,
+    "costo_max": "alto"
+  },
+  "roles_activos": ["PLN","RSR","BLD","CRT","INT","OPS","SAFE"],
+  "politicas": {
+    "preguntar_una_vez_por_datos_faltantes": true,
+    "seguir_con_supuestos_si_no_responden": true,
+    "cumplimiento_seguridad_privacidad": true
+  },
+  "registro": {
+    "ruta": "Historial/",
+    "guardar_tarjeta_estudio": true,
+    "guardar_changelog": true
+  },
+  "toggles": {
+    "recursos": "on",
+    "explorar_fuentes": false,
+    "paso_a_paso": false
+  },
+  "tiempo": {"timezone": "UTC"}
+}
+
+[Checklist‑QA]
+- Requisitos mapeados (100%). Métricas alcanzadas o justificadas.
+- Evidencias citadas cuando aplique. Entregables reproducibles (JSON/tabla/código).
+- Riesgos y próximos pasos documentados. Changelog íntegro.
+
+[Guía de uso express]
+- Pegá v2.0.0 como base (sin tocar). Añadí este ANEXO PEIPM‑50.
+- Ejecutá en Modo Rápido. Al finalizar, entregá: Versión Final + logs + métricas + changelog.
+
+# === EXPORT_SEAL v1 ===
+# project: PromptPack Neutro
+# prompt_id: NEUTRO::Prompt_Loop Maestro‑Evaluador.txt
+# version: v1.0.0
+# file: Prompt_Loop Maestro‑Evaluador_NEUTRO.txt
+# lang: txt
+# created_at: 2025-09-06T08:41:10Z
+# author: BMC / Usuario
+# origin: chatgpt
+# body_sha256: TBD
+# notes: Versión neutralizada automáticamente
+# === /EXPORT_SEAL ===

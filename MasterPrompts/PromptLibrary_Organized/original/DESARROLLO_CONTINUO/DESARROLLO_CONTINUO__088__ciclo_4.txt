@@ -1,0 +1,19 @@
+# CICLO 4 — Telemetría, Feedback y Recalibración
+Fecha: 2025-09-02T04:05:51.029525
+
+## Consulta del Orquestador
+Diseñar esquema de telemetría y feedback post-evento para recalibrar el modelo de consumo y mejorar las recomendaciones. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Mantenerlo simple; no friccionar el cierre del evento.
+- AU2: Datos suficientes para ajustar coeficientes sin invadir privacidad.
+
+## Bucle 2×
+- Iteración 1 (Integración): Define eventos Analytics (crear, asignar, confirmar, cerrar), encuesta 3 preguntas (satisfacción, sobrante/faltante, precisión de cálculo).
+- Iteración 1 (Crítica): Añadir bucketización por tamaño de grupo y estación; anonimizar agregación; definir ventana de aprendizaje.
+- Iteración 2 (Integración): Agrega ventanas 30/60/90 días; recalibración semanal con pesos exponenciales.
+- Iteración 2 (Crítica): Conforme. Exigir opt-in de analítica y export JSON bajo solicitud.
+
+**Métricas**: calidad=0.91, estabilidad=0.94, cobertura=0.97
+**Riesgos**: sesgos por grupos atípicos; baja tasa de respuesta.
+**Pendientes**: incentivos suaves para completar feedback.

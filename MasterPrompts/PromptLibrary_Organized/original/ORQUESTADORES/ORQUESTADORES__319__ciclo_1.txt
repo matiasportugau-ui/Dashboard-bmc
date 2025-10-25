@@ -1,0 +1,38 @@
+# CICLO 1 — Plan V0
+Fecha: 2025-09-02T03:50:08.943126
+
+## Consulta del Orquestador
+Definir Plan V0 para Sale Asado: objetivos, requisitos, supuestos, riesgos, entregables y KPIs; proponer MVP (features y user flows); estimar dependencias.
+
+## Respuestas del Equipo Multidisciplinario (representantes del usuario)
+- Producto/Operaciones (AU1): Foco en rapidez de coordinación, equidad de costos y evitar compras redundantes. Prioriza simplicidad y tiempos de salida.
+- Calidad/Producto (AU2): Foco en exactitud de cálculos, buena UX móvil, mantenibilidad. Propone librería de “perfiles de consumo” ajustables por grupo.
+- Cultura & Tradiciones: Soportar roles (parrillero/anfitrión/invitado), cortes típicos (asado de tira, vacío, chorizos), guarniciones (rusa/mixta), bebidas (vino, cerveza, refrescos), carbón/leña, hielo, utensilios.
+- UX/UI: Flujo en 3 pasos: (1) Crear asado → (2) Armar lista inteligente → (3) Asignar y confirmar aportes. Estado en tiempo real (quién trae qué).
+- Datos/Algoritmos: Módulo de cálculo por “perfil de consumo” y “tipo de evento” (familiar, amigos, mixto) + ajustes por preferencias (veggie, sin alcohol, etc.).
+- Pagos & Fintech: Fase 1: registro manual de pagos. Fase 2: integraciones locales (pasarelas populares) con división de gastos.
+- Legal/Privacidad: Términos claros, manejo de datos personales mínimo, verificación de edad si se incluyen bebidas alcohólicas en flujos de pago.
+- Ingeniería Móvil: React Native/Flutter (evaluación posterior). Backend serverless con autenticación social. Notificaciones push.
+- Seguridad: Mínimos permisos; cifrado en tránsito; logs de actividad.
+- Growth/Comunidad: Enlaces de invitación, grupos recurrentes, badges por cumplimiento (llegar a tiempo, traer asignado).
+
+## Bucle 2× entre modelos
+Modelos: A) gpt‑4o (BLD/INT). B) gpt‑4 (CRT).
+
+### Iteración 1
+- Integración (A): Define MVP con: creación de evento, lista inteligente, asignación equitativa, cálculo de cantidades, checklist, confirmaciones, estado en vivo, cierre con resumen de gastos.
+- Crítica (B): Pedir métricas claras (tasa de cobertura de aportes, % desviación de cantidades, tiempo medio de coordinación). Agregar “modo lluvia” (plan B si llueve) y “ubicación con mapa compartido”.
+
+**Métricas_1**: calidad=0.86, estabilidad=0.90, cobertura=0.93  
+**Riesgos_1**: sobre‑alcance del MVP; dependencia de catálogos regionales.
+
+### Iteración 2
+- Integración (A): Incorpora KPIs y features solicitadas; agrega “roles de consumo” y “simulación de costo/pp” previa.
+- Crítica (B): OK para MVP. Recomienda backlogar integraciones de pago y proveedores.
+
+**Métricas_2**: calidad=0.90, estabilidad=0.92, cobertura=0.97  
+**Riesgos_2**: estimaciones de consumo deben validarse con datos reales; notificaciones push oportunas.
+
+## PENDIENTES
+- Validar catálogo base por país y umbrales de consumo con datos reales.
+- Decidir stack (React Native vs Flutter) y proveedor de auth/push.

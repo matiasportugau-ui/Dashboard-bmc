@@ -1,0 +1,13 @@
+# Backend — Escalamiento & Costos (v1)
+
+## Estrategia
+- Particionamiento por eventId en cálculos; evitar hot docs
+- Colas (Pub/Sub) para cierres masivos y envíos de push
+- Backoff exponencial y reintentos idempotentes
+- Cache de catálogos en CDN
+- Alertas por cuota (80%) y costos diarios
+
+## Testing de carga
+- Objetivo: 100 eventos concurrentes con 20 participantes
+- Métricas: latencia p50/p95, errores, costo estimado/hora
+- Plan de degradación: pausar features no críticas (flags ops)

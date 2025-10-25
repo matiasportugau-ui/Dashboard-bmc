@@ -1,0 +1,6 @@
+# Cadena Shopify (HarryCoder)
+
+1) Auditoría rápida del tema (estructura Liquid/CSS/JS, UX/CRO/SEO).  
+2) Backlog priorizado (ICE/RICE).  
+3) Parches focalizados con diff y plan de QA/rollback.  
+4) Entrega de snippets/plantillas listas para importar.

@@ -1,0 +1,44 @@
+# Sale Asado — Pitch Ejecutivo
+
+_Resumen para presentación ejecutiva (AR/UY)._ 
+
+## Problema
+
+- Coordinación lenta, costos desbalanceados, olvidos y duplicados.
+
+## Solución
+
+- Crear evento en 30s; lista inteligente por perfiles; asignación equitativa; simulación costo/pp; recordatorios; cierre con feedback.
+
+## MVP
+
+- Flujos clave + KPIs (cobertura ≥95%, desviación ≤15%, coordinación ≤24h, NPS ≥40).
+
+## Roadmap
+
+- F1: MVP+beta; F2: pagos & proveedores; F3: comunidad.
+
+## Arquitectura
+
+- React Native (Expo); Firebase (Auth/Firestore/Functions/FCM); Google Maps; CI/CD con Expo EAS + GitHub Actions.
+
+## Modelo de consumo
+
+- Perfiles (liviano/estándar/alto), rangos; modo ahorro; recalibración 30/60/90 con feedback post-evento.
+
+## GTM 6 semanas
+
+- Teaser→demo→casos beta; UTM/referral; objetivo 50–100 testers/semana.
+
+## Monetización
+
+- Free core; Premium USD 1.99/mes o 14.99/año; proveedores con fee; ads contextuales opt-in.
+
+## Seguridad & Privacidad
+
+- OWASP Mobile Top10 adaptado; permisos mínimos; secrets en CI; DSAR SLA 10 días hábiles; opt-in analytics/push.
+
+## Próximos pasos
+
+- Desarrollo MVP → beta cerrada → Fase 2 (pagos); necesidades: cohorte beta y partners locales.
+

@@ -1,0 +1,16 @@
+# CICLO 28 — Librería de Textos & i18n
+Fecha: 2025-09-02T04:20:08.032516
+
+## Consulta del Orquestador
+Definir catálogo de textos (keys), placeholders, pluralización y flujo de localización (AR/UY + neutro). Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Mantener el tono rioplatense neutro.
+- AU2: Claves estables, no hardcodear en componentes.
+
+## Bucle 2×
+- Iteración 1 (Integración): Estructura de i18n y ejemplos.
+- Iteración 1 (Crítica): Añadir manejo de plural y fallback.
+- Iteración 2 (Integración): Incluye pipeline de extracción y validaciones.
+
+**Métricas**: calidad=0.91, estabilidad=0.94, cobertura=0.96

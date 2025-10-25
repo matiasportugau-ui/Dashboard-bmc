@@ -1,0 +1,20 @@
+# Métricas Técnicas — Especificación v1
+
+## KPIs
+- Crash-free rate (meta ≥ 99%)
+- ANR (stalls >5s) por sesión (meta ≤ 0.5%)
+- TTI (time-to-interactive) (meta ≤ 2.5s en gama media)
+- TTFB para APIs clave (meta ≤ 300ms p50, ≤ 800ms p95)
+
+## Segmentación
+- Por dispositivo (RAM/CPU), OS, red (wifi/datos), versión de app/build
+
+## Tableros
+- Overview por release
+- Comparativo p50/p95
+- Mapa de errores (stack, frecuencia, contexto)
+
+## Alertas
+- Crash-free < 98.5% (24h)
+- ANR > 1% (24h)
+- TTFB p95 > 1s en 2 builds consecutivos

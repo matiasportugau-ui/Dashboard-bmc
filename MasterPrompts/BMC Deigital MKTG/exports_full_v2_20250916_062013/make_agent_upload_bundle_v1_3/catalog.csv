@@ -1,0 +1,4 @@
+sku,title,category,price,unit_cost,stock_qty,stock_days,brand,status
+SKU-001,Zapatillas Run,calzado,2490,1450,35,12,BMC,active
+SKU-002,Remera Tech,indumentaria,990,420,120,25,BMC,active
+SKU-003,Gorra Logo,accesorios,690,210,18,4,BMC,active

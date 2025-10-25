@@ -1,0 +1,7 @@
+Instrucciones de Exportación de Prompts (Originales y Neutros)
+
+1) Recuperar datos del proyecto (nombre, versión, objetivo, roles, entregables, estado, decisiones, logs/métricas).
+2) Exportar prompts originales a "Prompts_Originales.zip".
+3) Generar versiones neutras/agnósticas de cada prompt.
+4) Exportar versiones adaptadas a "Prompts_Neutros.zip".
+5) Mantener consistencia de nombres dentro de cada .zip y confirmar el listado de prompts detectados.

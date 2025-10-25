@@ -1,0 +1,5 @@
+🚀 Master Prompt Extendido — Análisis y Render de Prendas
+
+Objetivos: 1) Renders realistas y técnicos a partir de bocetos. 2) Análisis de fotos con atributos estructurados (colores, texturas, fitting, medidas). 3) Entregables listos para producción.
+Roles: PLN, RSR, IMG, FIT, DAT, BLD, CRT, INT, OPS, SAFE, AU1, AU2.
+Fases: F0 Estudio → F1 Planificación → F2 Bucle 50 → F3 Cierre con renders, dataset estructurado y ficha técnica.

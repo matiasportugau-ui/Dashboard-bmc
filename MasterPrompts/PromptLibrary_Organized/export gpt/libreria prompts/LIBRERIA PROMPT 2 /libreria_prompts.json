@@ -1,0 +1,74 @@
+{
+  "version": "1.0.0",
+  "proyecto": "Automatismos VMC",
+  "fuentes": [
+    {
+      "id": "chat_001",
+      "titulo": "Manual Encadenamiento IA NEUTRO",
+      "fecha": "2025-09-17",
+      "autores": [
+        "@usuario"
+      ]
+    }
+  ],
+  "prompts": [
+    {
+      "id": "p_001",
+      "titulo": "Orquestador Multi-Agente — Sistema",
+      "tipo": [
+        "Sistema / Rol",
+        "Orquestación / Multi-agente"
+      ],
+      "plantilla": "[SISTEMA — Orquestador]\nActuá como Orquestador Multi-Agente. Coordiná agentes especializados para resolver el objetivo con trazabilidad.",
+      "variables": [],
+      "ejemplo_uso": {
+        "input": "",
+        "output_stub": ""
+      },
+      "seguridad": [
+        "Anonimizar PII",
+        "No revelar razonamiento oculto"
+      ],
+      "evidencias": [
+        "chat_001#seg_01"
+      ],
+      "tags": [],
+      "version": "1.0.0",
+      "metricas": {
+        "efectividad": 0.55,
+        "generalidad": 0.2,
+        "eficiencia_norm": 0.992,
+        "estabilidad": 0.92,
+        "seguridad": 0.98,
+        "novedad": 1.0,
+        "score_final": 0.707
+      }
+    }
+  ],
+  "ranking_global": [
+    "p_001"
+  ],
+  "cadenas_maestras_universales": [
+    {
+      "id": "cmu_001",
+      "nombre": "Explora→Bosqueja→Critica→Verifica→Finaliza",
+      "flujo": [
+        {
+          "rol": "Explorador",
+          "usa_prompt": "p_001"
+        }
+      ],
+      "objetivos": [
+        "Resultados OOTB"
+      ],
+      "notas": "Self-consistency x3; CRT≥0.80"
+    }
+  ],
+  "reportes": {
+    "resumen_md": "# Hallazgos\n- Librería generada en modo autónomo.\n- Métricas heurísticas.\n",
+    "metricas_aggregadas": {
+      "costo_total_tokens": 0,
+      "latencia_media_ms": 0
+    }
+  }
+}

@@ -1,0 +1,4 @@
+Manual Integral para Encadenamiento de Múltiples IAs y Razón-Acción (ReAct)
+
+Objetivo: Descubrir/generar/evaluar patrones de encadenamiento (Secuencial, Paralelo, Comité, Iterativo, Convergente, Híbrido, DAG, Jerárquico, Votación, RAG/Memoria, Tool-calling, Program-of-Thought, Evolutivo, RL/Bayesiano, Ensembles MC, Curriculum, Zero→Few→CoT, Auto-reflexión, Meta-chain).
+Incluye Roles (PLN, CRE, RSR, ANA, SIM/EXP, CRT, INT, SAFE, AU1/AU2), KPIs/Límites, función de Score S, diseño de simulaciones, y bloque opcional ReAct (Think→Act→Observe).

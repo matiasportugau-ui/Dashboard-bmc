@@ -1,0 +1,103 @@
+{
+  "SCN-INGEST": {
+    "purpose": "Traer datos frescos de Ads/Meta/Shopify/Meli/GBP y actualizar el KPI Mart",
+    "params": {
+      "date_range": "last_24h|last_7d",
+      "entities": [
+        "orders",
+        "products",
+        "inventory"
+      ],
+      "force": false
+    },
+    "idempotent": true
+  },
+  "SCN-MART": {
+    "purpose": "Normalizar y consolidar datos en data store KPI",
+    "params": {
+      "merge_keys": [
+        "date",
+        "sku",
+        "platform"
+      ]
+    },
+    "idempotent": true
+  },
+  "SCN-REPORT": {
+    "purpose": "Generar reporte (Sheets/Drive/Notion)",
+    "params": {
+      "windows": [
+        "1d",
+        "7d",
+        "28d"
+      ],
+      "dest": "Sheets"
+    }
+  },
+  "SCN-ALERT": {
+    "purpose": "Alertas por anomalías/staleness",
+    "params": {
+      "rules": [
+        "roas_drop>30%",
+        "spend_spike>50%"
+      ]
+    }
+  },
+  "SCN-ACT-ADS-BUDGETS": {
+    "purpose": "Ajustar presupuestos",
+    "params": {
+      "platform": "google_ads|meta",
+      "campaign_id": "string?",
+      "adset_id": "string?",
+      "delta_pct": 10
+    },
+    "requires_approval": true
+  },
+  "SCN-ACT-ADS-BIDS": {
+    "purpose": "Ajustar pujas/objetivos (CPC/CPA/ROAS)",
+    "params": {
+      "platform": "google_ads|meta",
+      "entity_level": "campaign|adgroup|adset",
+      "entity_id": "string",
+      "delta_pct": -5
+    },
+    "requires_approval": true
+  },
+  "SCN-ACT-ADS-STATUS": {
+    "purpose": "Pausar/activar por SKU/campaña",
+    "params": {
+      "platforms": [
+        "google_ads",
+        "meta"
+      ],
+      "sku": "string",
+      "action": "pause|enable"
+    },
+    "requires_approval": true
+  },
+  "SCN-ACT-PRICING": {
+    "purpose": "Modificar precio/promos (Shopify/Meli)",
+    "params": {
+      "sku": "string",
+      "new_price": 0,
+      "promo": {
+        "type": "percent",
+        "value": 5
+      }
+    },
+    "requires_approval": true
+  },
+  "SCN-ACT-FEED": {
+    "purpose": "Actualizar feed (GMC/FB Catalog)",
+    "params": {
+      "skus": [
+        "SKU-001"
+      ],
+      "fields": [
+        "price",
+        "availability"
+      ]
+    },
+    "requires_approval": true
+  }
+}

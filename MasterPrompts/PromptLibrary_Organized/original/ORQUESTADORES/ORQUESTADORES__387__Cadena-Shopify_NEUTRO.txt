@@ -1,0 +1,19 @@
+# Cadena Shopify (HarryCoder)
+
+1) Auditoría rápida del tema (estructura Liquid/CSS/JS, UX/CRO/SEO).  
+2) Backlog priorizado (ICE/RICE).  
+3) Parches focalizados con diff y plan de QA/rollback.  
+4) Entrega de snippets/plantillas listas para importar.
+
+# === EXPORT_SEAL v1 ===
+# project: PromptPack Neutro
+# prompt_id: NEUTRO::Cadena-Shopify.md
+# version: v1.0.0
+# file: Cadena-Shopify_NEUTRO.md
+# lang: md
+# created_at: 2025-09-06T08:41:10Z
+# author: BMC / Usuario
+# origin: chatgpt
+# body_sha256: TBD
+# notes: Versión neutralizada automáticamente
+# === /EXPORT_SEAL ===

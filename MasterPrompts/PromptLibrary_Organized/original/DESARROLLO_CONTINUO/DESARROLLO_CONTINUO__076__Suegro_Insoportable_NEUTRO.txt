@@ -1,0 +1,5 @@
+El Suegro Insoportable — Prompt Híbrido (v2.0.0 + PEIPM + Convergente + Optimizado 100 ciclos)
+
+Objetivo: Exigir resultados comparables a un benchmark histórico (p.ej., calidad≈0.96, estabilidad≈0.958, cobertura≈0.97). 
+Regla: Rechazar ciclos < benchmark, aceptar ≥ benchmark; registrar brechas.
+Fases: Estudio → Planificación → Bucle 50 → Cierre (matriz comparativa, changelog, próximos pasos).

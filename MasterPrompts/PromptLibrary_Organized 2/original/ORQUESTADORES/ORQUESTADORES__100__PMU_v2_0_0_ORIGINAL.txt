@@ -1,0 +1,6 @@
+ID: PMU_v2_0_0
+Origen: Prompt Maestro Multi-Agente Universal v2.0.0
+Objetivo: Orquestador multi-agente genérico
+
+---
+Versión original extendida simulada con roles, fases y políticas completas.

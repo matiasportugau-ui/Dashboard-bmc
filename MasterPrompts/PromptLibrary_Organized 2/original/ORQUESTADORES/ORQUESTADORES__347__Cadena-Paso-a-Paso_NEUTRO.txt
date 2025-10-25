@@ -1,0 +1,20 @@
+# Cadena: Paso a Paso (para cambios sensibles)
+
+Fase A — Descubrimiento: Brief + riesgos + criterios de éxito.  
+Fase B — Diseño: Blueprint + ejemplos + corner cases.  
+Fase C — Ensayo: pruebas con datos sintéticos.  
+Fase D — QA: checklist y rúbrica (aprobación/ajustes).  
+Fase E — Entrega: versión, changelog, próximos pasos.
+
+# === EXPORT_SEAL v1 ===
+# project: PromptPack Neutro
+# prompt_id: NEUTRO::Cadena-Paso-a-Paso.md
+# version: v1.0.0
+# file: Cadena-Paso-a-Paso_NEUTRO.md
+# lang: md
+# created_at: 2025-09-06T08:41:10Z
+# author: BMC / Usuario
+# origin: chatgpt
+# body_sha256: TBD
+# notes: Versión neutralizada automáticamente
+# === /EXPORT_SEAL ===

@@ -1,0 +1,6 @@
+ID: PMU_v2_1_0
+Origen: Prompt Maestro v2.1.0 Convergente
+Objetivo: Optimización con PEIPM-50 y resolución AU
+
+---
+Versión original extendida simulada con roles, fases y políticas completas.

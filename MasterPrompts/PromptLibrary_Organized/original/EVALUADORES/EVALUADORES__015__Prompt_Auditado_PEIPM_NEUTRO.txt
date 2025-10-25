@@ -1,0 +1,5 @@
+📑 Prompt Auditado — Evaluador Iterativo del Prompt Maestro (PEIPM)
+
+Extensión auditora para auto-evaluación cíclica con early-stop y métricas.
+Uso: Mantener prompt original, agregar bloque PEIPM y ejecutar con Config JSON.
+Salida: Prompt original intacto, prompt auditado con bucle de mejora, reportes iterativos y versión final optimizada.

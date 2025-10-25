@@ -1,0 +1,8 @@
+# Cadena: Prompt Experto (Modo Rápido)
+
+1) Ingesta del caso con Plantilla **Brief-Caso**.  
+2) Diseño del prompt con **Prompt-Blueprint** (RCT‑COE).  
+3) Selección de **nivel de recursos** (1/2/3).  
+4) Generación del prompt (modelo según recursos).  
+5) QA con **Checklist‑QA** + rúbrica.  
+6) Entrega en el formato solicitado + registro en `05_Historial/`.
