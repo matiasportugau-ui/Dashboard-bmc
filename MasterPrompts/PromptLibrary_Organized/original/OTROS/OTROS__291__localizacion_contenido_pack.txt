@@ -1,0 +1,16 @@
+# Paquete de Localización — AR/UY (v1)
+
+## Cortes y embutidos (glosario)
+- Asado de tira, vacío, entraña, bondiola, matambre, pollo, chorizo, morcilla
+## Guarniciones
+- Ensalada rusa, mixta, papas, provoleta
+## Panificados
+- Pan flauta/baguette, tortillas (opcional)
+## Bebidas
+- Agua, refrescos, cerveza, vino (consumo responsable)
+
+## Fallback neutro
+- Carne roja, cerdo, pollo, embutidos, ensaladas, pan, bebidas
+
+## Guía de tono
+- Inclusivo, claro, sin estereotipos; opciones veggie disponibles.

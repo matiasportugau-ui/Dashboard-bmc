@@ -1,0 +1,19 @@
+# Plan de QA — MVP
+
+## Tipos
+- Smoke: arranque app, login, crear evento, generar lista, asignar, confirmar, cierre.
+- Funcionales: validaciones de formularios, cálculos de cantidades y costos, notificaciones.
+- E2E básicos: flujo completo Crear→Lista→Asignación→Recordatorios→Cierre.
+
+## Cobertura mínima
+- Smoke ≥ 95% de pase.
+- Funcionales críticos ≥ 90% de pase.
+- E2E básicos: 2 recorridos principales sin fallas críticas.
+
+## Escenarios no felices
+- Offline en Lista/Asignación (modo retry y cola local).
+- Conflictos de asignación simultánea.
+- Errores de red y reintentos exponenciales.
+
+## Métricas
+- Tasa de fallos por tipo, tiempo medio de resolución, severidad P0/P1/P2.

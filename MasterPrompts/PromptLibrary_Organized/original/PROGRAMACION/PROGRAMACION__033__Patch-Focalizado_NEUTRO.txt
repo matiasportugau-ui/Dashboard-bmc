@@ -1,0 +1,31 @@
+# Patch Focalizado — Plantilla
+
+## Objetivo
+(qué corrige/mejora y por qué)
+
+## Antes / Después (diff breve)
+```diff
+- código anterior
++ código nuevo
+```
+
+## Riesgos y mitigaciones
+- …
+
+## QA
+- Pruebas funcionales
+- Lighthouse/mediciones
+- Rollback plan
+
+# === EXPORT_SEAL v1 ===
+# project: PromptPack Neutro
+# prompt_id: NEUTRO::Patch-Focalizado.md
+# version: v1.0.0
+# file: Patch-Focalizado_NEUTRO.md
+# lang: md
+# created_at: 2025-09-06T08:41:10Z
+# author: BMC / Usuario
+# origin: chatgpt
+# body_sha256: TBD
+# notes: Versión neutralizada automáticamente
+# === /EXPORT_SEAL ===

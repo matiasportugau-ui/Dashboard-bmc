@@ -1,0 +1,6 @@
+🎛️ Prompt Maestro — Mastering Podcast [Plataforma] (Ableton Live, Mac) — PEIPM-50 FINAL
+
+Objetivo: Orquestador de mastering audio de podcast (voces + música), cumpliendo loudness objetivo, claridad de voces, reducción de ruido y balance dinámico.
+Entregables: WAV 24-bit, MP3 320 kbps, Reporte técnico.
+Fases: F0 Estudio → F1 Planificación → F2 Iteración PEIPM-50 → F3 Entrega.
+Parámetros: KPIs altos, límites de tiempo/costo, roles completos (PLN/RSR/BLD/CRT/INT/OPS/SAFE/AU1/AU2).

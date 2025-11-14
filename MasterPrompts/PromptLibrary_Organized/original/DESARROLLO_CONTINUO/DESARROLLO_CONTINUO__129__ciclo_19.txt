@@ -1,0 +1,16 @@
+# CICLO 19 — Localización & Contenido Cultural
+Fecha: 2025-09-02T04:14:36.260144
+
+## Consulta del Orquestador
+Definir paquete de localización AR/UY (nombres de cortes, bebidas, modismos neutros) y guías de tono inclusivo. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Mantener términos conocidos.
+- AU2: Evitar estereotipos; incluir opciones veggies.
+
+## Bucle 2×
+- Iteración 1 (Integración): Listas base AR/UY.
+- Iteración 1 (Crítica): Añadir glosario y fallback neutro.
+- Iteración 2 (Integración): Incluye guía de uso y variantes.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.95

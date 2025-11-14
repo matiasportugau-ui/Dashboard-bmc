@@ -1,0 +1,32 @@
+# Techpack — VEST-NEGRO-RIB-DOR-001 (v2)
+**Cambios confirmados por cliente:** tejido exacto, sin forro, sin cierre, largo a suelo.
+
+**Tejido exacto**: crepé elástico 230 gsm — 95% poliéster / 5% elastano.
+**Forrería**: no.
+**Cierre**: sin cierre (entrada por elasticidad + espalda abierta).
+**Largo**: suelo.
+
+## Ajustes de patronaje
+- Holgura negativa leve en torso (-1 a -2 cm vs medidas de contorno).
+- Verificar que la apertura de espalda y el escote permitan colocación sin forzar.
+- Añadir presillas discretas para guiar/asegurar cordón dorado.
+- Controlar altura del tajo para paso largo y sedestación.
+
+## Construcción (actualizada)
+1. Vistas con entretela tricot; stay tape en V.
+2. Cuerpo: unir hombros y costados; montar vistas; top-stitch opcional.
+3. Aplicación del galón dorado sin traccionar el tejido.
+4. Falda evasé: unir paneles; preparar tajo; unir a cuerpo; bartack.
+5. Sin cremallera: comprobar entrada; ajustar sisa/escote si es necesario.
+6. Dobladillo a suelo con calzado de uso.
+7. Presillas/ojales para cordón en espalda (si no están integradas).
+
+## QA específico v2
+- Escote y sisas estables sin ceder tras 30 ciclos de estiramiento ligero.
+- Largo a suelo (±5 mm) y sin arrastres indeseados.
+- Apertura del tajo controlada (prueba caminata y sentarse).
+- Galón continuo y plano (sin ondulaciones ni huecos).
+
+## Diagramas
+- [Frente v2 SVG](VEST-NEGRO-RIB-DOR-001_front_v2.svg)
+- [Espalda v2 SVG](VEST-NEGRO-RIB-DOR-001_back_v2.svg)

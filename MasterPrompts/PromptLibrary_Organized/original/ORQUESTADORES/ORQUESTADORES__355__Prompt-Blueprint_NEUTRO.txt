@@ -1,0 +1,21 @@
+# Prompt Blueprint (RCT‑COE)
+
+Rol: …  
+Contexto: …  
+Tarea: …  
+Condiciones: …  
+Output: …  
+Ejemplos: (incluya positivos y negativos)
+
+# === EXPORT_SEAL v1 ===
+# project: PromptPack Neutro
+# prompt_id: NEUTRO::Prompt-Blueprint.md
+# version: v1.0.0
+# file: Prompt-Blueprint_NEUTRO.md
+# lang: md
+# created_at: 2025-09-06T08:41:10Z
+# author: BMC / Usuario
+# origin: chatgpt
+# body_sha256: TBD
+# notes: Versión neutralizada automáticamente
+# === /EXPORT_SEAL ===

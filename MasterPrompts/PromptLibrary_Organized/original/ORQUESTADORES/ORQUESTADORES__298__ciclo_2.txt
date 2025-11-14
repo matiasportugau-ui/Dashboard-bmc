@@ -1,0 +1,30 @@
+# CICLO 2 — Refinamiento de Consumo + User Stories
+Fecha: 2025-09-02T03:52:27.527540
+
+## Consulta del Orquestador
+Refinar el modelo de estimación de consumo por perfil y tipo de evento; definir User Stories priorizadas (lista inicial), con criterios de aceptación y dependencias para arrancar desarrollo del MVP. Ejecutar bucle 2× entre modelos (BLD/INT ↔ CRT).
+
+## Respuestas del Equipo Multidisciplinario (representantes del usuario)
+- AU1 (Operaciones/Negocio): Simplicidad y rapidez. Presets de consumo claros y editables en la app. Enfoque en carne, chorizo, pan, ensaladas básicas, bebidas, carbón y hielo.
+- AU2 (Calidad/Producto): Incluir perfiles (carne-alta, estándar, liviano), preferencias (veggie/sin alcohol/niños), y tipo de evento (amigos/familiar/mixto). Asegurar validación posterior con datos reales.
+
+## Bucle 2× entre modelos
+Modelos: A) gpt-4o (BLD/INT) — integra y sintetiza; B) gpt-4 (CRT) — critica con rúbrica.
+
+### Iteración 1
+- Integración (A): Define presets iniciales por persona (ajustables) y matriz por perfil. Propone backlog con User Stories P0 para MVP.
+- Crítica (B): Pedir límites de rango, señalizar supuestos explícitos, y agregar criterios de aceptación medibles. Solicita contemplar variación estacional (verano/invierno) y “modo ahorro”.
+
+**Métricas_1**: calidad=0.87, estabilidad=0.90, cobertura=0.94
+**Riesgos_1**: sobre-simplificación en bebidas; falta de datos históricos.
+
+### Iteración 2
+- Integración (A): Añade rangos y supuestos, “modo ahorro” y variación estacional, criterios de aceptación cuantificables. Refina dependencias técnicas.
+- Crítica (B): Conforme para MVP. Requiere validación en pruebas beta y telemetría para ajustar coeficientes.
+
+**Métricas_2**: calidad=0.91, estabilidad=0.93, cobertura=0.97
+**Riesgos_2**: Necesidad de ajustar por región y hábitos del grupo; evitar sesgos fijos.
+
+## PENDIENTES
+- Definir esquema de telemetría para aprendizaje de consumos reales (post-evento).
+- Añadir test A/B de presets “estándar” vs “ahorro” con medición de satisfacción.

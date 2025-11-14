@@ -1,0 +1,19 @@
+# Estimación y Priorización
+
+- Impacto esperado (↑ conversión, ↓ rebote, ↑ CLS, etc.).  
+- Confianza (baja/media/alta).  
+- Esfuerzo (bajo/medio/alto).  
+- Score ICE/RICE → orden de ejecución.
+
+# === EXPORT_SEAL v1 ===
+# project: PromptPack Neutro
+# prompt_id: NEUTRO::Estimacion-Priorizacion.md
+# version: v1.0.0
+# file: Estimacion-Priorizacion_NEUTRO.md
+# lang: md
+# created_at: 2025-09-06T08:41:10Z
+# author: BMC / Usuario
+# origin: chatgpt
+# body_sha256: TBD
+# notes: Versión neutralizada automáticamente
+# === /EXPORT_SEAL ===

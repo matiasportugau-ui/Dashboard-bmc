@@ -1,0 +1,7 @@
+# Rúbrica de Calidad (0–3)
+
+1) Claridad y estructura (0–3)  
+2) Cobertura de casos (0–3)  
+3) Precisión técnica (0–3)  
+4) Robustez a ruido (0–3)  
+5) Utilidad del output (0–3)

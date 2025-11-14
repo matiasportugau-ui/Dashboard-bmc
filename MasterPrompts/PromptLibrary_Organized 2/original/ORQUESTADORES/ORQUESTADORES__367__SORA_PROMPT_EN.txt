@@ -1,0 +1,36 @@
+# SORA — E‑COMMERCE PROMO (10 s, 9:16, 30 fps) · Benefits + REAL Website on Phone
+
+Instruction: Generate a single **vertical** video of **10 seconds** (1080×1920, **30 fps**) with a fast pace (~120 BPM).
+**Use the uploaded references EXACTLY** as on‑screen content where indicated. **No invented logos**, **no watermarks**, **no faces** (hands only). Text must be **large**, **high‑contrast**, centered within the safe area.
+
+Look & Feel
+- Style: clean industrial, realistic.
+- Lighting: soft daylight; crisp material textures.
+- Camera: smooth gimbal; clean cuts.
+- Typography: bold, mobile‑legible.
+
+Scene (4 beats × 2.5 s) — with assets
+[0–2.5s] HOOK — Phone showing the **real website**
+- Visual: close shot of a hand holding a smartphone (no face).
+- **On the phone screen, use the uploaded `assets/phone_home.png` (or `assets/phone_scroll.mp4`).**
+- Overlay (XL): **“Shop online — easy”**
+
+[2.5–5s] PROOF — Real snap‑fit macro
+- Visual: satisfying macro of accessory locking onto an insulated panel; screws/alignment visible.
+- (If `assets/macro_accessory.png` was uploaded, blend it subtly.)
+- Overlay: **“See it — decide better”**
+
+[5–7.5s] AVAILABILITY — Real products grid
+- Visual: **show `assets/grid_top_products.png`** (2×2 collage of real items) as a neat flat‑lay with subtle parallax.
+- Overlay: **“Permanent stock”**
+
+[7.5–10s] CTA — Big URL
+- Visual: clean end‑card, strong contrast.
+- Overlay (XL): **“bmcuruguay.com.uy”**
+- Small footer: “Real site captures. Illustrative images.”
+
+Constraints / Negatives
+- Do not invent UI; use the uploaded captures as the phone screen.
+- No shipping promises; informative and accurate copy only.
+- Keep all text within central safe zone.
+- Avoid busy backgrounds; prioritize readability.

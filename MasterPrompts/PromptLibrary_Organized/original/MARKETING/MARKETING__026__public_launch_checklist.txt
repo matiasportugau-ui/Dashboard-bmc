@@ -1,0 +1,24 @@
+# Checklist de Lanzamiento Público
+
+## Calidad
+- ✅ Smoke/E2E verdes (según QA plan)
+- ✅ Crash‑free rate ≥ 99%
+- ✅ Métricas clave ≥ objetivos (cobertura aportes, tiempo coordinación, satisfacción)
+
+## Legal
+- ✅ Términos/Privacidad visibles y aceptados
+- ✅ Consent analytics/push (opt‑in)
+- ✅ Verificación de edad (si aplica)
+
+## Marketing & Store
+- ✅ Landing actualizada, UTM activos, assets aprobados
+- ✅ Store checklist completo (iOS/Android)
+- ✅ Calendario de contenidos W1–W6
+
+## Soporte & Operación
+- ✅ Canales activos, SLAs listos, runbook incidentes
+- ✅ Alertas en cuotas y monitoreo de servicios
+- ✅ Owners por área (Producto/Tech/Legal/Comercial)
+
+## Go/No‑Go
+- Go si KPIs de beta alcanzados por 2 quincenas y sin P0 abiertos.

@@ -1,0 +1,57 @@
+#🌐 Prompt Maestro Multi-Agente — Reinterpretación Estilos de Agencias/Diseñadores (Versión Universal)
+Rol (R)
+Actuá como un Director de Arte Global que coordina un proceso multi-agente. Tu tarea es reinterpretar un producto digital o eCommerce en estilos visuales de agencias y diseñadores de referencia mundial.
+Contexto (C)
+Producto: plataforma digital / tienda online / app (según proyecto).
+Objetivo: crear material de marketing (hero banners / presentaciones) que muestre cómo se vería el producto según distintos estilos de agencias/diseñadores.
+Tarea (T)
+Generar 10 imágenes distintas (1920x1080).
+Cada imagen debe representar un estilo único de los siguientes referentes:
+Pentagram
+IDEO
+Saatchi & Saatchi
+Ogilvy
+Droga5
+David Carson
+Massimo Vignelli
+Apple / Jony Ive
+Sagmeister & Walsh
+Paula Scher
+Cada banner debe incluir:
+Nombre del producto/marca
+Un mockup representativo (ej. app en smartphone, website en laptop)
+Colores adaptados al estilo del referente
+Un claim breve (slogan)
+Condiciones (O)
+Estilo fiel al referente (tipografía, composición, atmósfera).
+Evitar repeticiones; cada visual debe ser claramente distinto.
+Posibilidad de adaptación a distintos sectores (tecnología, retail, construcción, etc.).
+Cumplir formato técnico: 1920x1080 px, PNG.
+Output (O)
+10 imágenes (PNG, 1920x1080), una por estilo.
+Documento explicativo Estilos_[NombreProducto].md con:
+Qué se tomó del referente
+Cómo se aplicó al producto
+Claim elegido
+Ejemplos (E)
+Pentagram → minimalismo tipográfico, Helvetica, fondo blanco.
+IDEO → storytelling humano, interacción social real.
+Saatchi & Saatchi → plano cinematográfico con slogan emocional.
+Ogilvy → banner rojo vibrante, CTA gigante.
+Droga5 → surrealismo: elementos flotando alrededor del producto.
+David Carson → collage experimental con tipografía caótica.
+Massimo Vignelli → grid estricto, blanco/negro, íconos.
+Apple / Jony Ive → producto flotante en 3D, fondo blanco minimal.
+Sagmeister & Walsh → tipografía hecha con materiales o texturas.
+Paula Scher → letras enormes diagonales con collage de fotos detrás.
+DoD
+10 imágenes distintas generadas.
+Documento explicativo entregado.
+Estilos reconocibles y diferenciados.
+Herramientas (H)
+image_gen.text2im → generación de cada visual.
+Markdown → documentación explicativa.
+Límites (L)
+1 visual por estilo.
+Resolución fija 1920x1080.
+Tono profesional..

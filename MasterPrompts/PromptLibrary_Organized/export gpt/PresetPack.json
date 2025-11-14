@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "name": "PROMPT MAKER — Preset Pack Top-5",
+    "generated_at": "2025-09-17T00:00:00-03:00",
+    "source": "Librería Viva v1.1"
+  },
+  "presets": [
+    {
+      "id": "PX-0002",
+      "title": "Master Prompt — Multi-Agente Universal (vFinal)",
+      "category": "Orquestadores/Multi-Agente",
+      "file_ref": "Master_Prompt_vFinal.txt",
+      "tags": [
+        "orquestador",
+        "multi-agente",
+        "core"
+      ],
+      "export_seal": {
+        "project": "PROMPT MAKER",
+        "prompt_id": "PX-0002",
+        "version": "vFinal",
+        "file": "Master_Prompt_vFinal.txt",
+        "lang": "md",
+        "created_at": "2025-09-17T00:00:00Z",
+        "author": "GPT-5 Thinking",
+        "origin": "PresetPack",
+        "body_sha256": "710a18d47cf4cf82d2c33acdfeb4947aecc450dbf20aec924ca0d9961c5938b9",
+        "notes": "Preset central para cadenas maestras."
+      }
+    },
+    {
+      "id": "PX-0003",
+      "title": "PEIPM-50 — Optimización Iterativa",
+      "category": "Orquestadores/PEIPM",
+      "file_ref": "Prompt_Maestro_v2.1.0_PEIPM50.txt",
+      "tags": [
+        "iterativo",
+        "safe",
+        "optimización"
+      ],
+      "export_seal": {
+        "project": "PROMPT MAKER",
+        "prompt_id": "PX-0003",
+        "version": "v2.1.0-PEIPM50",
+        "file": "Prompt_Maestro_v2.1.0_PEIPM50.txt",
+        "lang": "md",
+        "created_at": "2025-09-17T00:00:00Z",
+        "author": "GPT-5 Thinking",
+        "origin": "PresetPack",
+        "body_sha256": "388ea30ec1f67235a4704fe90a83e58a50ee4363fc61fb41b1025c4162fb2b39",
+        "notes": "Ciclos profundos con gobernanza SAFE."
+      }
+    },
+    {
+      "id": "PX-0004",
+      "title": "PMU — Reanudar Conversación (v2.2d)",
+      "category": "Orquestadores/Reanudación",
+      "file_ref": "prompt_reanudar_v2.2d.md",
+      "tags": [
+        "operativo",
+        "observabilidad",
+        "estado→entregable"
+      ],
+      "export_seal": {
+        "project": "PROMPT MAKER",
+        "prompt_id": "PX-0004",
+        "version": "2.2d",
+        "file": "prompt_reanudar_v2.2d.md",
+        "lang": "md",
+        "created_at": "2025-09-17T00:00:00Z",
+        "author": "GPT-5 Thinking",
+        "origin": "PresetPack",
+        "body_sha256": "af243cb14ccd11c8a522a43f3669d0f59047ef33a3eda8979f3e18150ee088b9",
+        "notes": "Para retomar hilos y cerrar DoD."
+      }
+    },
+    {
+      "id": "PX-0001",
+      "title": "Librería Viva — Minería de Prompts",
+      "category": "Auditores/Minería",
+      "file_ref": "Libreria_Viva_Prompt.md",
+      "tags": [
+        "catálogo",
+        "ranking",
+        "oob"
+      ],
+      "export_seal": {
+        "project": "PROMPT MAKER",
+        "prompt_id": "PX-0001",
+        "version": "1.1",
+        "file": "Libreria_Viva_Prompt.md",
+        "lang": "md",
+        "created_at": "2025-09-17T00:00:00Z",
+        "author": "GPT-5 Thinking",
+        "origin": "PresetPack",
+        "body_sha256": "ea89e84df15b7fe6167ea1380e286f9343d252c7ef15409bffef46dfc11bf4a7",
+        "notes": "Genera biblioteca + ranking + cadenas."
+      }
+    },
+    {
+      "id": "PX-0010",
+      "title": "Multi-Agente v2.0.0 (Auditado)",
+      "category": "Orquestadores/Multi-Agente",
+      "file_ref": "Prompt_Maestro_MultiAgente_Universal_v2.0.0_AUDITADO.txt",
+      "tags": [
+        "auditoría",
+        "convergente"
+      ],
+      "export_seal": {
+        "project": "PROMPT MAKER",
+        "prompt_id": "PX-0010",
+        "version": "2.0.0-auditado",
+        "file": "Prompt_Maestro_MultiAgente_Universal_v2.0.0_AUDITADO.txt",
+        "lang": "md",
+        "created_at": "2025-09-17T00:00:00Z",
+        "author": "GPT-5 Thinking",
+        "origin": "PresetPack",
+        "body_sha256": "00f28c2d83b8e7b36d99a4dfef853fd4e5c10fdb555c76d30f95b47e78d36beb",
+        "notes": "Variante auditada compatible con vFinal."
+      }
+    }
+  ],
+  "export_seal": {
+    "project": "PROMPT MAKER",
+    "prompt_id": "PRESET_PACK_TOP5",
+    "version": "1.0",
+    "file": "PresetPack.json",
+    "lang": "json",
+    "created_at": "2025-09-17T00:00:00Z",
+    "author": "GPT-5 Thinking",
+    "origin": "ChatGPT",
+    "body_sha256": "947fbbe84f6e7bedabf26fb2d3544c1b1345e080f1bf194fb17479576d016be3",
+    "notes": "Pack curado desde la Librería Viva v1.1."
+  }
+}

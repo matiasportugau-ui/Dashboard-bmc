@@ -1,0 +1,13 @@
+version: 1
+project: Automatismos VMC
+sources:
+  - id: chat_001
+    title: "Manual Encadenamiento IA NEUTRO"
+    date: "2025-09-17"
+    authors: ["@usuario"]
+    path: "data/raw_chats/Manual_Encadenamiento_IA_NEUTRO.md"
+pii_policy: config/pii_patterns.yaml
+out:
+  drafts_json: "data/intermediate/prompts_draft.json"
+  canon_json: "prompts/canonical/prompts_canon.json"
+  evidence_dir: "data/evidences"

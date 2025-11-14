@@ -1,0 +1,4 @@
+📜 Analizador Profundo de Prompts & Compatibilidad Cruzada
+
+Objetivo: Mapear funcionalidades/roles/fases, estudiar compatibilidad y divergencias, diseñar integraciones cruzadas y proponer prompts híbridos derivados.
+Fases: Estudio → Compatibilidad → Integración Cruzada → Resultados (tabla, recomendaciones, prompts derivados).

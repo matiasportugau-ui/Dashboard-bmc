@@ -1,0 +1,18 @@
+# CICLO 10 — Pagos & Proveedores (Plan Fase 2)
+Fecha: 2025-09-02T04:11:43.827299
+
+## Consulta del Orquestador
+Esbozar estrategia de división de gastos (split) e integración con pasarelas locales; catálogo de proveedores (opcional) y cupones. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Minimizar costos y fricción; empezar con split manual con guía.
+- AU2: Cumplimiento legal y KYC cuando corresponda.
+
+## Bucle 2×
+- Iteración 1 (Integración): Flujo de split (manual → link de cobro por persona), catálogo opt-in.
+- Iteración 1 (Crítica): Añadir evaluación de comisiones y fallback a efectivo/transferencia.
+- Iteración 2 (Integración): Tabla de comisiones, feature flags, pruebas sandbox.
+
+**Métricas**: calidad=0.88, estabilidad=0.92, cobertura=0.94
+**Riesgos**: variabilidad de comisiones; compliance.
+**Pendientes**: decisión de proveedor por país.

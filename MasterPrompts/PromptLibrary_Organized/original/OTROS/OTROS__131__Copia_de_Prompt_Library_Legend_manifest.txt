@@ -1,0 +1,11 @@
+Contenido del paquete Prompt_Library_Legend_Package.zip:
+- prompt_library_legend.py
+- Prompt_Library_Master/README.md
+- Prompt_Library_Master/Inbox/.keep
+- Prompt_Library_Master/Originales/.keep
+- Prompt_Library_Master/Corregidos/.keep
+- Prompt_Library_Master/Neutros/.keep
+- Prompt_Library_Master/Combinados/.keep
+- Prompt_Library_Master/Logs_Metrics/.keep
+- Prompt_Library_Master/Backups_Zip/.keep
+- Prompt_Library_Master/Resumen_Maestro.xlsx

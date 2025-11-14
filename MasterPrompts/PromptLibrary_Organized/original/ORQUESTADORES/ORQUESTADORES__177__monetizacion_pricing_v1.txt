@@ -1,0 +1,9 @@
+# Estrategia de Monetización
+- **Free**: crear asados ilimitados, lista inteligente básica, asignación y recordatorios.
+- **Premium** (ej. USD 1.99/mes o 14.99/año):
+  - Listas avanzadas por histórico
+  - Grupos recurrentes y presets por grupo
+  - Exportación de historial y estadísticas
+  - Soporte prioritario
+- **Proveedores**: comisión o fee fijo por redención de cupones (opt-in)
+- **Ads**: solo contextuales y no intrusivos (opt-in)

@@ -1,0 +1,70 @@
+{
+  "prompt_id": "v1.1-demo",
+  "metrics_old": {
+    "utility": 0.68,
+    "robustness": 0.78,
+    "efficiency": 0.72,
+    "security": 0.992,
+    "generalization": 0.65,
+    "explainability": 0.62
+  },
+  "metrics_new": {
+    "utility": 0.78,
+    "robustness": 0.83,
+    "efficiency": 0.75,
+    "security": 0.997,
+    "generalization": 0.7,
+    "explainability": 0.66
+  },
+  "norm_params": {
+    "utility": {
+      "type": "rate"
+    },
+    "robustness": {
+      "type": "rate"
+    },
+    "efficiency": {
+      "type": "composite"
+    },
+    "security": {
+      "type": "rate"
+    },
+    "generalization": {
+      "type": "rate"
+    },
+    "explainability": {
+      "type": "rated_judges"
+    }
+  },
+  "weights": {
+    "utility": 0.3,
+    "robustness": 0.2,
+    "efficiency": 0.15,
+    "security": 0.2,
+    "generalization": 0.1,
+    "explainability": 0.05
+  },
+  "run_context": {
+    "models": [
+      {
+        "name": "gpt-5-thinking",
+        "version": "2025-09-demo"
+      }
+    ],
+    "versions": {
+      "old": "v1.0",
+      "new": "v1.1"
+    },
+    "seeds": [
+      1337,
+      20250907
+    ],
+    "temps": [
+      0.2
+    ],
+    "prompt_hash": "demo_c12d8e371a6f",
+    "dataset_id": "eval_main_2025-09",
+    "timezone": "America/Montevideo",
+    "timestamp": "2025-09-07T08:18:55Z"
+  }
+}

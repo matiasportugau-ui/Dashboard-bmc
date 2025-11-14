@@ -1,0 +1,164 @@
+{
+  "proceso_id": "BMC-Ventas-LeadsIG-v1",
+  "owner": {
+    "nombre": "Equipo Ventas",
+    "rol": "Lead Ops",
+    "email": "ventas@bmc.com"
+  },
+  "objetivo": "Capturar leads de Instagram/Facebook Lead Ads, calificarlos y disparar nurtures por WhatsApp/Email, registrando todo en GSheets y CRM.",
+  "alcance": "Incluye captura, validación de datos, scoring, asignación a vendedor y primera secuencia de contacto. Excluye cierre comercial y facturación.",
+  "prioridad": "alta",
+  "area": "Ventas",
+  "sistemas_origen": [
+    "Facebook Lead Ads",
+    "GSheets",
+    "WhatsApp Business",
+    "Gmail"
+  ],
+  "gatillos": [
+    "webhook"
+  ],
+  "entradas": [
+    {
+      "tipo": "api",
+      "fuente": "Facebook Lead Ads",
+      "formato": "JSON"
+    },
+    {
+      "tipo": "dato",
+      "fuente": "GSheets/CRM",
+      "formato": "tabla"
+    }
+  ],
+  "salidas": [
+    {
+      "tipo": "registro",
+      "destino": "GSheets - Leads",
+      "formato": "fila"
+    },
+    {
+      "tipo": "notif",
+      "destino": "WhatsApp plantilla",
+      "formato": "mensaje"
+    },
+    {
+      "tipo": "notif",
+      "destino": "Email bienvenida",
+      "formato": "mensaje"
+    }
+  ],
+  "SLA": {
+    "objetivo_horas": 1,
+    "ventana": "L-V 9-20",
+    "tolerancia_pct": 10
+  },
+  "reglas": [
+    "Descartar leads sin teléfono o email",
+    "Priorizar leads con score >= 70",
+    "Notificar a coordinador si no hay contacto en 2 horas"
+  ],
+  "pasos": [
+    {
+      "n": 1,
+      "desc": "Recepción webhook y parsing",
+      "actor": "sistema",
+      "herramienta": "iPaaS/n8n/Make"
+    },
+    {
+      "n": 2,
+      "desc": "Validación de datos y scoring",
+      "actor": "sistema",
+      "herramienta": "script/función"
+    },
+    {
+      "n": 3,
+      "desc": "Alta en GSheets y CRM",
+      "actor": "sistema",
+      "herramienta": "API/Conector"
+    },
+    {
+      "n": 4,
+      "desc": "Disparo de mensajes (WA/Email)",
+      "actor": "sistema",
+      "herramienta": "WA API / Gmail API"
+    },
+    {
+      "n": 5,
+      "desc": "Asignación automática a vendedor",
+      "actor": "sistema",
+      "herramienta": "reglas de negocio"
+    },
+    {
+      "n": 6,
+      "desc": "Alerta al coordinador si SLA incumplido",
+      "actor": "sistema",
+      "herramienta": "notificación"
+    }
+  ],
+  "excepciones": [
+    {
+      "caso": "Datos incompletos",
+      "tratamiento": "Enviar email solicitando datos faltantes y marcar en lista 'Revisión'"
+    },
+    {
+      "caso": "API caída",
+      "tratamiento": "Reintentos exponenciales x3 y alerta a TI"
+    }
+  ],
+  "metricas": [
+    "Tiempo_primera_respuesta",
+    "Tasa_contacto_24h",
+    "Tasa_calificados",
+    "Costo_por_lead_procesado"
+  ],
+  "riesgos": [
+    "Bloqueo de plantillas WhatsApp",
+    "Cambios en políticas Meta",
+    "Errores en mapeos de campos"
+  ],
+  "datos_sensibles": {
+    "presentes": true,
+    "detalle": [
+      "email",
+      "teléfono",
+      "nombre"
+    ]
+  },
+  "integraciones": [
+    {
+      "tipo": "api",
+      "sistema": "Meta Graph API",
+      "endpoint": "/leadgen_forms/webhooks"
+    },
+    {
+      "tipo": "api",
+      "sistema": "GSheets",
+      "endpoint": "spreadsheets.values.append"
+    },
+    {
+      "tipo": "api",
+      "sistema": "WhatsApp Cloud API",
+      "endpoint": "/messages"
+    },
+    {
+      "tipo": "api",
+      "sistema": "Gmail API",
+      "endpoint": "users.messages.send"
+    }
+  ],
+  "automatable": true,
+  "artefactos_adjuntos": [],
+  "notas": "Usar sandbox hasta validar compliance.",
+  "export_seal": {
+    "project": "BMC-Automatizaciones",
+    "prompt_id": "Ejemplo_Proceso_Ventas_LeadsIG",
+    "version": "v1.0",
+    "file": "Ejemplo_Proceso_Ventas.json",
+    "lang": "json",
+    "created_at": "2025-09-17T21:36:22Z",
+    "author": "BMC",
+    "origin": "ChatGPT",
+    "body_sha256": "TBD",
+    "notes": "Ejemplo de referencia"
+  }
+}

@@ -1,0 +1,15 @@
+# Plan Pagos & Proveedores — Fase 2
+
+## Split de gastos
+- Modo 1 (MVP+): Manual con guía y QR/CBU/alias por usuario.
+- Modo 2 (F2): Link de cobro individual (pasarela local) con monto sugerido.
+- Reconciliación: estado pagado/pendiente por invitado (manual al inicio).
+
+## Proveedores (opt-in)
+- Catálogo de carnes/bebidas/hielo con precios de referencia.
+- Cupones por evento/grupo; tracking básico.
+
+## Comisiones (ejemplo comparativo)
+- Pasarela A: 5–7% + fijo
+- Pasarela B: 3–4% + fijo (transferencias instantáneas)
+- Efectivo/transferencia directa: 0% (sin tracking automático)

@@ -1,0 +1,22 @@
+# Prompt Maestro — Proyecto “Sale Asado” (RCT‑COE, Multi‑Agente)
+# Idioma: es‑UY · Estilo: profesional y conciso
+# Objetivo: Diseñar concepto de negocio, MVP, funcionalidades y roadmap para la app móvil “Sale Asado”.
+
+[Roles IA activos] PLN (Planificador), RSR (Investigador), BLD (Constructor), CRT (Crítico), INT (Integrador), SAFE (Cumplimiento).
+[Modos] Paso a Paso para decisiones sensibles; Rápido para síntesis.
+[DoD] MVP definido, roadmap faseado, KPIs iniciales, riesgos, supuestos, documentación reproducible.
+
+[Tarea]
+1) Identificar MVP y user flows fundamentales (proponer asado, selección de aportes, cálculo de cantidades/costos, asignación equitativa, checklist, pagos/manual o integraciones futuras).
+2) Mapear funcionalidades futuras (gamificación, comunidad, listas inteligentes, proveedores, cupones).
+3) Diseñar UX/UI con referencias culturales de AR/UY (roles: parrillero/anfitrión/invitado; cortes y bebidas típicas; preferencias).
+4) Roadmap Fase 1 (0–3 meses) y Fase 2 (3–6 meses). KPIs y riesgos.
+5) Generar artefactos: Plan V0, tabla de funcionalidades, runbook de re‑ejecución.
+
+[Parámetros de control]
+- Ciclos: 2 por consulta (BLD↔CRT), SAFE ON.
+- Registro: por ciclo (RESUMEN_i, CAMBIOS_i, MÉTRICAS_i, RIESGOS_i, PENDIENTES_i).
+
+[Salida]
+- Documento de concepto (MVP + roadmap + KPIs).
+- Logs y runbook para reutilizar el proceso en futuros productos.

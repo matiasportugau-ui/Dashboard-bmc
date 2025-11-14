@@ -1,0 +1,22 @@
+# Testing de Usabilidad — Protocolo
+
+## Perfiles
+- Organizador frecuente (25–40 años)
+- Invitado ocasional
+- Grupo familiar mixto
+
+## Tareas (ejemplo)
+1) Crear un asado con 8 personas y ubicación
+2) Generar lista inteligente en modo ahorro
+3) Asignarte 2 ítems y confirmar
+4) Ver simulación de costo por persona
+5) Enviar recordatorios
+6) Cerrar el evento y completar feedback
+
+## Métricas
+- Tasa de éxito por tarea (%)
+- Tiempo por tarea (mediana)
+- SUS (cuestionario) y NPS
+
+## Template de hallazgos
+- Hallazgo, evidencia, severidad, recomendación, owner

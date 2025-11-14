@@ -1,0 +1,16 @@
+# CICLO 17 — Plan de Proyecto (Gantt/roles/risgos)
+Fecha: 2025-09-02T04:14:36.260144
+
+## Consulta del Orquestador
+Armar un plan de ejecución con hitos, responsables, dependencias y riesgos, y priorización ICE/RICE básica. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Fechas realistas 0–3–6 meses.
+- AU2: Responsables claros y riesgos trazados.
+
+## Bucle 2×
+- Iteración 1 (Integración): Gantt CSV y mapa de roles.
+- Iteración 1 (Crítica): Añadir priorización ICE/RICE resumida.
+- Iteración 2 (Integración): Incluye puntajes y columna priorizada.
+
+**Métricas**: calidad=0.89, estabilidad=0.92, cobertura=0.94

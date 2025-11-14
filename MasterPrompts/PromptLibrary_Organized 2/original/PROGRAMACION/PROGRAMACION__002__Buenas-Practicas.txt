@@ -1,0 +1,8 @@
+# Buenas Prácticas
+
+- Siempre definir **medida de éxito** y **casos límite**.
+- Pedir **formato explícito** (JSON/tabla/código) cuando corresponda.
+- Usar **ejemplos positivos y negativos**.
+- Separar **requerimientos** de **opciones**.
+- Versionar prompts con fecha, autor y cambios.
+- Revisar con **Checklist‑QA** antes de entregar.

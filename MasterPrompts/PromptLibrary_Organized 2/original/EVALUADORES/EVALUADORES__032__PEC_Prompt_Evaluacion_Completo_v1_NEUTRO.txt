@@ -1,0 +1,5 @@
+PROMPT DE EVALUACIÓN COMPLETO (PEC) — v1.0
+
+Objetivo: Evaluar calidad y evolución de prompts (utilidad, robustez, eficiencia, seguridad; + extensiones).
+Fases: DAN (evidencias) → AUTO (procesamiento/score) → ANALYTICS (evaluación) → Atribución de mejoras → Autoevaluación BAEM/BEEE → Loop PEIPM-50.
+Output: JSON técnico con scores, mejoras, ranking; resumen narrativo; checklist-QA.

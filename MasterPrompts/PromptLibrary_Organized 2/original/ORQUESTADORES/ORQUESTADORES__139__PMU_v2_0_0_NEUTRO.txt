@@ -1,0 +1,23 @@
+{
+  "id": "PMU_v2_0_0",
+  "objetivo": "Versión neutra, aplicable a cualquier proyecto",
+  "roles": [
+    "PLN",
+    "RSR",
+    "BLD",
+    "CRT",
+    "INT",
+    "OPS",
+    "SAFE"
+  ],
+  "fases": [
+    "estudio",
+    "planificacion",
+    "bucle_iterativo",
+    "cierre"
+  ],
+  "politicas": {
+    "early_stop": true,
+    "cumplimiento_seguridad": true
+  }
+}

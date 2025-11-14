@@ -1,0 +1,13 @@
+{
+  "tokens_est": {
+    "prompt": 0.0,
+    "completion": 0.0
+  },
+  "cost_est_usd": 0.0,
+  "latency_profile_ms": {
+    "p50": 900,
+    "p95": 1800,
+    "notes": "Ver SCALING_PROFILE_C4 para perfil previo."
+  },
+  "notes": "Para costos/latencias reales, integrar medidores en OPS (no disponibles en este entorno)."
+}

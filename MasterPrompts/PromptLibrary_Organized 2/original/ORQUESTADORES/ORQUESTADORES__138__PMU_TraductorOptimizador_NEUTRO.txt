@@ -1,0 +1,16 @@
+{
+  "id": "PMU_TraductorOptimizador",
+  "objetivo": "Versión neutra, aplicable a cualquier proyecto",
+  "roles": [
+    "PLN",
+    "BLD",
+    "CRT",
+    "INT"
+  ],
+  "fases": [
+    "analizar_intencion",
+    "traducir_JSON",
+    "optimizar_metricas"
+  ],
+  "politicas": {}
+}

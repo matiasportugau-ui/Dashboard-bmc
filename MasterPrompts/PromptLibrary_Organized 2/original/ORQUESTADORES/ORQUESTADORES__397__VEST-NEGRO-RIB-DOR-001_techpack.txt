@@ -1,0 +1,67 @@
+# Techpack — VEST-NEGRO-RIB-DOR-001
+**Estilo:** Vestido negro de noche, escote V con ribete dorado, espalda abierta, tajo alto lateral.
+
+**Fecha:** 2025-09-06
+
+## Descripción breve
+Vestido maxi en negro, cuerpo ceñido y falda evasé. Escote V profundo con ribete/galón de cuentas doradas que continúa hacia la espalda, donde un cordón con cuentas cae en el centro. Espalda abierta. Tajo alto en delantero-lateral izquierdo.
+
+## Paleta
+- Negro base: #0F0F10
+- Dorado ribete: #C6A74A
+
+## BOM (Bill of Materials)
+- Tejido principal: crepé poliéster (200–260 gsm). Alternativa: crepé elástico 6–10% elastano.
+- Forrería (recomendada): satén elástico ligero o tricot suave en busto/falda superior.
+- Ribete/galón: cuentas doradas Ø 5–8 mm.
+- Cierre: cremallera invisible 50–60 cm (lateral izquierdo o centro-espalda). (to_confirm)
+- Hilo: poliéster continuo 120/2; hilo espuma para dobladillo (opcional).
+- Entretela: tricot ligera para vistas de escote/sisa + stay tape en V.
+
+## Piezas de patrón (estimadas)
+1. Delantero superior (x2, corte a hilo); escote V.
+2. Espalda superior (x2) con apertura profunda y presillas para cordón.
+3. Falda evasé (4 paneles).
+4. Vistas de escote y sisas (delantera y trasera).
+5. Forro de busto y falda superior (opcional).
+
+## Medidas sugeridas (a completar por talla)
+- Profundidad del V (centro frente): __ cm
+- Altura del tajo desde el suelo: __ cm
+- Largo total desde hombro: __ cm
+- Contorno busto/cintura/cadera base: __/__/__ cm
+
+## Construcción (resumen)
+1. Preparar vistas con entretela; aplicar stay tape en V del delantero.
+2. Unir costuras hombro y costados del cuerpo; montar vistas y asentar (top-stitch discreto opcional).
+3. Aplicar ribete/galón dorado en escote y tirantes sin generar tracción.
+4. Unir paneles de falda; dejar abertura prevista del tajo.
+5. Montar falda al cuerpo; reforzar inicio del tajo con bartack.
+6. Instalar cremallera invisible (lateral o espalda).
+7. Forrería (si aplica): busto y parte superior de falda.
+8. Dobladillo: enrollado o doble 10 mm.
+9. Presillas/ojales para fijar el cordón dorado en centro-espalda.
+
+## Puntadas y terminaciones
+- Overlock 3/4 hilos en interiores.
+- Recta 2.5–3.0 mm en uniones principales.
+- Puntada invisible o cover para dobladillo (según tejido).
+- Bartack en inicio del tajo y puntos de tensión.
+
+## QA / Checkpoints
+- Simetría del V (±2 mm).
+- Continuidad del ribete dorado sin escalones.
+- Altura del tajo consistente entre lados (±5 mm).
+- Caída sin tironeos; sin transparencias indeseadas.
+- Prueba de movimiento: sentarse y caminar con paso largo sin apertura excesiva.
+- Verificación SAFE: sin etiquetas/agentes cortantes en contacto con piel.
+
+## Diagramas
+- [Frente SVG](VEST-NEGRO-RIB-DOR-001_front.svg)
+- [Espalda SVG](VEST-NEGRO-RIB-DOR-001_back.svg)
+
+## Cuidado
+Lavado delicado, plancha a baja temperatura con paño, no retorcer, evitar tracción del ribete de cuentas.
+
+---
+**Estado:** TECHPACK v1 (cobertura alta; faltan confirmaciones de tejido exacto, sistema de cierre y forrería).

@@ -1,0 +1,4 @@
+platform,level,entity_id,entity_name,sku,weight
+google_ads,campaign,123,Search | Brand,SKU-001,1.0
+meta,adset,A1,Prospecting | Shoes,SKU-001,0.8
+meta,adset,A2,Retarget | Site Visitors,SKU-002,0.6

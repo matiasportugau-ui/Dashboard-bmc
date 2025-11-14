@@ -1,0 +1,19 @@
+# CICLO 6 — Diseño de Dominio & Esquema de Datos
+Fecha: 2025-09-02T04:08:54.260925
+
+## Consulta del Orquestador
+Diseñar el modelo de datos para el MVP (entidades, relaciones, índices) y un primer borrador de reglas de seguridad para Firestore. Ejecutar bucle 2× (BLD/INT ↔ CRT).
+
+## Respuestas del Equipo (representantes del usuario)
+- AU1: Mantener costos bajos, lecturas/escrituras eficientes.
+- AU2: Integridad, consistencia y mínima duplicación controlada para consultas rápidas (lista, asignaciones, estado en vivo).
+
+## Bucle 2×
+- Iteración 1 (Integración): Define colecciones, subcolecciones y campos clave; índices compuestos para consultas habituales (por userId y estado).
+- Iteración 1 (Crítica): Exigir trazabilidad de cambios (audit), timestamps, y validaciones de ownership; minimizar fan-out excesivo.
+- Iteración 2 (Integración): Añade 'audit' básico, timestamps server-side, ownership checks en reglas; patrón de agregados para resúmenes.
+- Iteración 2 (Crítica): Conforme para MVP; recomendar pruebas de carga básicas.
+
+**Métricas**: calidad=0.91, estabilidad=0.94, cobertura=0.97
+**Riesgos**: hot documents en eventos grandes; índices desactualizados.
+**Pendientes**: stress test con >100 participantes.

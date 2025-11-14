@@ -1,0 +1,26 @@
+# OKRs Trimestrales — Sale Asado
+
+## T1 (MVP + Beta)
+**O1 — MVP funcional validado en beta**
+- KR1: Cobertura de aportes ≥95% en beta por 2 quincenas (Owner: Producto)
+- KR2: Tiempo de coordinación ≤24 h p50 (Owner: Producto)
+- KR3: Crash-free ≥99% y ANR ≤0.5% (Owner: Tech)
+- KR4: 50–100 testers activos/semana (Owner: Growth)
+
+**O2 — Aprendizajes accionables para Fase 2**
+- KR1: ≥60% tasa de feedback post-evento (Owner: Producto)
+- KR2: 2 iteraciones de recalibración de consumo (Owner: Datos)
+- KR3: ≥2 proveedores candidatos evaluados por país (Owner: Operaciones)
+
+## T2 (Lanzamiento Público Inicial)
+**O1 — Lanzamiento público con calidad estable**
+- KR1: Crash-free ≥99.2% por release (Owner: Tech)
+- KR2: TTFB p95 ≤800ms en APIs clave (Owner: Tech)
+- KR3: NPS ≥40 (Owner: Producto)
+
+**O2 — Tracción inicial y retención**
+- KR1: 3K usuarios activos mensuales (Owner: Growth)
+- KR2: Retención W4 ≥35% (Owner: Producto)
+- KR3: Conversión premium ≥3% de MAU (Owner: Negocio)
+
+**Revisión:** bisemanal; **Go/No-Go:** cumplimiento ≥75% KRs críticos.

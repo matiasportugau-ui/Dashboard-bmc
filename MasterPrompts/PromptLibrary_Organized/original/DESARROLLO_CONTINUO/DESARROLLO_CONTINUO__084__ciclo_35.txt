@@ -1,0 +1,16 @@
+# CICLO 35 — Playbook de Community Management
+Fecha: 2025-09-02T04:24:20.541303
+
+## Consulta del Orquestador
+Definir playbook de comunidad (tono, dinámicas, normas), calendario y métricas; gestión de conflictos. Ejecutar bucle 2×.
+
+## Respuestas del Equipo
+- AU1: Comunidad sana y útil.
+- AU2: Moderación sencilla y transparente.
+
+## Bucle 2×
+- Iteración 1 (Integración): Playbook y calendario.
+- Iteración 1 (Crítica): Añadir protocolo de moderación y escalamiento.
+- Iteración 2 (Integración): Incluye métricas y plantilla de reporte mensual.
+
+**Métricas**: calidad=0.90, estabilidad=0.93, cobertura=0.95

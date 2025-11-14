@@ -1,0 +1,16 @@
+# Telemetría & Recalibración v1
+
+## Eventos (Analytics)
+- event_create, list_generate, item_assign, item_confirm, reminder_send, event_close
+- survey_submit (satisfaccion:1-5, sobrante_pct, faltante_pct, precision_calc:1-5)
+
+## Dimensiones
+- tam_grupo (1–5,6–10,11–20,>20), estacion (verano/invierno), tipo_evento, perfil_mayoritario
+
+## Recalibración
+- Ventanas: 30/60/90 días; pesos exponenciales (recency bias).
+- Update de coeficientes por rubro y perfil.
+- Umbral para cambios: |delta| > 5% y N≥30 muestras.
+
+## Privacidad
+- Opt-in, anonimización, export JSON bajo solicitud del usuario.

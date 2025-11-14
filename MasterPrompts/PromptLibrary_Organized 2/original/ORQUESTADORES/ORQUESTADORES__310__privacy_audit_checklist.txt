@@ -1,0 +1,27 @@
+# Auditoría de Datos & Privacidad — Checklist
+
+## Recolección
+- Mínima necesaria (principio de minimización)
+- Consentimientos explícitos (analytics, push)
+
+## Base legal
+- Ejecución de contrato (funciones básicas)
+- Consentimiento (medición/marketing)
+
+## Retención
+- Política definida (cuentas activas/inactivas)
+- Borrado a los 90 días de inactividad (opcional)
+
+## Derechos (DSAR)
+- Acceso/rectificación/supresión/portabilidad
+- SLA respuesta: 10 días hábiles
+- Registro de solicitudes y resolución
+
+## Seguridad
+- TLS, reglas Firestore, control de accesos, rotación de claves
+- Backups y restauración (ensayo trimestral)
+
+# Matriz de Riesgos (ejemplos)
+- R-D1: Exceso de datos recopilados → Mitigar con revisión trimestral de campos
+- R-D2: Exposición de API keys → Mitigar con secrets en CI y rotación
+- R-D3: Exportación de datos incompleta → Ensayar DSAR y checklist
