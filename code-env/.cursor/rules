@@ -1,0 +1,42 @@
+# Reglas para el entorno Code - Compatible con AI Assistant
+
+## Estructura de Proyecto
+- Siempre usar la estructura de directorios definida en code-env/
+- Mantener separación clara entre templates, scripts, config, docs, tools y projects
+- Cada proyecto debe tener su propio directorio en projects/
+
+## Estándares de Código
+- JavaScript/TypeScript: Usar ESLint y Prettier configurados
+- Python: Usar Black, Flake8 y MyPy
+- Siempre incluir documentación inline
+- Tests son obligatorios para funciones críticas
+
+## Automatización
+- Usar scripts predefinidos en scripts/ para operaciones comunes
+- Mantener logs de todas las operaciones automatizadas
+- Implementar rollback automático en caso de errores
+
+## Integración con AI
+- Todas las funciones deben tener comentarios descriptivos para AI
+- Usar nomenclatura clara y descriptiva
+- Mantener archivos de contexto actualizados en docs/
+
+## Templates
+- Cada template debe ser completamente funcional
+- Incluir README específico para cada template
+- Configurar CI/CD básico en cada template
+
+## Comunicación AI
+- Usar el sistema de sync automático para mantener consistencia
+- Documentar cambios importantes en docs/changelog.md
+- Mantener archivos de contexto para facilitar la comprensión del AI
+
+## Deployment
+- Usar scripts automatizados
+- Siempre hacer backup antes de deployment
+- Testing automático antes de production
+
+## Seguridad
+- No incluir credenciales en código
+- Usar variables de entorno para configuración sensible
+- Auditar dependencias regularmente
