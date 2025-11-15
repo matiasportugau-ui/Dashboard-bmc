@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+
+# Testing
+coverage/
+.nyc_output/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Generated files (except templates)
+generated/*
+!generated/.gitkeep
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE specific
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+env/
+
+# Documentation build
+docs/_build/
+docs/.doctrees/
+
+# Automation state files
+sync-state.json
+cursor-sync-state.json
+code-analysis-report.json
+automation-logs/
